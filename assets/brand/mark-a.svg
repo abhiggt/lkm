@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" role="img" aria-label="Linkmery">
+  <g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="4" y="5" width="5" height="21" rx="1.6"/>
+    <rect x="12" y="8.5" width="5" height="17.5" rx="1.6"/>
+    <rect x="19.4" y="7" width="5" height="19" rx="1.6" transform="rotate(16 24.4 26)"/>
+    <path d="M2 29h28"/>
+  </g>
+</svg>

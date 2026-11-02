@@ -1,0 +1,143 @@
+{
+  "schemaVersion": 1,
+  "entries": [
+    {
+      "id": "t1fs", "url": "https://www.fontshare.com", "title": "Fontshare",
+      "description": "Free, properly good typefaces from the Indian Type Foundry. My first stop when a client has no font budget but still deserves something with character.",
+      "why": "free fonts for client work and logo exploration", "type": "tool", "maker": "Indian Type Foundry",
+      "tags": ["fonts", "free", "typography"], "shelf": "type", "added": "2025-09-14", "pinned": true, "readLater": false
+    },
+    {
+      "id": "t2gf", "url": "https://fonts.google.com", "title": "Google Fonts",
+      "description": "The big open-source font library. Filter by variable fonts and language support before falling in love with anything.",
+      "why": "web fonts with Devanagari support", "type": "tool", "maker": "Google",
+      "tags": ["fonts", "free", "web"], "shelf": "type", "added": "2023-06-02", "pinned": false, "readLater": false
+    },
+    {
+      "id": "t3pt", "url": "https://practicaltypography.com", "title": "Butterick's Practical Typography",
+      "description": "A whole book about typography for people who write, free online. The chapters on line length and font pairing settle most arguments.",
+      "why": "send to clients who want everything in bold", "type": "reference", "maker": "Matthew Butterick",
+      "tags": ["typography", "book", "rules"], "shelf": "type", "added": "2023-03-19", "pinned": false, "readLater": false
+    },
+    {
+      "id": "t4ts", "url": "https://typescale.com", "title": "Type Scale",
+      "description": "Pick a base size and a ratio and it previews the whole heading scale live. Saves me from guessing h2 sizes for the hundredth time.",
+      "why": "setting up a type ramp for a new site", "type": "tool", "maker": "Jeremy Church",
+      "tags": ["typography", "scale", "css"], "shelf": "type", "added": "2024-02-11", "pinned": false, "readLater": false
+    },
+    {
+      "id": "t5fu", "url": "https://fontsinuse.com", "title": "Fonts In Use",
+      "description": "An archive of real typography in the wild, searchable by typeface. The quickest way to see if a font looks good on a logo, a poster or a book cover before buying it.",
+      "why": "checking a typeface on real logo work", "type": "reference",
+      "tags": ["typography", "fonts", "examples", "logo"], "shelf": "type", "added": "2024-08-30", "pinned": false, "readLater": false
+    },
+    {
+      "id": "c1co", "url": "https://coolors.co", "title": "Coolors",
+      "description": "Press space, get a palette. Lock the colours you like and keep spinning until something clicks. Embarrassingly addictive.",
+      "why": "quick palette starting points", "type": "tool",
+      "tags": ["palette", "generator", "colour"], "shelf": "colour", "added": "2023-01-08", "pinned": false, "readLater": false
+    },
+    {
+      "id": "c2rc", "url": "https://www.realtimecolors.com", "title": "Realtime Colors",
+      "description": "Try a palette on an actual website layout instead of on swatches. Text, background, primary, secondary and accent, all live.",
+      "why": "showing a client a palette in context", "type": "tool", "maker": "Juxtopposed",
+      "tags": ["palette", "web", "preview", "colour"], "shelf": "colour", "added": "2025-04-22", "pinned": true, "readLater": false
+    },
+    {
+      "id": "c3ok", "url": "https://oklch.com", "title": "OKLCH Color Picker",
+      "description": "A colour picker and converter for OKLCH, the colour space where lightness actually behaves. Good for building tints that look evenly spaced.",
+      "why": "making perceptually even colour ramps", "type": "tool", "maker": "Evil Martians",
+      "tags": ["picker", "oklch", "css", "colour"], "shelf": "colour", "added": "2025-11-03", "pinned": false, "readLater": true
+    },
+    {
+      "id": "c4cr", "url": "https://contrast-ratio.com", "title": "Contrast Ratio",
+      "description": "Paste two colours, get the WCAG contrast ratio. Tiny, fast, and handles transparency, which most checkers ignore.",
+      "why": "accessibility check before handoff", "type": "tool", "maker": "Lea Verou",
+      "tags": ["accessibility", "contrast", "wcag"], "shelf": "colour", "added": "2023-09-27", "pinned": false, "readLater": false
+    },
+    {
+      "id": "i1lu", "url": "https://lawsofux.com", "title": "Laws of UX",
+      "description": "Short, beautifully illustrated cards on the psychology behind interfaces: Hick's law, Fitts's law, Jakob's law and friends. Great for backing up a design decision in a review.",
+      "why": "explaining why a button should be bigger", "type": "reference", "maker": "Jon Yablonski",
+      "tags": ["ux", "psychology", "principles"], "shelf": "interface", "added": "2023-04-15", "pinned": false, "readLater": false
+    },
+    {
+      "id": "i2rf", "url": "https://www.refactoringui.com", "title": "Refactoring UI",
+      "description": "Practical tactics for making interfaces look better without being a designer, which is useful even when you are one. Spacing, hierarchy and shadows explained plainly.",
+      "why": "fixing a dashboard that looks off", "type": "reference", "maker": "Adam Wathan and Steve Schoger",
+      "tags": ["ui", "book", "hierarchy", "spacing"], "shelf": "interface", "added": "2024-05-06", "pinned": false, "readLater": false
+    },
+    {
+      "id": "i3nn", "url": "https://www.nngroup.com/articles/ten-usability-heuristics/", "title": "10 Usability Heuristics for User Interface Design",
+      "description": "The classic ten rules for usable interfaces from Nielsen Norman Group. Old, unglamorous, still right about almost everything.",
+      "why": "heuristic review of an app", "type": "article", "maker": "Jakob Nielsen",
+      "tags": ["usability", "ux", "heuristics"], "shelf": "interface", "added": "2023-02-21", "pinned": false, "readLater": false
+    },
+    {
+      "id": "i4mb", "url": "https://mobbin.com", "title": "Mobbin",
+      "description": "A huge library of real app screens and flows, searchable by pattern. Onboarding, paywalls, settings, empty states: someone has already shipped it.",
+      "why": "seeing how real apps do onboarding", "type": "inspiration",
+      "tags": ["mobile", "screens", "patterns", "ui"], "shelf": "interface", "added": "2025-07-19", "pinned": false, "readLater": false
+    },
+    {
+      "id": "i5ds", "url": "https://designsystemsrepo.com", "title": "Design Systems Repo",
+      "description": "A directory of public design systems, pattern libraries and style guides from companies big and small. Handy when naming components.",
+      "why": "comparing how others name components", "type": "reference",
+      "tags": ["design system", "components", "documentation"], "shelf": "interface", "added": "2024-01-28", "pinned": false, "readLater": true
+    },
+    {
+      "id": "b1bn", "url": "https://www.underconsideration.com/brandnew/", "title": "Brand New",
+      "description": "Reviews of new logos and identity redesigns, with before and after. The comments are half the fun.",
+      "why": "keeping up with identity redesigns", "type": "inspiration", "maker": "UnderConsideration",
+      "tags": ["logo", "identity", "rebrand", "reviews"], "shelf": "brand", "added": "2023-05-11", "pinned": false, "readLater": false
+    },
+    {
+      "id": "b2ld", "url": "https://www.logodesignlove.com", "title": "Logo Design Love",
+      "description": "A long-running blog about logo and identity design, full of process stories and sketches. Calm, generous and never trendy.",
+      "why": "process references for logo work", "type": "article", "maker": "David Airey",
+      "tags": ["logo", "process", "identity", "blog"], "shelf": "brand", "added": "2023-08-03", "pinned": false, "readLater": false
+    },
+    {
+      "id": "b3sv", "url": "https://jakearchibald.github.io/svgomg/", "title": "SVGOMG",
+      "description": "Drop in an SVG, get a much smaller one. Toggle each optimisation and watch the preview so nothing breaks. Every logo export goes through here.",
+      "why": "cleaning up logo SVG exports", "type": "tool", "maker": "Jake Archibald",
+      "tags": ["svg", "optimise", "export", "logo"], "shelf": "brand", "added": "2024-10-12", "pinned": true, "readLater": false
+    },
+    {
+      "id": "n1si", "url": "https://www.siteinspire.com", "title": "siteInspire",
+      "description": "A slow, well-curated showcase of web design, filterable by style and subject. Less noise than the big galleries.",
+      "why": "mood board for a portfolio site", "type": "inspiration",
+      "tags": ["websites", "gallery", "web"], "shelf": "inspiration", "added": "2023-07-23", "pinned": false, "readLater": false
+    },
+    {
+      "id": "n2ln", "url": "https://www.lapa.ninja", "title": "Lapa Ninja",
+      "description": "A gallery of landing pages sorted by category, with whole sections on pricing pages, hero sections and footers. Scroll here before designing any SaaS pricing table.",
+      "why": "pricing page and landing page references", "type": "inspiration",
+      "tags": ["landing pages", "pricing", "saas", "web"], "shelf": "inspiration", "added": "2025-02-14", "pinned": false, "readLater": false
+    },
+    {
+      "id": "n3sv", "url": "https://savee.it", "title": "Savee",
+      "description": "A visual bookmarking app full of other designers' saves. Rabbit hole warning: you go in for one reference and come out with forty.",
+      "why": "collecting visual references for a pitch", "type": "inspiration",
+      "tags": ["moodboard", "images", "references"], "shelf": "inspiration", "added": "2024-03-09", "pinned": false, "readLater": false
+    },
+    {
+      "id": "r1ci", "url": "https://ciechanow.ski", "title": "Bartosz Ciechanowski",
+      "description": "Long interactive essays explaining how things work, from mechanical watches to GPS, with hand-built 3D demos. The gold standard for explaining with visuals.",
+      "why": "proof that explainers can be beautiful", "type": "article", "maker": "Bartosz Ciechanowski",
+      "tags": ["explainers", "interactive", "essays"], "shelf": "reading", "added": "2024-06-17", "pinned": false, "readLater": true
+    },
+    {
+      "id": "r2dw", "url": "https://alistapart.com/article/dao/", "title": "A Dao of Web Design",
+      "description": "The essay from 2000 that argued web pages should flow and adapt instead of copying print. Responsive design before it had a name.",
+      "why": "reminder that the web is not paper", "type": "article", "maker": "John Allsopp",
+      "tags": ["web", "essay", "responsive", "history"], "shelf": "reading", "added": "2023-10-05", "pinned": false, "readLater": false
+    },
+    {
+      "id": "r3fu", "url": "https://www.youtube.com/@thefutur", "title": "The Futur on YouTube",
+      "description": "Videos on the business side of design: pricing your work, talking to clients, branding. Good for long drives and pricing anxiety.",
+      "why": "how to price freelance work", "type": "video", "maker": "Chris Do",
+      "tags": ["business", "pricing", "freelance", "branding"], "shelf": "reading", "added": "2025-10-28", "pinned": false, "readLater": false
+    }
+  ]
+}

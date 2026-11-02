@@ -1,0 +1,15 @@
+[
+  { "id": "now", "name": "Now", "order": 0, "kind": "pinned", "area": { "x": 0, "y": 0, "w": 2, "h": 2 }, "note": "Pinned links I keep reaching for." },
+  { "id": "recent", "name": "New arrivals", "order": 1, "kind": "recent", "area": { "x": 0, "y": 2, "w": 2, "h": 2 }, "note": "The latest books brought home. They sit on top of the cabinet for a while." },
+  { "id": "gems", "name": "Forgotten gems", "order": 2, "kind": "gems", "area": { "x": 0, "y": 4, "w": 2, "h": 2 }, "note": "Older links, a different handful on every visit." },
+  { "id": "web", "name": "Web inspiration", "order": 3, "area": { "x": 2, "y": 0, "w": 4, "h": 2 }, "note": "Galleries of websites, landing pages and single sections: heroes, navbars, CTAs, footers, pricing." },
+  { "id": "components", "name": "Components and effects", "order": 4, "area": { "x": 6, "y": 0, "w": 3, "h": 2 }, "note": "Copy-paste UI, shaders and effects, and building blocks for AI interfaces." },
+  { "id": "tools", "name": "Tools", "order": 5, "area": { "x": 9, "y": 0, "w": 3, "h": 2 }, "note": "Single-job tools: compress, generate, convert, research." },
+  { "id": "motion", "name": "Motion and interaction", "order": 6, "area": { "x": 2, "y": 2, "w": 3, "h": 2 }, "note": "Animation references, micro-interactions and tools for showing work in motion." },
+  { "id": "visual", "name": "Brand and visual", "order": 7, "area": { "x": 5, "y": 2, "w": 3, "h": 2 }, "note": "Branding, social posts, icons, aesthetics and images to look at." },
+  { "id": "assets", "name": "Type, icons and assets", "order": 8, "area": { "x": 8, "y": 2, "w": 4, "h": 2 }, "note": "Fonts, icon sets, illustrations, backgrounds, 3D files and templates." },
+  { "id": "play", "name": "Playful web", "order": 9, "area": { "x": 2, "y": 4, "w": 4, "h": 2 }, "note": "Experiments, toys and delightful corners of the internet." },
+  { "id": "directories", "name": "Directories", "order": 10, "area": { "x": 6, "y": 4, "w": 2, "h": 2 }, "note": "Lists of tools and resources, for when nothing here fits." },
+  { "id": "ai", "name": "AI and code", "order": 11, "area": { "x": 8, "y": 4, "w": 2, "h": 2 }, "note": "Design systems and skills for AI coders, and open-source projects to learn from." },
+  { "id": "reading", "name": "Reading and references", "order": 12, "area": { "x": 10, "y": 4, "w": 2, "h": 2 }, "note": "Books, tutorials, archives and references worth returning to." }
+]

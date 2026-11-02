@@ -1,0 +1,27 @@
+# Every Saturday morning: one email listing read-later links older than 3 days.
+# Needs repository secrets RESEND_API_KEY, REMIND_TO and REMIND_FROM (see README).
+# It never changes any data.
+name: Read-later reminder
+
+on:
+  schedule:
+    - cron: "43 3 * * 6"   # Saturday 09:13 IST
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  remind:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Send the digest
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          REMIND_TO: ${{ secrets.REMIND_TO }}
+          REMIND_FROM: ${{ secrets.REMIND_FROM }}
+        run: node tools/remind.mjs

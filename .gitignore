@@ -1,0 +1,6 @@
+node_modules/
+tests/shots/
+_site/
+link-report.md
+.DS_Store
+assets/fav/

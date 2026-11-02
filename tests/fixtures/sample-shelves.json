@@ -1,0 +1,11 @@
+[
+  { "id": "now", "name": "Now", "order": 0, "kind": "pinned", "area": { "x": 0, "y": 0, "w": 2, "h": 2 }, "note": "Pinned links I keep reaching for." },
+  { "id": "recent", "name": "Recently added", "order": 1, "kind": "recent", "area": { "x": 0, "y": 2, "w": 2, "h": 2 }, "note": "The newest additions to the almari." },
+  { "id": "gems", "name": "Forgotten gems", "order": 2, "kind": "gems", "area": { "x": 0, "y": 4, "w": 2, "h": 2 }, "note": "Older links, a different handful on every visit." },
+  { "id": "type", "name": "Type", "order": 3, "area": { "x": 2, "y": 0, "w": 3, "h": 3 }, "color": "spine-1", "note": "Fonts, type foundries, typesetting and the craft of letters." },
+  { "id": "colour", "name": "Colour", "order": 4, "area": { "x": 5, "y": 0, "w": 3, "h": 3 }, "color": "spine-4", "note": "Palettes, colour pickers, contrast and colour theory." },
+  { "id": "interface", "name": "Interface", "order": 5, "area": { "x": 8, "y": 0, "w": 4, "h": 3 }, "color": "spine-5", "note": "UI patterns, usability, design systems and screens." },
+  { "id": "brand", "name": "Brand and identity", "order": 6, "area": { "x": 2, "y": 3, "w": 3, "h": 3 }, "color": "spine-2", "note": "Logos, identity systems and brand writing." },
+  { "id": "inspiration", "name": "Inspiration", "order": 7, "area": { "x": 5, "y": 3, "w": 3, "h": 3 }, "color": "spine-3", "note": "Galleries and places to look when the page is blank." },
+  { "id": "reading", "name": "Reading", "order": 8, "area": { "x": 8, "y": 3, "w": 4, "h": 3 }, "color": "spine-6", "note": "Essays, explainers and must-read posts about the work." }
+]

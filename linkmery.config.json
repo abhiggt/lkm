@@ -1,0 +1,24 @@
+{
+  "siteUrl": "https://abhiggt.github.io/lkm/",
+  "title": "Linkmery: a visual designer's links on type, colour, interface and brand",
+  "shortName": "Linkmery",
+  "description": "A visual designer's hand-picked links on typography, colour, interface design, branding and inspiration, each with a note on when to reach for it. Search them, browse the shelves, share what you need.",
+  "lang": "en-IN",
+  "horizontalPlan": true,
+  "dayStartsIST": 6,
+  "nightStartsIST": 18,
+  "gemsOlderThanDays": 180,
+  "exampleSearches": [
+    "grainy gradient background",
+    "free icons for figma",
+    "that site with pricing page examples"
+  ],
+  "ownerName": "Abhijeet",
+  "why": [
+    "Good links get lost in chats, notes and saved posts.",
+    "So I gave mine a home: the {count} I actually reach for, each with a note on when it helps.",
+    "I made it for myself, to keep for years.",
+    "It's open so I can hand a shelf to the people I care about."
+  ],
+  "nameOrigin": "The name blends almari, the cupboard where Indian homes keep what matters, with library and \"link meri\": my links."
+}

@@ -1,0 +1,108 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "linkmery/bookmarks.schema.json",
+  "title": "Linkmery bookmarks",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "entries"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "url",
+          "title",
+          "description",
+          "type",
+          "tags",
+          "shelf",
+          "added",
+          "pinned",
+          "readLater"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9]{3,12}$"
+          },
+          "url": {
+            "type": "string",
+            "format": "uri",
+            "pattern": "^https?://"
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200
+          },
+          "description": {
+            "type": "string",
+            "minLength": 1
+          },
+          "why": {
+            "type": "string",
+            "maxLength": 140
+          },
+          "type": {
+            "enum": [
+              "tool",
+              "article",
+              "video",
+              "inspiration",
+              "reference"
+            ]
+          },
+          "maker": {
+            "type": "string"
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[a-z0-9][a-z0-9 .+#-]*$"
+            },
+            "uniqueItems": true
+          },
+          "shelf": {
+            "type": "string"
+          },
+          "added": {
+            "type": "string",
+            "format": "date"
+          },
+          "pinned": {
+            "type": "boolean"
+          },
+          "readLater": {
+            "type": "boolean"
+          },
+          "image": {
+            "type": "string",
+            "pattern": "^(?!https?:)[^\\s]+$"
+          },
+          "favicon": {
+            "type": "string",
+            "pattern": "^(?!https?:)[^\\s]+$"
+          },
+          "archiveUrl": {
+            "type": "string",
+            "format": "uri"
+          },
+          "deadSince": {
+            "type": "string",
+            "format": "date"
+          }
+        }
+      }
+    }
+  }
+}

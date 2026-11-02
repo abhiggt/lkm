@@ -1,0 +1,1079 @@
+<!doctype html>
+<html lang="en-IN" data-theme="day">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Linkmery: a visual designer&#39;s links on type, colour, interface and brand</title>
+<meta name="description" content="A visual designer&#39;s hand-picked links on typography, colour, interface design, branding and inspiration, each with a note on when to reach for it. Search them, browse the shelves, share what you need.">
+<link rel="canonical" href="https://abhiggt.github.io/lkm/">
+<meta name="theme-color" content="#ffffff">
+<script>
+/* Theme: by default follows India Standard Time for every visitor (day 06:00
+   to 18:00). The footer switch can pin Day or Night; that choice is remembered. */
+(function () {
+  var root = document.documentElement;
+  root.classList.add('js');
+  function mode() { try { return localStorage.getItem('lm.theme') || 'ist'; } catch (e) { return 'ist'; } }
+  function set() {
+    var m = mode();
+    var h = +new Intl.DateTimeFormat('en-GB', { timeZone: 'Asia/Kolkata', hour: 'numeric', hourCycle: 'h23' }).format(new Date());
+    root.dataset.theme = m === 'day' || m === 'night' ? m : (h >= 6 && h < 18) ? 'day' : 'night';
+    root.dataset.mode = m;
+  }
+  window.__lmTheme = set;
+  set(); setInterval(set, 60000);
+})();
+</script>
+<link rel="preload" href="assets/fonts/instrument-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/instrument-sans-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/fraunces-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/tokens.css?v=b6e8666f">
+<link rel="stylesheet" href="assets/css/site.css?v=b6e8666f">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="icons/icon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Linkmery">
+<meta property="og:title" content="Linkmery: a visual designer&#39;s links on type, colour, interface and brand">
+<meta property="og:description" content="A visual designer&#39;s hand-picked links on typography, colour, interface design, branding and inspiration, each with a note on when to reach for it. Search them, browse the shelves, share what you need.">
+<meta property="og:url" content="https://abhiggt.github.io/lkm/">
+<meta property="og:image" content="https://abhiggt.github.io/lkm/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Linkmery: a shelf of link covers beside the logo, three books on a shelf">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Linkmery: a visual designer&#39;s links on type, colour, interface and brand">
+<meta name="twitter:description" content="A visual designer&#39;s hand-picked links on typography, colour, interface design, branding and inspiration, each with a note on when to reach for it. Search them, browse the shelves, share what you need.">
+<meta name="twitter:image" content="https://abhiggt.github.io/lkm/og.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Linkmery","headline":"Linkmery: a visual designer's links on type, colour, interface and brand","description":"A visual designer's hand-picked links on typography, colour, interface design, branding and inspiration, each with a note on when to reach for it. Search them, browse the shelves, share what you need.","url":"https://abhiggt.github.io/lkm/","inLanguage":"en-IN","dateModified":"2026-11-02","mainEntity":{"@type":"ItemList","numberOfItems":100,"itemListElement":[{"@type":"ListItem","position":1,"url":"http://component.gallery/","name":"The Component Gallery","description":"UI components from about 95 public design systems, thousands of examples. Compare how each one builds the same thing."},{"@type":"ListItem","position":2,"url":"https://archive.org/","name":"Internet Archive","description":"A digital library of texts, films, music and old web pages through the Wayback Machine."},{"@type":"ListItem","position":3,"url":"https://tympanus.net/codrops/","name":"The New Collective (Codrops)","description":"Frontend and design tutorials, more than 500 free demos and a showcase of notable sites. Codrops now carries this name."},{"@type":"ListItem","position":4,"url":"https://hallofshame.design/","name":"Dark Patterns Hall of Shame","description":"Dark patterns and manipulative design from real companies, tagged by pattern type. What not to ship."},{"@type":"ListItem","position":5,"url":"https://productdesignpsychology.com/","name":"Product Design Psychology","description":"A free online book in 40 chapters on the psychology behind product design: the designer's mind, interfaces, users and organisations."},{"@type":"ListItem","position":6,"url":"https://www.gigabanger.com/","name":"antislop","description":"Saved without a note, and the page only says \"antislop\", so it is unclear what this is. Worth a second look."},{"@type":"ListItem","position":7,"url":"https://random-topic-generator-woad.vercel.app/","name":"Speech Practice","description":"Random topics for impromptu speaking practice, with a timer, recording and interview questions."},{"@type":"ListItem","position":8,"url":"https://origamiarchive.com/","name":"Origami Archive","description":"A personal archive of origami prototypes and design files from 2021 to 2024, each downloadable."},{"@type":"ListItem","position":9,"url":"http://earth.nullschool.net/","name":"earth","description":"The planet's wind, weather and ocean conditions live on a spinning globe. A classic of data visualisation."},{"@type":"ListItem","position":10,"url":"http://paperplanes.world/","name":"Paper Planes","description":"Throw a virtual paper plane and catch ones thrown by people around the world."},{"@type":"ListItem","position":11,"url":"http://liumichelle.com/sketchbook","name":"Michelle Liu's Sketchbook","description":"A living digital sketchbook on product designer Michelle Liu's personal site."},{"@type":"ListItem","position":12,"url":"http://marijanapav.com/stamps","name":"Digital Stamp Collection","description":"Digitally recreated postage stamps, made as a tribute to a grandfather's stamp collection."},{"@type":"ListItem","position":13,"url":"http://poetry.camera/","name":"Poetry Camera","description":"An instant camera that prints a poem about what it sees instead of a photo. The DIY version is open source."},{"@type":"ListItem","position":14,"url":"http://everynoise.com/","name":"Every Noise at Once","description":"An interactive map of thousands of music genres with audio samples. Not updated since its creator left Spotify in 2023."},{"@type":"ListItem","position":15,"url":"http://music.jessyin.world/","name":"Visual Instruments","description":"Turns an image into tiles that play sounds; hover, swap and retune them. Visual instruments."},{"@type":"ListItem","position":16,"url":"https://profconradi.com/","name":"Simone Conradi","description":"Mathematical art and physics simulations, from polynomial roots to complex-plane plots. Math, visualised beautifully."},{"@type":"ListItem","position":17,"url":"http://synesthesiaengine.netlify.app/","name":"Synesthesia Engine","description":"Upload an image and hear it as sound, with a live visualisation."},{"@type":"ListItem","position":18,"url":"http://midlife.engineering/","name":"Midlife Engineering","description":"Interactive sound therapy: ambient music you play with for relaxing, focus and sleep."},{"@type":"ListItem","position":19,"url":"https://ransom-note.vercel.app/","name":"Ransom Note Generator","description":"Sets your text in mixed cut-out letters like a ransom note, shareable as a link or image."},{"@type":"ListItem","position":20,"url":"https://justforfun.io/","name":"Just For Fun","description":"A showcase of playful creative-coding projects like Windows 93, Tixy.land and CSS 3D clouds."},{"@type":"ListItem","position":21,"url":"https://howubeen.com/","name":"How u been","description":"A fill-in postcard you draw on and send when someone asks how you have been."},{"@type":"ListItem","position":22,"url":"https://cityguesser.eu/","name":"City Guesser","description":"Watch a video from somewhere on Earth and guess where on the map. Has private multiplayer rooms."},{"@type":"ListItem","position":23,"url":"https://github.com/LibreChat-AI/LibreChat","name":"LibreChat","description":"An open-source, self-hostable AI chat app that works with many providers and supports agents and tools."},{"@type":"ListItem","position":24,"url":"https://github.com/heygen-com/hyperframes","name":"HyperFrames","description":"Renders HTML, CSS, media and animation into MP4 with headless Chrome and FFmpeg. Video from web code."},{"@type":"ListItem","position":25,"url":"https://github.com/cloudflare/agentic-inbox","name":"agentic-inbox","description":"Cloudflare's open-source, self-hosted email client with an AI agent built in, running on Workers."},{"@type":"ListItem","position":26,"url":"https://sneakpeek.design/","name":"Sneak Peek","description":"A newsletter on how leading design teams use AI in their work."},{"@type":"ListItem","position":27,"url":"https://www.ui-skills.com/","name":"UI Skills","description":"Design-engineering skills and guides for AI agents covering accessibility, motion and interface quality, with a CLI and MCP."},{"@type":"ListItem","position":28,"url":"https://styles.refero.design/","name":"Refero Styles","description":"More than 2,000 design systems pulled from product websites, with colours, type and spacing, each as a DESIGN.md file for AI coding tools."},{"@type":"ListItem","position":29,"url":"http://on.design/","name":"on.design","description":"An invite-only design community where designers post work and build profiles."},{"@type":"ListItem","position":30,"url":"https://builtbydesigners.com/","name":"Built by Designers","description":"Apps, tools, websites and experiments that designers built and shipped themselves."},{"@type":"ListItem","position":31,"url":"https://toolfolio.com/","name":"Toolfolio","description":"A directory of tools across design, AI, code, marketing and productivity, with daily picks and deals. Formerly toolfolio.io."},{"@type":"ListItem","position":32,"url":"https://designengineer.tools/","name":"Design Engineer Tools","description":"Tools for web design engineers sorted into inspiration, AI code, components, motion, 3D, fonts and browser."},{"@type":"ListItem","position":33,"url":"https://designtools.fyi/","name":"designtools.fyi","description":"About 100 design tools ranked by role, from art director to design engineer, each marked free, paid or open source."},{"@type":"ListItem","position":34,"url":"https://markitnow.net/","name":"Mark-it","description":"A personal directory of design resources: tools, inspiration, fonts, motion assets and AI tools."},{"@type":"ListItem","position":35,"url":"https://www.designminis.com/","name":"Design Minis","description":"Small single-purpose tools made by designers, filterable by colour, type, motion, icons and layout, each marked free or paid."},{"@type":"ListItem","position":36,"url":"https://mkdir.directory/","name":"mkdir","description":"About 38 web design inspiration directories, ranked by votes. An inspiration list of inspiration lists."},{"@type":"ListItem","position":37,"url":"https://designeer.xyz/","name":"Designeer","description":"A collection of interface craft, component libraries, AI tools and resources for builders. It did not load when I sorted these links."},{"@type":"ListItem","position":38,"url":"http://wonderlist.design/","name":"Wonderlist","description":"A paid bundle of 127 Figma website templates, over 1,100 pages across SaaS, portfolio and agency."},{"@type":"ListItem","position":39,"url":"https://huggingface.co/datasets/nvidia/simready-assets/tree/main","name":"NVIDIA SimReady Assets","description":"NVIDIA's dataset of about 476 GB of 3D asset folders: furniture, appliances, tools and more. Great 3D files for scenes."},{"@type":"ListItem","position":40,"url":"http://grainient.supply/","name":"Grainient","description":"Grainy and smooth gradients, animated gradients and AI backgrounds, plus a shader tool. Unlimited gradients, some free."},{"@type":"ListItem","position":41,"url":"http://backgrounds.supply/","name":"Backgrounds Supply","description":"More than a thousand backgrounds, wallpapers and gradients licensed for client work, one-time purchase."},{"@type":"ListItem","position":42,"url":"https://kitbitz.art/","name":"Kitbitz","description":"Over 2,000 hand-drawn CC0 illustrations as SVG and PNG, with Figma kits and an MCP connection."},{"@type":"ListItem","position":43,"url":"https://www.drawkit.com/","name":"DrawKit","description":"Vector and 3D illustrations, icons, animations and mockups with Figma plugins. Some packs free."},{"@type":"ListItem","position":44,"url":"http://hugeicons.com/","name":"Hugeicons","description":"More than 60,000 icons in several styles, with a Figma plugin and packages for React, Vue and Flutter. Free set plus Pro."},{"@type":"ListItem","position":45,"url":"http://youworkforthem.com/fonts","name":"YouWorkForThem Fonts","description":"A long-running marketplace of curated fonts from independent foundries, with one-time licences."},{"@type":"ListItem","position":46,"url":"http://fontinlogo.com/","name":"Font In Logo","description":"The typefaces behind well-known brand logos, browsable by brand, industry or font."},{"@type":"ListItem","position":47,"url":"https://www.typewolf.com/","name":"Typewolf","description":"Fonts used on real websites, pairing ideas, popularity lists and guides. Where I go to choose and pair typefaces."},{"@type":"ListItem","position":48,"url":"http://modulify.ai/","name":"Modulify","description":"An AI website and web app builder that goes from prompt to site, with CMS, database and hosting. Cheaper than Lovable."},{"@type":"ListItem","position":49,"url":"http://brik.space/","name":"Brik","description":"Builds a custom design tool from a text brief, aimed at animation, 3D, typography and interactive work."},{"@type":"ListItem","position":50,"url":"https://texs.org/","name":"texs.org","description":"Tex Jernigan's little tools: crossword, VHS and CD label generators, a Google Font lookup and a GIF maker."},{"@type":"ListItem","position":51,"url":"https://answerthepublic.com/","name":"AnswerThePublic","description":"Shows the questions people search for across Google, YouTube, Amazon and AI tools."},{"@type":"ListItem","position":52,"url":"http://handofyou.app/","name":"Hand of You","description":"Draw your letters on screen and it makes a font file from your handwriting. Free."},{"@type":"ListItem","position":53,"url":"https://www.gradientool.com/","name":"Gradientool","description":"A gradient generator with random shapes, colours and effects, exporting PNG, JPG, MP4 or code."},{"@type":"ListItem","position":54,"url":"https://supercolorpalette.com/","name":"Super Color Palette","description":"A colour palette generator with hue, saturation and lightness controls, contrast checks and colours pulled from images."},{"@type":"ListItem","position":55,"url":"https://www.imgto3d.ai/","name":"IMGto3D","description":"Turns a single image into a 3D model exported as OBJ, GLB or STL."},{"@type":"ListItem","position":56,"url":"https://www.fffuel.co/","name":"fffuel","description":"Colour tools and SVG generators for gradients, patterns, textures, shapes and backgrounds. A whole drawer of decorative fuel."},{"@type":"ListItem","position":57,"url":"https://squoosh.app/","name":"Squoosh","description":"Compress images in the browser and compare codecs and quality side by side. Nothing leaves your machine."},{"@type":"ListItem","position":58,"url":"https://eyecannndy.com/","name":"Eyecannndy","description":"Saved as visual inspiration. It did not load when I sorted these links, so check it is still there."},{"@type":"ListItem","position":59,"url":"http://ignant.com/","name":"IGNANT","description":"A daily online magazine of art, design, photography, travel and architecture."},{"@type":"ListItem","position":60,"url":"https://www.bxmuseum.com/","name":"BX Museum","description":"An online collection of brand artifacts from companies like LEGO and IKEA, organised by category."},{"@type":"ListItem","position":61,"url":"https://cari.institute/aesthetics/","name":"CARI Index of Aesthetics","description":"A searchable index of consumer aesthetics and visual eras, filterable by decade. Y2K, Frutiger Aero and the rest, explained."},{"@type":"ListItem","position":62,"url":"http://arqe.ai/","name":"Arqe","description":"Motion templates for social content, animated device mockups and a library of royalty-free AI images. Exporting needs a subscription."},{"@type":"ListItem","position":63,"url":"https://savee.com/","name":"Savee","description":"A visual inspiration platform: save references into boards and search by word, colour or image. Rabbit hole guaranteed."},{"@type":"ListItem","position":64,"url":"http://iconly.design/","name":"Iconly","description":"About 2,400 app, game and web app icons, searchable by type, category and colour. For looking, not downloading."},{"@type":"ListItem","position":65,"url":"http://rebrand.gallery/","name":"Rebrand Gallery","description":"Rebrand projects with reveal videos and the logos, colours and type behind them, browsable by industry, style, typeface and studio."},{"@type":"ListItem","position":66,"url":"https://posts.design/","name":"posts.design","description":"An inspiration library of brand social posts: launches, hiring and event announcements, X headers and OG images. Saved three times, which says something."},{"@type":"ListItem","position":67,"url":"http://surface-motion.com/","name":"Surface Motion","description":"Saved as a dynamic way to showcase design work. It blocks automated checks, so its details are unconfirmed."},{"@type":"ListItem","position":68,"url":"https://perspectivemock.vercel.app/","name":"PerspectiveMock","description":"Puts screenshots, videos or code into a tilted 3D perspective with camera keyframes and exports MP4. No sign-up."},{"@type":"ListItem","position":69,"url":"http://animos.app/","name":"animos","description":"A browser tool with 25 animation templates for presenting design work: add images or video, export MP4 or WebM."},{"@type":"ListItem","position":70,"url":"https://reanimate.niazmorshed.dev/","name":"reanimate","description":"An open-source Claude Code skill that rebuilds an animation from a website, video or GIF as code in your project."},{"@type":"ListItem","position":71,"url":"https://www.keyloom.app/","name":"Keyloom","description":"Prebuilt animated video scenes for Remotion, like a typing search bar or counting stats. Motion videos without After Effects."},{"@type":"ListItem","position":72,"url":"https://www.jhey.dev/prototypes/2026/segue","name":"Segue by Jhey","description":"A single HTML and CSS prototype of a page-to-page transition, with its code shown. Jhey makes the browser do things it should not."},{"@type":"ListItem","position":73,"url":"http://appmotion.design/","name":"App Motion","description":"Saved as a gallery of mobile app animations and transitions. It did not load when I sorted these links and may be offline."},{"@type":"ListItem","position":74,"url":"http://60fps.design/","name":"60fps","description":"UI animation and interaction examples from iOS and web apps, organised by app, gesture, pattern and effect."},{"@type":"ListItem","position":75,"url":"https://www.designspells.com/","name":"Design Spells","description":"Micro-interactions, easter eggs and small delightful details found in apps and websites. Proof that the tiny things are remembered."},{"@type":"ListItem","position":76,"url":"http://footer.design/","name":"Footer","description":"A gallery of website footers filterable by style: typographic, dark, animated."},{"@type":"ListItem","position":77,"url":"http://cta.gallery/","name":"CTA Gallery","description":"Call-to-action sections from real websites, sorted by buttons, forms, pop-ups, newsletters and pricing."},{"@type":"ListItem","position":78,"url":"http://navbar.gallery/","name":"Navbar Gallery","description":"Website navigation bars grouped by type: dropdowns, mega menus, sidebars."},{"@type":"ListItem","position":79,"url":"http://saaspo.com/","name":"Saaspo","description":"A curated collection of SaaS websites, filterable by style and page type, including pricing pages."},{"@type":"ListItem","position":80,"url":"http://landing.love/","name":"Landing Love","description":"Saved as a gallery of landing page inspiration. It did not load when I sorted these links, so it may have moved."},{"@type":"ListItem","position":81,"url":"http://curated.design/","name":"Curated","description":"A gallery of live websites and landing pages filterable by style and industry. Advanced filters are Pro."},{"@type":"ListItem","position":82,"url":"http://landdding.com/","name":"Landdding","description":"Landing pages and templates built on Webflow, Framer, WordPress, Wix and Squarespace, filterable by category. Top-notch landings."},{"@type":"ListItem","position":83,"url":"https://deadsimplesites.com/","name":"Dead Simple Sites","description":"A weekly gallery of minimal websites with screenshots. Plain, clean, mostly typographic."},{"@type":"ListItem","position":84,"url":"http://recent.design/","name":"Recent","description":"A design inspiration feed covering websites, posters, branding, motion, illustration, OG images and app icons, with tools and jobs. Godly.website now redirects here."},{"@type":"ListItem","position":85,"url":"https://www.supahero.io/","name":"Supahero","description":"A curated library of website hero sections. Now part of screensdesign.com."},{"@type":"ListItem","position":86,"url":"https://www.unsection.com/","name":"Unsection","description":"Website sections collected one by one: heroes, features, pricing, FAQs, footers, navbars. Needs a free sign-up for most of it."},{"@type":"ListItem","position":87,"url":"https://minimal.gallery/","name":"Minimal Gallery","description":"A daily-updated gallery of minimal website design, with Framer and Webflow templates on the side."},{"@type":"ListItem","position":88,"url":"https://calltoinspiration.com/","name":"CallToInspiration","description":"UI examples captured from real websites and apps, organised by pattern: logins, popups, pricing, dashboards, forms."},{"@type":"ListItem","position":89,"url":"http://motionin.design/","name":"Motion","description":"Interactive web sections like animated heroes and scroll galleries, sold as a spec and prompt you hand to an AI model to build. One prompt, one section."},{"@type":"ListItem","position":90,"url":"https://metalforge.xyz/","name":"MetalForge","description":"Shaders and animated effects for SwiftUI, React Native and the web, tweaked with sliders and exported as code. Some free, some on subscription."},{"@type":"ListItem","position":91,"url":"https://opensourceui.in/","name":"Opensource UI","description":"MIT-licensed React and Next.js components in Tailwind, with device mockups, forms, widgets and loaders, each with a live preview."},{"@type":"ListItem","position":92,"url":"https://uiverse.io/","name":"Uiverse","description":"Community-made buttons, loaders, toggles and forms you can copy as HTML and CSS, Tailwind, React or Figma. Endless small UI pieces."},{"@type":"ListItem","position":93,"url":"https://libraries.dev/orbs","name":"Thinking Orbs","description":"Animated orbs for AI thinking and loading states, nine of them, for React, React Native and SwiftUI. Moved here from orbs.jakubantalik.com."},{"@type":"ListItem","position":94,"url":"https://www.beautifului.dev/","name":"Beautiful UI","description":"Twenty-plus crafted, MIT-licensed primitives for AI-native interfaces: thinking states, streaming text, approval cards, chat panels and tables."},{"@type":"ListItem","position":95,"url":"https://metal.jakubantalik.com/","name":"Liquid Metal","description":"A real-time WebGL shader that gives buttons and components a liquid chrome look, tuned with presets and a slider."},{"@type":"ListItem","position":96,"url":"https://transitions.dev/","name":"Transitions.dev","description":"More than 40 copy-paste transitions for web apps, plus an AI builder and a motion-audit agent. The essentials for moving between states without jank."},{"@type":"ListItem","position":97,"url":"https://aicss.dev/","name":"AICSS","description":"Copy-paste components for AI agent chats: thinking states, tool calls, streaming text and citations, in React, Vue and Svelte. Some are Pro."},{"@type":"ListItem","position":98,"url":"https://originkit.dev/","name":"Originkit","description":"Free library of animated website components you can copy as code, use in Framer, or pull in through MCP. Ready-made motion for site builds."},{"@type":"ListItem","position":99,"url":"https://libraries.dev/beam","name":"Border Beam","description":"An animated glow that travels around an element's border, for React, SwiftUI and React Native. Moved here from beam.jakubantalik.com."},{"@type":"ListItem","position":100,"url":"https://canvasui.dev/","name":"Canvas UI","description":"Open-source library of about 35 WebGL and WebGPU effects that render over live HTML, for React, Vue, Svelte and plain JavaScript. Shader effects on real UI, not on a canvas copy."}]}}</script>
+</head>
+<body>
+<a class="skip" href="#q">Skip to search</a>
+
+<main class="almari" id="main">
+  <div class="plaque" id="plaque" role="button" tabindex="0" aria-label="The Library of Links, kept by Abhijeet" data-since="2026-11-02">
+    <span class="pl-turn">
+      <span class="pl-face pl-front"><span class="pl-title">The Library of Links</span><em>kept by Abhijeet</em></span>
+      <span class="pl-face pl-back" aria-live="polite"><span class="pl-time" id="pl-time"></span><em id="pl-secret"></em></span>
+    </span>
+    <span class="pl-brooch" aria-hidden="true"><svg viewBox="0 0 32 32" width="26" height="26">
+  <g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="4" y="5" width="5" height="21" rx="1.6"/>
+    <rect x="12" y="8.5" width="5" height="17.5" rx="1.6"/>
+    <rect x="19.4" y="7" width="5" height="19" rx="1.6" transform="rotate(16 24.4 26)"/>
+    <path d="M2 29h28"/>
+  </g></svg></span>
+  </div>
+  <div class="cabinet-top">
+    <button type="button" class="top-obj" id="globe" data-js aria-label="Spin the globe: it stops on a random book"><i class="contact"></i>
+      <span class="globe-art" aria-hidden="true"><span class="sphere"><span class="map"></span></span><img class="stand" src="assets/img/globe-stand.avif" alt="" width="240" height="280" decoding="async"></span>
+    </button>
+    <button type="button" class="plant-btn" id="plant" data-js aria-label="Water the money plant"><i class="contact"></i>
+      <img class="money" src="assets/img/plant.avif" alt="" width="210" height="720" decoding="async"><i class="drop d1" aria-hidden="true"></i><i class="drop d2" aria-hidden="true"></i><i class="drop d3" aria-hidden="true"></i><i class="drop d4" aria-hidden="true"></i>
+    </button>
+  </div>
+  <div class="cabinet-doors" id="doors" data-js hidden>
+    <div class="door l" aria-hidden="true">
+      <svg class="door-lines" viewBox="0 0 100 100" preserveAspectRatio="none"><rect x="6" y="4" width="88" height="92" rx="2"/><path d="M14 10l14 -6M14 24l30 -14"/></svg>
+      <span class="hinge t"></span><span class="hinge b"></span>
+    </div>
+    <div class="door r" aria-hidden="true">
+      <svg class="door-lines" viewBox="0 0 100 100" preserveAspectRatio="none"><rect x="6" y="4" width="88" height="92" rx="2"/><path d="M60 96l26 -12M78 96l10 -5"/></svg>
+      <span class="hinge t"></span><span class="hinge b"></span>
+    </div>
+    <span class="seam" aria-hidden="true"></span>
+    <span class="keyhole" aria-hidden="true"></span>
+    <button type="button" class="knob" id="open-doors" aria-label="Open Linkmery"><svg viewBox="0 0 32 32" width="30" height="30" aria-hidden="true">
+  <g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="4" y="5" width="5" height="21" rx="1.6"/>
+    <rect x="12" y="8.5" width="5" height="17.5" rx="1.6"/>
+    <rect x="19.4" y="7" width="5" height="19" rx="1.6" transform="rotate(16 24.4 26)"/>
+    <path d="M2 29h28"/>
+  </g></svg></button>
+    <p class="cue" aria-hidden="true"><span id="cue-hello">Come in.</span> Tap to open</p>
+  </div>
+
+  <button type="button" class="btn back" id="back" data-js><svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M12 4l-6 6 6 6"/></svg>All shelves</button>
+  <div class="almari-head">
+    <h1 class="crest"><span class="crest-btn" id="crest"><svg class="lockup" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 211 44" width="211" height="44" aria-hidden="true" focusable="false">
+  <svg x="0" y="0" width="44" height="44" viewBox="0 0 32 32" overflow="visible">
+  <g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+    <rect class="bk bk1" x="4" y="5" width="5" height="21" rx="1.6"/>
+    <rect class="bk bk2" x="12" y="8.5" width="5" height="17.5" rx="1.6"/>
+    <rect class="bk bk3" x="19.4" y="7" width="5" height="19" rx="1.6" transform="rotate(16 24.4 26)"/>
+    <path d="M2 29h28"/>
+  </g></svg>
+  <g transform="translate(54 3)"><path fill="currentColor" d="M7.08 32L2.92 32L2.92 3.2L7.08 3.2L7.08 32M16.28 32L12.12 32L12.12 11.6L16.28 11.6L16.28 32M16.52 7.6L11.92 7.6L11.92 2.92L16.52 2.92L16.52 7.6M25.48 32L21.32 32L21.32 11.6L25.28 11.6L25.28 15.48Q26.28 13.64 28.04 12.52L28.04 12.52Q30.12 11.2 32.88 11.2L32.88 11.2Q36.16 11.2 38.04 13.04Q39.92 14.88 39.92 17.92L39.92 17.92L39.92 32L35.8 32L35.8 18.88Q35.8 16.76 34.74 15.72Q33.68 14.68 31.6 14.68L31.6 14.68Q29.8 14.68 28.42 15.48Q27.04 16.28 26.26 17.68Q25.48 19.08 25.48 21L25.48 21L25.48 32M48.92 32L44.76 32L44.76 2.68L48.92 2.68L48.92 20.44L57.68 11.6L62.92 11.6L52.92 21.32L63.32 32L58 32L48.92 22.4L48.92 32M69.96 32L65.8 32L65.8 11.6L69.76 11.6L69.76 15.48Q70.76 13.64 72.48 12.52L72.48 12.52Q74.48 11.2 77 11.2L77 11.2Q80.04 11.2 81.88 12.96L81.88 12.96Q82.84 13.92 83.32 15.24L83.32 15.24Q84.32 13.56 86 12.52L86 12.52Q88.08 11.2 90.68 11.2L90.68 11.2Q93.76 11.2 95.6 12.98Q97.44 14.76 97.44 17.72L97.44 17.72L97.44 32L93.32 32L93.32 18.68Q93.32 16.6 92.34 15.64Q91.36 14.68 89.56 14.68L89.56 14.68Q87.92 14.68 86.58 15.46Q85.24 16.24 84.46 17.62Q83.68 19 83.68 20.88L83.68 20.88L83.68 32L79.56 32L79.56 18.68Q79.56 16.6 78.6 15.64Q77.64 14.68 75.84 14.68L75.84 14.68Q74.16 14.68 72.82 15.46Q71.48 16.24 70.72 17.62Q69.96 19 69.96 20.88L69.96 20.88L69.96 32M111.04 32.4L111.04 32.4Q107.96 32.4 105.62 31.04Q103.28 29.68 101.96 27.28Q100.64 24.88 100.64 21.76L100.64 21.76Q100.64 18.6 101.94 16.22Q103.24 13.84 105.6 12.52Q107.96 11.2 111 11.2L111 11.2Q113.96 11.2 116.14 12.46Q118.32 13.72 119.5 15.96Q120.68 18.2 120.68 21.28L120.68 21.28Q120.68 21.76 120.66 22.18Q120.64 22.6 120.56 23.04L120.56 23.04L104.92 23.04Q105.16 25.6 106.52 27.2L106.52 27.2Q108.16 29.16 111.12 29.16L111.12 29.16Q112.92 29.16 114.24 28.42Q115.56 27.68 116.2 26.24L116.2 26.24L120.12 26.24Q119.12 29.12 116.74 30.76Q114.36 32.4 111.04 32.4M104.96 19.92L104.96 19.92L116.56 19.92Q116.32 17.52 115.12 16.16L115.12 16.16Q113.64 14.44 111 14.44L111 14.44Q108.16 14.44 106.52 16.36L106.52 16.36Q105.32 17.76 104.96 19.92M128.28 32L124.12 32L124.12 11.6L128.08 11.6L128.08 15.56Q128.84 13.64 130.24 12.56L130.24 12.56Q132 11.2 134.44 11.2L134.44 11.2Q135.36 11.2 135.72 11.36L135.72 11.36L135.72 15.28Q135.52 15.2 135.16 15.18Q134.8 15.16 134.28 15.16L134.28 15.16Q131.28 15.16 129.78 16.72Q128.28 18.28 128.28 21.36L128.28 21.36L128.28 32M144.44 40.2L140.16 40.2L144.32 30.68L136.16 11.6L140.68 11.6L146.52 26.08L152.12 11.6L156.44 11.6L144.44 40.2"/></g></svg></span><span class="sr-only">Linkmery: a visual designer's links on type, colour, interface and brand</span></h1>
+    <noscript><p class="crest-fallback">Linkmery</p></noscript>
+    <p class="dedication">Links I keep coming back to, each one kept for a reason.</p>
+    <div class="search-row">
+      <form class="search" role="search" action="#" data-js>
+        <label for="q" class="sr-only">Search the shelves</label>
+        <input id="q" name="q" type="search" autocomplete="off" spellcheck="false" placeholder="Search the shelves" aria-describedby="search-help">
+        <kbd class="slash" aria-hidden="true">/</kbd>
+        <p id="search-help" class="sr-only">Results appear as you type. Press Escape to clear.</p>
+      </form>
+      <button type="button" class="btn surprise" id="random" data-js aria-label="Wander: a random book from a random shelf"><svg class="i compass" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="7.2"/><path class="needle" d="M12.6 7.4l-1.5 3.7-3.7 1.5 1.5-3.7z"/></svg>Wander</button>
+    </div>
+    <div class="drawer" id="drawer" data-js hidden></div>
+    <section class="shelf found" id="found" data-js aria-live="polite" hidden></section>
+  </div>
+
+  <div class="shelves" id="shelves">
+    <section class="shelf" id="web" data-view="shelf" aria-labelledby="h-web">
+      <header class="shelf-head">
+        <h2 id="h-web" class="shelf-label"><a href="#web" tabindex="-1">Web inspiration</a></h2>
+        <p class="shelf-note">Galleries of websites, landing pages and single sections: heroes, navbars, CTAs, footers, pricing.</p>
+      </header>
+      <div class="rows">
+        <article class="cover paper" id="l-9s6ddj" data-id="9s6ddj" data-age="0">
+          <h3 class="cv-t"><a href="http://footer.design/" rel="noopener">Footer</a></h3>
+          <span class="cv-art mono" data-host="footer.design" aria-hidden="true">F</span>
+          <p class="cv-site">footer.design</p>
+          <p class="cv-d">A gallery of website footers filterable by style: typographic, dark, animated.</p>
+          <p class="cv-why">For footer inspiration</p>
+          <p class="cv-m"><span class="cv-dom">footer.design</span><span class="cv-type">Inspiration</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <article class="cover paper" id="l-8zrmn0" data-id="8zrmn0" data-age="0">
+          <h3 class="cv-t"><a href="http://cta.gallery/" rel="noopener">CTA Gallery</a></h3>
+          <span class="cv-art mono" data-host="cta.gallery" aria-hidden="true">C</span>
+          <p class="cv-site">cta.gallery</p>
+          <p class="cv-d">Call-to-action sections from real websites, sorted by buttons, forms, pop-ups, newsletters and pricing.</p>
+          <p class="cv-why">For a call to action that converts</p>
+          <p class="cv-m"><span class="cv-dom">cta.gallery</span><span class="cv-type">Inspiration</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <article class="cover paper" id="l-4of6dt" data-id="4of6dt" data-age="0">
+          <h3 class="cv-t"><a href="http://navbar.gallery/" rel="noopener">Navbar Gallery</a></h3>
+          <span class="cv-art mono" data-host="navbar.gallery" aria-hidden="true">N</span>
+          <p class="cv-site">navbar.gallery</p>
+          <p class="cv-d">Website navigation bars grouped by type: dropdowns, mega menus, sidebars.</p>
+          <p class="cv-why">For designing site navigation</p>
+          <p class="cv-m"><span class="cv-dom">navbar.gallery</span><span class="cv-type">Inspiration</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <article class="cover paper" id="l-3a1iv6" data-id="3a1iv6" data-age="0">
+          <h3 class="cv-t"><a href="http://saaspo.com/" rel="noopener">Saaspo</a></h3>
+          <span class="cv-art mono" data-host="saaspo.com" aria-hidden="true">S</span>
+          <p class="cv-site">saaspo.com</p>
+          <p class="cv-d">A curated collection of SaaS websites, filterable by style and page type, including pricing pages.</p>
+          <p class="cv-why">For SaaS sites and pricing pages</p>
+          <p class="cv-m"><span class="cv-dom">saaspo.com</span><span class="cv-type">Inspiration</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <article class="cover paper" id="l-7dlwij" data-id="7dlwij" data-age="0">
+          <h3 class="cv-t"><a href="http://landing.love/" rel="noopener">Landing Love</a></h3>
+          <span class="cv-art mono" data-host="landing.love" aria-hidden="true">L</span>
+          <p class="cv-site">landing.love</p>
+          <p class="cv-d">Saved as a gallery of landing page inspiration. It did not load when I sorted these links, so it may have moved.</p>
+          <p class="cv-why">For landing page inspiration</p>
+          <p class="cv-m"><span class="cv-dom">landing.love</span><span class="cv-type">Inspiration</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <article class="cover paper" id="l-1av4sr" data-id="1av4sr" data-age="0">
+          <h3 class="cv-t"><a href="http://curated.design/" rel="noopener">Curated</a></h3>
+          <span class="cv-art mono" data-host="curated.design" aria-hidden="true">C</span>
+          <p class="cv-site">curated.design</p>
+          <p class="cv-d">A gallery of live websites and landing pages filterable by style and industry. Advanced filters are Pro.</p>
+          <p class="cv-why">For web design inspiration by industry</p>
+          <p class="cv-m"><span class="cv-dom">curated.design</span><span class="cv-type">Inspiration</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <article class="cover paper" id="l-aw2e45" data-id="aw2e45" data-age="0">
+          <h3 class="cv-t"><a href="http://landdding.com/" rel="noopener">Landdding</a></h3>
+          <span class="cv-art mono" data-host="landdding.com" aria-hidden="true">L</span>
+          <p class="cv-site">landdding.com</p>
+          <p class="cv-d">Landing pages and templates built on Webflow, Framer, WordPress, Wix and Squarespace, filterable by category. Top-notch landings.</p>
+          <p class="cv-why">For landing page layouts</p>
+          <p class="cv-m"><span class="cv-dom">landdding.com</span><span class="cv-type">Inspiration</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <article class="cover paper" id="l-atxsqx" data-id="atxsqx" data-age="0">
+          <h3 class="cv-t"><a href="https://deadsimplesites.com/" rel="noopener">Dead Simple Sites</a></h3>
+          <span class="cv-art mono" data-host="deadsimplesites.com" aria-hidden="true">D</span>
+          <p class="cv-site">deadsimplesites.com</p>
+          <p class="cv-d">A weekly gallery of minimal websites with screenshots. Plain, clean, mostly typographic.</p>
+          <p class="cv-why">For a portfolio that does less</p>
+          <p class="cv-m"><span class="cv-dom">deadsimplesites.com</span><span class="cv-type">Inspiration</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <article class="cover paper" id="l-dj1p5x" data-id="dj1p5x" data-age="0">
+          <h3 class="cv-t"><a href="http://recent.design/" rel="noopener">Recent</a></h3>
+          <span class="cv-art mono" data-host="recent.design" aria-hidden="true">R</span>
+          <p class="cv-site">recent.design</p>
+          <p class="cv-d">A design inspiration feed covering websites, posters, branding, motion, illustration, OG images and app icons, with tools and jobs. Godly.website now redirects here.</p>
+          <p class="cv-why">For a daily scroll of good design</p>
+          <p class="cv-m"><span class="cv-dom">recent.design</span><span class="cv-type">Inspiration</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <article class="cover paper" id="l-41ebiz" data-id="41ebiz" data-age="0">
+          <h3 class="cv-t"><a href="https://www.supahero.io/" rel="noopener">Supahero</a></h3>
+          <span class="cv-art mono" data-host="supahero.io" aria-hidden="true">S</span>
+          <p class="cv-site">supahero.io</p>
+          <p class="cv-d">A curated library of website hero sections. Now part of screensdesign.com.</p>
+          <p class="cv-why">For hero section ideas</p>
+          <p class="cv-m"><span class="cv-dom">supahero.io</span><span class="cv-type">Inspiration</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <article class="cover paper" id="l-2hxgno" data-id="2hxgno" data-age="0">
+          <h3 class="cv-t"><a href="https://www.unsection.com/" rel="noopener">Unsection</a></h3>
+          <span class="cv-art mono" data-host="unsection.com" aria-hidden="true">U</span>
+          <p class="cv-site">unsection.com</p>
+          <p class="cv-d">Website sections collected one by one: heroes, features, pricing, FAQs, footers, navbars. Needs a free sign-up for most of it.</p>
+          <p class="cv-why">For one section at a time for a landing page</p>
+          <p class="cv-m"><span class="cv-dom">unsection.com</span><span class="cv-type">Inspiration</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <article class="cover paper" id="l-6sf1im" data-id="6sf1im" data-age="0">
+          <h3 class="cv-t"><a href="https://minimal.gallery/" rel="noopener">Minimal Gallery</a></h3>
+          <span class="cv-art mono" data-host="minimal.gallery" aria-hidden="true">M</span>
+          <p class="cv-site">minimal.gallery</p>
+          <p class="cv-d">A daily-updated gallery of minimal website design, with Framer and Webflow templates on the side.</p>
+          <p class="cv-why">For restrained, quiet web layouts</p>
+          <p class="cv-m"><span class="cv-dom">minimal.gallery</span><span class="cv-type">Inspiration</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <article class="cover paper" id="l-9094k7" data-id="9094k7" data-age="0">
+          <h3 class="cv-t"><a href="https://calltoinspiration.com/" rel="noopener">Call<wbr>To<wbr>Inspiration</a></h3>
+          <span class="cv-art mono" data-host="calltoinspiration.com" aria-hidden="true">C</span>
+          <p class="cv-site">calltoinspiration.com</p>
+          <p class="cv-d">UI examples captured from real websites and apps, organised by pattern: logins, popups, pricing, dashboards, forms.</p>
+          <p class="cv-why">For seeing how others solve one UI pattern</p>
+          <p class="cv-m"><span class="cv-dom">calltoinspiration.com</span><span class="cv-type">Inspiration</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <a class="see-all" href="#web"><span>See all</span><svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 6l4 4-4 4"/></svg></a>
+      </div>
+      <a class="shelf-plate" href="#web" aria-label="Open the Web inspiration shelf"><span>Web inspiration</span></a>
+    </section>
+    <section class="shelf" id="components" data-view="shelf" aria-labelledby="h-components">
+      <header class="shelf-head">
+        <h2 id="h-components" class="shelf-label"><a href="#components" tabindex="-1">Components and effects</a></h2>
+        <p class="shelf-note">Copy-paste UI, shaders and effects, and building blocks for AI interfaces.</p>
+      </header>
+      <div class="rows">
+        <article class="cover paper" id="l-d2s0kp" data-id="d2s0kp" data-age="0">
+          <h3 class="cv-t"><a href="http://motionin.design/" rel="noopener">Motion</a></h3>
+          <span class="cv-art mono" data-host="motionin.design" aria-hidden="true">M</span>
+          <p class="cv-site">motionin.design</p>
+          <p class="cv-d">Interactive web sections like animated heroes and scroll galleries, sold as a spec and prompt you hand to an AI model to build. One prompt, one section.</p>
+          <p class="cv-why">For animated sections built by AI</p>
+          <p class="cv-m"><span class="cv-dom">motionin.design</span><span class="cv-type">Tool</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <article class="cover paper" id="l-4shxnm" data-id="4shxnm" data-age="0">
+          <h3 class="cv-t"><a href="https://metalforge.xyz/" rel="noopener">Metal<wbr>Forge</a></h3>
+          <span class="cv-art mono" data-host="metalforge.xyz" aria-hidden="true">M</span>
+          <p class="cv-site">metalforge.xyz</p>
+          <p class="cv-d">Shaders and animated effects for SwiftUI, React Native and the web, tweaked with sliders and exported as code. Some free, some on subscription.</p>
+          <p class="cv-why">For shader effects for a mobile app</p>
+          <p class="cv-m"><span class="cv-dom">metalforge.xyz</span><span class="cv-type">Tool</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <article class="cover paper" id="l-aeqnx6" data-id="aeqnx6" data-age="0">
+          <h3 class="cv-t"><a href="https://opensourceui.in/" rel="noopener">Opensource UI</a></h3>
+          <span class="cv-art mono" data-host="opensourceui.in" aria-hidden="true">O</span>
+          <p class="cv-site">opensourceui.in</p>
+          <p class="cv-d">MIT-licensed React and Next.js components in Tailwind, with device mockups, forms, widgets and loaders, each with a live preview.</p>
+          <p class="cv-why">For free React components with mockups</p>
+          <p class="cv-m"><span class="cv-dom">opensourceui.in</span><span class="cv-type">Tool</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <article class="cover paper" id="l-9gk631" data-id="9gk631" data-age="0">
+          <h3 class="cv-t"><a href="https://uiverse.io/" rel="noopener">Uiverse</a></h3>
+          <span class="cv-art mono" data-host="uiverse.io" aria-hidden="true">U</span>
+          <p class="cv-site">uiverse.io</p>
+          <p class="cv-d">Community-made buttons, loaders, toggles and forms you can copy as HTML and CSS, Tailwind, React or Figma. Endless small UI pieces.</p>
+          <p class="cv-why">For grabbing a button or loader fast</p>
+          <p class="cv-m"><span class="cv-dom">uiverse.io</span><span class="cv-type">Tool</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <article class="cover paper" id="l-1qn7xf" data-id="1qn7xf" data-age="0">
+          <h3 class="cv-t"><a href="https://libraries.dev/orbs" rel="noopener">Thinking Orbs</a></h3>
+          <span class="cv-art mono" data-host="libraries.dev" aria-hidden="true">T</span>
+          <p class="cv-site">libraries.dev</p>
+          <p class="cv-d">Animated orbs for AI thinking and loading states, nine of them, for React, React Native and SwiftUI. Moved here from orbs.jakubantalik.com.</p>
+          <p class="cv-why">For a thinking indicator that is not a spinner</p>
+          <p class="cv-m"><span class="cv-dom">libraries.dev</span><span class="cv-type">Tool</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <article class="cover paper" id="l-cgwt50" data-id="cgwt50" data-age="0">
+          <h3 class="cv-t"><a href="https://www.beautifului.dev/" rel="noopener">Beautiful UI</a></h3>
+          <span class="cv-art mono" data-host="beautifului.dev" aria-hidden="true">B</span>
+          <p class="cv-site">beautifului.dev</p>
+          <p class="cv-d">Twenty-plus crafted, MIT-licensed primitives for AI-native interfaces: thinking states, streaming text, approval cards, chat panels and tables.</p>
+          <p class="cv-why">For building blocks for an AI product UI</p>
+          <p class="cv-m"><span class="cv-dom">beautifului.dev</span><span class="cv-type">Tool</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <article class="cover paper" id="l-5954rq" data-id="5954rq" data-age="0">
+          <h3 class="cv-t"><a href="https://metal.jakubantalik.com/" rel="noopener">Liquid Metal</a></h3>
+          <span class="cv-art mono" data-host="metal.jakubantalik.com" aria-hidden="true">L</span>
+          <p class="cv-site">metal.jakubantalik.com</p>
+          <p class="cv-d">A real-time WebGL shader that gives buttons and components a liquid chrome look, tuned with presets and a slider.</p>
+          <p class="cv-why">For a metallic button that actually catches light</p>
+          <p class="cv-m"><span class="cv-dom">metal.jakubantalik.com</span><span class="cv-type">Tool</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <article class="cover paper" id="l-8vn6ys" data-id="8vn6ys" data-age="0">
+          <h3 class="cv-t"><a href="https://transitions.dev/" rel="noopener">Transitions.dev</a></h3>
+          <span class="cv-art mono" data-host="transitions.dev" aria-hidden="true">T</span>
+          <p class="cv-site">transitions.dev</p>
+          <p class="cv-d">More than 40 copy-paste transitions for web apps, plus an AI builder and a motion-audit agent. The essentials for moving between states without jank.</p>
+          <p class="cv-why">For picking a transition for a web app</p>
+          <p class="cv-m"><span class="cv-dom">transitions.dev</span><span class="cv-type">Tool</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <article class="cover paper" id="l-16w7mc" data-id="16w7mc" data-age="0">
+          <h3 class="cv-t"><a href="https://aicss.dev/" rel="noopener">AICSS</a></h3>
+          <span class="cv-art mono" data-host="aicss.dev" aria-hidden="true">A</span>
+          <p class="cv-site">aicss.dev</p>
+          <p class="cv-d">Copy-paste components for AI agent chats: thinking states, tool calls, streaming text and citations, in React, Vue and Svelte. Some are Pro.</p>
+          <p class="cv-why">For designing an AI chat interface</p>
+          <p class="cv-m"><span class="cv-dom">aicss.dev</span><span class="cv-type">Tool</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <article class="cover paper" id="l-dsm6n3" data-id="dsm6n3" data-age="0">
+          <h3 class="cv-t"><a href="https://originkit.dev/" rel="noopener">Originkit</a></h3>
+          <span class="cv-art mono" data-host="originkit.dev" aria-hidden="true">O</span>
+          <p class="cv-site">originkit.dev</p>
+          <p class="cv-d">Free library of animated website components you can copy as code, use in Framer, or pull in through MCP. Ready-made motion for site builds.</p>
+          <p class="cv-why">For dropping ready motion into a site build</p>
+          <p class="cv-m"><span class="cv-dom">originkit.dev</span><span class="cv-type">Tool</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <article class="cover paper" id="l-a5r5aj" data-id="a5r5aj" data-age="0">
+          <h3 class="cv-t"><a href="https://libraries.dev/beam" rel="noopener">Border Beam</a></h3>
+          <span class="cv-art mono" data-host="libraries.dev" aria-hidden="true">B</span>
+          <p class="cv-site">libraries.dev</p>
+          <p class="cv-d">An animated glow that travels around an element&#39;s border, for React, SwiftUI and React Native. Moved here from beam.jakubantalik.com.</p>
+          <p class="cv-why">For making a card or button feel alive</p>
+          <p class="cv-m"><span class="cv-dom">libraries.dev</span><span class="cv-type">Tool</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <article class="cover paper" id="l-45v6tv" data-id="45v6tv" data-age="0">
+          <h3 class="cv-t"><a href="https://canvasui.dev/" rel="noopener">Canvas UI</a></h3>
+          <span class="cv-art mono" data-host="canvasui.dev" aria-hidden="true">C</span>
+          <p class="cv-site">canvasui.dev</p>
+          <p class="cv-d">Open-source library of about 35 WebGL and WebGPU effects that render over live HTML, for React, Vue, Svelte and plain JavaScript. Shader effects on real UI, not on a canvas copy.</p>
+          <p class="cv-why">For adding shader effects to real interface elements</p>
+          <p class="cv-m"><span class="cv-dom">canvasui.dev</span><span class="cv-type">Tool</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <a class="see-all" href="#components"><span>See all</span><svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 6l4 4-4 4"/></svg></a>
+      </div>
+      <a class="shelf-plate" href="#components" aria-label="Open the Components and effects shelf"><span>Components and effects</span></a>
+    </section>
+    <section class="shelf" id="tools" data-view="shelf" aria-labelledby="h-tools">
+      <header class="shelf-head">
+        <h2 id="h-tools" class="shelf-label"><a href="#tools" tabindex="-1">Tools</a></h2>
+        <p class="shelf-note">Single-job tools: compress, generate, convert, research.</p>
+      </header>
+      <div class="rows">
+        <article class="cover paper" id="l-8cpoth" data-id="8cpoth" data-age="0">
+          <h3 class="cv-t"><a href="http://modulify.ai/" rel="noopener">Modulify</a></h3>
+          <span class="cv-art mono" data-host="modulify.ai" aria-hidden="true">M</span>
+          <p class="cv-site">modulify.ai</p>
+          <p class="cv-d">An AI website and web app builder that goes from prompt to site, with CMS, database and hosting. Cheaper than Lovable.</p>
+          <p class="cv-why">For shipping a site from a prompt</p>
+          <p class="cv-m"><span class="cv-dom">modulify.ai</span><span class="cv-type">Tool</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <article class="cover paper" id="l-cokpp0" data-id="cokpp0" data-age="0">
+          <h3 class="cv-t"><a href="http://brik.space/" rel="noopener">Brik</a></h3>
+          <span class="cv-art mono" data-host="brik.space" aria-hidden="true">B</span>
+          <p class="cv-site">brik.space</p>
+          <p class="cv-d">Builds a custom design tool from a text brief, aimed at animation, 3D, typography and interactive work.</p>
+          <p class="cv-why">For a one-off tool for a WebGL idea</p>
+          <p class="cv-m"><span class="cv-dom">brik.space</span><span class="cv-type">Tool</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <article class="cover paper" id="l-3o3za1" data-id="3o3za1" data-age="0">
+          <h3 class="cv-t"><a href="https://texs.org/" rel="noopener">texs.org</a></h3>
+          <span class="cv-art mono" data-host="texs.org" aria-hidden="true">T</span>
+          <p class="cv-site">texs.org</p>
+          <p class="cv-d">Tex Jernigan&#39;s little tools: crossword, VHS and CD label generators, a Google Font lookup and a GIF maker.</p>
+          <p class="cv-why">For oddly specific generators</p>
+          <p class="cv-m"><span class="cv-dom">texs.org</span><span class="cv-type">Tool</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <article class="cover paper" id="l-be5uq5" data-id="be5uq5" data-age="0">
+          <h3 class="cv-t"><a href="https://answerthepublic.com/" rel="noopener">Answer<wbr>The<wbr>Public</a></h3>
+          <span class="cv-art mono" data-host="answerthepublic.com" aria-hidden="true">A</span>
+          <p class="cv-site">answerthepublic.com</p>
+          <p class="cv-d">Shows the questions people search for across Google, YouTube, Amazon and AI tools.</p>
+          <p class="cv-why">For research for content and UX copy</p>
+          <p class="cv-m"><span class="cv-dom">answerthepublic.com</span><span class="cv-type">Tool</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <article class="cover paper" id="l-1dbw0y" data-id="1dbw0y" data-age="0">
+          <h3 class="cv-t"><a href="http://handofyou.app/" rel="noopener">Hand of You</a></h3>
+          <span class="cv-art mono" data-host="handofyou.app" aria-hidden="true">H</span>
+          <p class="cv-site">handofyou.app</p>
+          <p class="cv-d">Draw your letters on screen and it makes a font file from your handwriting. Free.</p>
+          <p class="cv-why">For turning handwriting into a font</p>
+          <p class="cv-m"><span class="cv-dom">handofyou.app</span><span class="cv-type">Tool</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <article class="cover paper" id="l-bc3zyn" data-id="bc3zyn" data-age="0">
+          <h3 class="cv-t"><a href="https://www.gradientool.com/" rel="noopener">Gradientool</a></h3>
+          <span class="cv-art mono" data-host="gradientool.com" aria-hidden="true">G</span>
+          <p class="cv-site">gradientool.com</p>
+          <p class="cv-d">A gradient generator with random shapes, colours and effects, exporting PNG, JPG, MP4 or code.</p>
+          <p class="cv-why">For gradient backgrounds and visuals</p>
+          <p class="cv-m"><span class="cv-dom">gradientool.com</span><span class="cv-type">Tool</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <article class="cover paper" id="l-9hxb56" data-id="9hxb56" data-age="0">
+          <h3 class="cv-t"><a href="https://supercolorpalette.com/" rel="noopener">Super Color Palette</a></h3>
+          <span class="cv-art mono" data-host="supercolorpalette.com" aria-hidden="true">S</span>
+          <p class="cv-site">supercolorpalette.com</p>
+          <p class="cv-d">A colour palette generator with hue, saturation and lightness controls, contrast checks and colours pulled from images.</p>
+          <p class="cv-why">For building a colour palette</p>
+          <p class="cv-m"><span class="cv-dom">supercolorpalette.com</span><span class="cv-type">Tool</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <article class="cover paper" id="l-c8kyan" data-id="c8kyan" data-age="0">
+          <h3 class="cv-t"><a href="https://www.imgto3d.ai/" rel="noopener">IMGto3D</a></h3>
+          <span class="cv-art mono" data-host="imgto3d.ai" aria-hidden="true">I</span>
+          <p class="cv-site">imgto3d.ai</p>
+          <p class="cv-d">Turns a single image into a 3D model exported as OBJ, GLB or STL.</p>
+          <p class="cv-why">For a quick 3D model from a photo</p>
+          <p class="cv-m"><span class="cv-dom">imgto3d.ai</span><span class="cv-type">Tool</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <article class="cover paper" id="l-vy0l9g" data-id="vy0l9g" data-age="0">
+          <h3 class="cv-t"><a href="https://www.fffuel.co/" rel="noopener">fffuel</a></h3>
+          <span class="cv-art mono" data-host="fffuel.co" aria-hidden="true">F</span>
+          <p class="cv-site">fffuel.co</p>
+          <p class="cv-d">Colour tools and SVG generators for gradients, patterns, textures, shapes and backgrounds. A whole drawer of decorative fuel.</p>
+          <p class="cv-why">For generating an SVG background or texture</p>
+          <p class="cv-m"><span class="cv-dom">fffuel.co</span><span class="cv-type">Tool</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <article class="cover paper" id="l-3iz5gc" data-id="3iz5gc" data-age="0">
+          <h3 class="cv-t"><a href="https://squoosh.app/" rel="noopener">Squoosh</a></h3>
+          <span class="cv-art mono" data-host="squoosh.app" aria-hidden="true">S</span>
+          <p class="cv-site">squoosh.app</p>
+          <p class="cv-d">Compress images in the browser and compare codecs and quality side by side. Nothing leaves your machine.</p>
+          <p class="cv-why">For shrinking images before they go on the web</p>
+          <p class="cv-m"><span class="cv-dom">squoosh.app</span><span class="cv-type">Tool</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <a class="see-all" href="#tools"><span>See all</span><svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 6l4 4-4 4"/></svg></a>
+      </div>
+      <a class="shelf-plate" href="#tools" aria-label="Open the Tools shelf"><span>Tools</span></a>
+    </section>
+    <section class="shelf" id="motion" data-view="shelf" aria-labelledby="h-motion">
+      <header class="shelf-head">
+        <h2 id="h-motion" class="shelf-label"><a href="#motion" tabindex="-1">Motion and interaction</a></h2>
+        <p class="shelf-note">Animation references, micro-interactions and tools for showing work in motion.</p>
+      </header>
+      <div class="rows">
+        <article class="cover paper" id="l-3dl4u4" data-id="3dl4u4" data-age="0">
+          <h3 class="cv-t"><a href="http://surface-motion.com/" rel="noopener">Surface Motion</a></h3>
+          <span class="cv-art mono" data-host="surface-motion.com" aria-hidden="true">S</span>
+          <p class="cv-site">surface-motion.com</p>
+          <p class="cv-d">Saved as a dynamic way to showcase design work. It blocks automated checks, so its details are unconfirmed.</p>
+          <p class="cv-why">For showcasing work with motion</p>
+          <p class="cv-m"><span class="cv-dom">surface-motion.com</span><span class="cv-type">Tool</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <article class="cover paper" id="l-b457e3" data-id="b457e3" data-age="0">
+          <h3 class="cv-t"><a href="https://perspectivemock.vercel.app/" rel="noopener">Perspective<wbr>Mock</a></h3>
+          <span class="cv-art mono" data-host="perspectivemock.vercel.app" aria-hidden="true">P</span>
+          <p class="cv-site">perspectivemock.vercel.app</p>
+          <p class="cv-d">Puts screenshots, videos or code into a tilted 3D perspective with camera keyframes and exports MP4. No sign-up.</p>
+          <p class="cv-why">For a quick product showcase animation</p>
+          <p class="cv-m"><span class="cv-dom">perspectivemock.vercel.app</span><span class="cv-type">Tool</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <article class="cover paper" id="l-1yf4ms" data-id="1yf4ms" data-age="0">
+          <h3 class="cv-t"><a href="http://animos.app/" rel="noopener">animos</a></h3>
+          <span class="cv-art mono" data-host="animos.app" aria-hidden="true">A</span>
+          <p class="cv-site">animos.app</p>
+          <p class="cv-d">A browser tool with 25 animation templates for presenting design work: add images or video, export MP4 or WebM.</p>
+          <p class="cv-why">For showcasing a design in a post</p>
+          <p class="cv-m"><span class="cv-dom">animos.app</span><span class="cv-type">Tool</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <article class="cover paper" id="l-6zfqax" data-id="6zfqax" data-age="0">
+          <h3 class="cv-t"><a href="https://reanimate.niazmorshed.dev/" rel="noopener">reanimate</a></h3>
+          <span class="cv-art mono" data-host="reanimate.niazmorshed.dev" aria-hidden="true">R</span>
+          <p class="cv-site">reanimate.niazmorshed.dev</p>
+          <p class="cv-d">An open-source Claude Code skill that rebuilds an animation from a website, video or GIF as code in your project.</p>
+          <p class="cv-why">For recreating a motion reference in code</p>
+          <p class="cv-m"><span class="cv-dom">reanimate.niazmorshed.dev</span><span class="cv-type">Tool</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <article class="cover paper" id="l-a9k7j8" data-id="a9k7j8" data-age="0">
+          <h3 class="cv-t"><a href="https://www.keyloom.app/" rel="noopener">Keyloom</a></h3>
+          <span class="cv-art mono" data-host="keyloom.app" aria-hidden="true">K</span>
+          <p class="cv-site">keyloom.app</p>
+          <p class="cv-d">Prebuilt animated video scenes for Remotion, like a typing search bar or counting stats. Motion videos without After Effects.</p>
+          <p class="cv-why">For product videos made in code</p>
+          <p class="cv-m"><span class="cv-dom">keyloom.app</span><span class="cv-type">Tool</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <article class="cover paper" id="l-83drg7" data-id="83drg7" data-age="0">
+          <h3 class="cv-t"><a href="https://www.jhey.dev/prototypes/2026/segue" rel="noopener">Segue by Jhey</a></h3>
+          <span class="cv-art mono" data-host="jhey.dev" aria-hidden="true">S</span>
+          <p class="cv-site">jhey.dev</p>
+          <p class="cv-d">A single HTML and CSS prototype of a page-to-page transition, with its code shown. Jhey makes the browser do things it should not.</p>
+          <p class="cv-why">For how to build a smooth page transition</p>
+          <p class="cv-m"><span class="cv-dom">jhey.dev</span><span class="cv-type">Reference</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <article class="cover paper" id="l-1e12sy" data-id="1e12sy" data-age="0">
+          <h3 class="cv-t"><a href="http://appmotion.design/" rel="noopener">App Motion</a></h3>
+          <span class="cv-art mono" data-host="appmotion.design" aria-hidden="true">A</span>
+          <p class="cv-site">appmotion.design</p>
+          <p class="cv-d">Saved as a gallery of mobile app animations and transitions. It did not load when I sorted these links and may be offline.</p>
+          <p class="cv-why">For app animation reference</p>
+          <p class="cv-m"><span class="cv-dom">appmotion.design</span><span class="cv-type">Inspiration</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <article class="cover paper" id="l-d37uw3" data-id="d37uw3" data-age="0">
+          <h3 class="cv-t"><a href="http://60fps.design/" rel="noopener">60fps</a></h3>
+          <span class="cv-art mono" data-host="60fps.design" aria-hidden="true">6</span>
+          <p class="cv-site">60fps.design</p>
+          <p class="cv-d">UI animation and interaction examples from iOS and web apps, organised by app, gesture, pattern and effect.</p>
+          <p class="cv-why">For mobile UI animation reference</p>
+          <p class="cv-m"><span class="cv-dom">60fps.design</span><span class="cv-type">Inspiration</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <article class="cover paper" id="l-cxh0oj" data-id="cxh0oj" data-age="0">
+          <h3 class="cv-t"><a href="https://www.designspells.com/" rel="noopener">Design Spells</a></h3>
+          <span class="cv-art mono" data-host="designspells.com" aria-hidden="true">D</span>
+          <p class="cv-site">designspells.com</p>
+          <p class="cv-d">Micro-interactions, easter eggs and small delightful details found in apps and websites. Proof that the tiny things are remembered.</p>
+          <p class="cv-why">For adding one delightful detail</p>
+          <p class="cv-m"><span class="cv-dom">designspells.com</span><span class="cv-type">Inspiration</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <a class="see-all" href="#motion"><span>See all</span><svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 6l4 4-4 4"/></svg></a>
+      </div>
+      <a class="shelf-plate" href="#motion" aria-label="Open the Motion and interaction shelf"><span>Motion and interaction</span></a>
+    </section>
+    <section class="shelf" id="visual" data-view="shelf" aria-labelledby="h-visual">
+      <header class="shelf-head">
+        <h2 id="h-visual" class="shelf-label"><a href="#visual" tabindex="-1">Brand and visual</a></h2>
+        <p class="shelf-note">Branding, social posts, icons, aesthetics and images to look at.</p>
+      </header>
+      <div class="rows">
+        <article class="cover paper" id="l-j8auwp" data-id="j8auwp" data-age="0">
+          <h3 class="cv-t"><a href="https://eyecannndy.com/" rel="noopener">Eyecannndy</a></h3>
+          <span class="cv-art mono" data-host="eyecannndy.com" aria-hidden="true">E</span>
+          <p class="cv-site">eyecannndy.com</p>
+          <p class="cv-d">Saved as visual inspiration. It did not load when I sorted these links, so check it is still there.</p>
+          <p class="cv-why">For visual inspiration</p>
+          <p class="cv-m"><span class="cv-dom">eyecannndy.com</span><span class="cv-type">Inspiration</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <article class="cover paper" id="l-3kqm8a" data-id="3kqm8a" data-age="0">
+          <h3 class="cv-t"><a href="http://ignant.com/" rel="noopener">IGNANT</a></h3>
+          <span class="cv-art mono" data-host="ignant.com" aria-hidden="true">I</span>
+          <p class="cv-site">ignant.com</p>
+          <p class="cv-d">A daily online magazine of art, design, photography, travel and architecture.</p>
+          <p class="cv-why">For a slow scroll for visual ideas</p>
+          <p class="cv-m"><span class="cv-dom">ignant.com</span><span class="cv-type">Article</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <article class="cover paper" id="l-c1j0wk" data-id="c1j0wk" data-age="0">
+          <h3 class="cv-t"><a href="https://www.bxmuseum.com/" rel="noopener">BX Museum</a></h3>
+          <span class="cv-art mono" data-host="bxmuseum.com" aria-hidden="true">B</span>
+          <p class="cv-site">bxmuseum.com</p>
+          <p class="cv-d">An online collection of brand artifacts from companies like LEGO and IKEA, organised by category.</p>
+          <p class="cv-why">For studying how brands show up in the world</p>
+          <p class="cv-m"><span class="cv-dom">bxmuseum.com</span><span class="cv-type">Reference</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <article class="cover paper" id="l-91ism0" data-id="91ism0" data-age="0">
+          <h3 class="cv-t"><a href="https://cari.institute/aesthetics/" rel="noopener">CARI Index of Aesthetics</a></h3>
+          <span class="cv-art mono" data-host="cari.institute" aria-hidden="true">C</span>
+          <p class="cv-site">cari.institute</p>
+          <p class="cv-d">A searchable index of consumer aesthetics and visual eras, filterable by decade. Y2K, Frutiger Aero and the rest, explained.</p>
+          <p class="cv-why">For naming and researching a visual style</p>
+          <p class="cv-m"><span class="cv-dom">cari.institute</span><span class="cv-type">Reference</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <article class="cover paper" id="l-8nn1nv" data-id="8nn1nv" data-age="0">
+          <h3 class="cv-t"><a href="http://arqe.ai/" rel="noopener">Arqe</a></h3>
+          <span class="cv-art mono" data-host="arqe.ai" aria-hidden="true">A</span>
+          <p class="cv-site">arqe.ai</p>
+          <p class="cv-d">Motion templates for social content, animated device mockups and a library of royalty-free AI images. Exporting needs a subscription.</p>
+          <p class="cv-why">For curated images and mockups for social</p>
+          <p class="cv-m"><span class="cv-dom">arqe.ai</span><span class="cv-type">Tool</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <article class="cover paper" id="l-3r88hs" data-id="3r88hs" data-age="0">
+          <h3 class="cv-t"><a href="https://savee.com/" rel="noopener">Savee</a></h3>
+          <span class="cv-art mono" data-host="savee.com" aria-hidden="true">S</span>
+          <p class="cv-site">savee.com</p>
+          <p class="cv-d">A visual inspiration platform: save references into boards and search by word, colour or image. Rabbit hole guaranteed.</p>
+          <p class="cv-why">For building a mood board</p>
+          <p class="cv-m"><span class="cv-dom">savee.com</span><span class="cv-type">Inspiration</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <article class="cover paper" id="l-2rcwn6" data-id="2rcwn6" data-age="0">
+          <h3 class="cv-t"><a href="http://iconly.design/" rel="noopener">Iconly</a></h3>
+          <span class="cv-art mono" data-host="iconly.design" aria-hidden="true">I</span>
+          <p class="cv-site">iconly.design</p>
+          <p class="cv-d">About 2,400 app, game and web app icons, searchable by type, category and colour. For looking, not downloading.</p>
+          <p class="cv-why">For app icon design references</p>
+          <p class="cv-m"><span class="cv-dom">iconly.design</span><span class="cv-type">Inspiration</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <article class="cover paper" id="l-5r1yed" data-id="5r1yed" data-age="0">
+          <h3 class="cv-t"><a href="http://rebrand.gallery/" rel="noopener">Rebrand Gallery</a></h3>
+          <span class="cv-art mono" data-host="rebrand.gallery" aria-hidden="true">R</span>
+          <p class="cv-site">rebrand.gallery</p>
+          <p class="cv-d">Rebrand projects with reveal videos and the logos, colours and type behind them, browsable by industry, style, typeface and studio.</p>
+          <p class="cv-why">For identity and rebrand references</p>
+          <p class="cv-m"><span class="cv-dom">rebrand.gallery</span><span class="cv-type">Inspiration</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <article class="cover paper" id="l-4q3an1" data-id="4q3an1" data-age="0">
+          <h3 class="cv-t"><a href="https://posts.design/" rel="noopener">posts.design</a></h3>
+          <span class="cv-art mono" data-host="posts.design" aria-hidden="true">P</span>
+          <p class="cv-site">posts.design</p>
+          <p class="cv-d">An inspiration library of brand social posts: launches, hiring and event announcements, X headers and OG images. Saved three times, which says something.</p>
+          <p class="cv-why">For designing a launch or announcement post</p>
+          <p class="cv-m"><span class="cv-dom">posts.design</span><span class="cv-type">Inspiration</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <a class="see-all" href="#visual"><span>See all</span><svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 6l4 4-4 4"/></svg></a>
+      </div>
+      <a class="shelf-plate" href="#visual" aria-label="Open the Brand and visual shelf"><span>Brand and visual</span></a>
+    </section>
+    <section class="shelf" id="assets" data-view="shelf" aria-labelledby="h-assets">
+      <header class="shelf-head">
+        <h2 id="h-assets" class="shelf-label"><a href="#assets" tabindex="-1">Type, icons and assets</a></h2>
+        <p class="shelf-note">Fonts, icon sets, illustrations, backgrounds, 3D files and templates.</p>
+      </header>
+      <div class="rows">
+        <article class="cover paper" id="l-dbxskk" data-id="dbxskk" data-age="0">
+          <h3 class="cv-t"><a href="http://wonderlist.design/" rel="noopener">Wonderlist</a></h3>
+          <span class="cv-art mono" data-host="wonderlist.design" aria-hidden="true">W</span>
+          <p class="cv-site">wonderlist.design</p>
+          <p class="cv-d">A paid bundle of 127 Figma website templates, over 1,100 pages across SaaS, portfolio and agency.</p>
+          <p class="cv-why">For full Figma designs to start from</p>
+          <p class="cv-m"><span class="cv-dom">wonderlist.design</span><span class="cv-type">Tool</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <article class="cover paper" id="l-djyma1" data-id="djyma1" data-age="0">
+          <h3 class="cv-t"><a href="https://huggingface.co/datasets/nvidia/simready-assets/tree/main" rel="noopener">NVIDIA Sim<wbr>Ready Assets</a></h3>
+          <span class="cv-art mono" data-host="huggingface.co" aria-hidden="true">N</span>
+          <p class="cv-site">huggingface.co</p>
+          <p class="cv-d">NVIDIA&#39;s dataset of about 476 GB of 3D asset folders: furniture, appliances, tools and more. Great 3D files for scenes.</p>
+          <p class="cv-why">For 3D models for a scene or render</p>
+          <p class="cv-m"><span class="cv-dom">huggingface.co</span><span class="cv-type">Reference</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <article class="cover paper" id="l-95gf9m" data-id="95gf9m" data-age="0">
+          <h3 class="cv-t"><a href="http://grainient.supply/" rel="noopener">Grainient</a></h3>
+          <span class="cv-art mono" data-host="grainient.supply" aria-hidden="true">G</span>
+          <p class="cv-site">grainient.supply</p>
+          <p class="cv-d">Grainy and smooth gradients, animated gradients and AI backgrounds, plus a shader tool. Unlimited gradients, some free.</p>
+          <p class="cv-why">For grainy gradient backgrounds</p>
+          <p class="cv-m"><span class="cv-dom">grainient.supply</span><span class="cv-type">Tool</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <article class="cover paper" id="l-60zzgk" data-id="60zzgk" data-age="0">
+          <h3 class="cv-t"><a href="http://backgrounds.supply/" rel="noopener">Backgrounds Supply</a></h3>
+          <span class="cv-art mono" data-host="backgrounds.supply" aria-hidden="true">B</span>
+          <p class="cv-site">backgrounds.supply</p>
+          <p class="cv-d">More than a thousand backgrounds, wallpapers and gradients licensed for client work, one-time purchase.</p>
+          <p class="cv-why">For backgrounds for client work</p>
+          <p class="cv-m"><span class="cv-dom">backgrounds.supply</span><span class="cv-type">Tool</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <article class="cover paper" id="l-7bzvtu" data-id="7bzvtu" data-age="0">
+          <h3 class="cv-t"><a href="https://kitbitz.art/" rel="noopener">Kitbitz</a></h3>
+          <span class="cv-art mono" data-host="kitbitz.art" aria-hidden="true">K</span>
+          <p class="cv-site">kitbitz.art</p>
+          <p class="cv-d">Over 2,000 hand-drawn CC0 illustrations as SVG and PNG, with Figma kits and an MCP connection.</p>
+          <p class="cv-why">For free hand-drawn illustrations</p>
+          <p class="cv-m"><span class="cv-dom">kitbitz.art</span><span class="cv-type">Tool</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <article class="cover paper" id="l-5lh24o" data-id="5lh24o" data-age="0">
+          <h3 class="cv-t"><a href="https://www.drawkit.com/" rel="noopener">Draw<wbr>Kit</a></h3>
+          <span class="cv-art mono" data-host="drawkit.com" aria-hidden="true">D</span>
+          <p class="cv-site">drawkit.com</p>
+          <p class="cv-d">Vector and 3D illustrations, icons, animations and mockups with Figma plugins. Some packs free.</p>
+          <p class="cv-why">For illustrations for product and marketing</p>
+          <p class="cv-m"><span class="cv-dom">drawkit.com</span><span class="cv-type">Tool</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <article class="cover paper" id="l-3hqf2d" data-id="3hqf2d" data-age="0">
+          <h3 class="cv-t"><a href="http://hugeicons.com/" rel="noopener">Hugeicons</a></h3>
+          <span class="cv-art mono" data-host="hugeicons.com" aria-hidden="true">H</span>
+          <p class="cv-site">hugeicons.com</p>
+          <p class="cv-d">More than 60,000 icons in several styles, with a Figma plugin and packages for React, Vue and Flutter. Free set plus Pro.</p>
+          <p class="cv-why">For an icon set for a product</p>
+          <p class="cv-m"><span class="cv-dom">hugeicons.com</span><span class="cv-type">Tool</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <article class="cover paper" id="l-8u0nt6" data-id="8u0nt6" data-age="0">
+          <h3 class="cv-t"><a href="http://youworkforthem.com/fonts" rel="noopener">You<wbr>Work<wbr>For<wbr>Them Fonts</a></h3>
+          <span class="cv-art mono" data-host="youworkforthem.com" aria-hidden="true">Y</span>
+          <p class="cv-site">youworkforthem.com</p>
+          <p class="cv-d">A long-running marketplace of curated fonts from independent foundries, with one-time licences.</p>
+          <p class="cv-why">For buying a commercial typeface</p>
+          <p class="cv-m"><span class="cv-dom">youworkforthem.com</span><span class="cv-type">Tool</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <article class="cover paper" id="l-67wow2" data-id="67wow2" data-age="0">
+          <h3 class="cv-t"><a href="http://fontinlogo.com/" rel="noopener">Font In Logo</a></h3>
+          <span class="cv-art mono" data-host="fontinlogo.com" aria-hidden="true">F</span>
+          <p class="cv-site">fontinlogo.com</p>
+          <p class="cv-d">The typefaces behind well-known brand logos, browsable by brand, industry or font.</p>
+          <p class="cv-why">For finding the font in a logo</p>
+          <p class="cv-m"><span class="cv-dom">fontinlogo.com</span><span class="cv-type">Reference</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <article class="cover paper" id="l-t5px27" data-id="t5px27" data-age="0">
+          <h3 class="cv-t"><a href="https://www.typewolf.com/" rel="noopener">Typewolf</a></h3>
+          <span class="cv-art mono" data-host="typewolf.com" aria-hidden="true">T</span>
+          <p class="cv-site">typewolf.com</p>
+          <p class="cv-d">Fonts used on real websites, pairing ideas, popularity lists and guides. Where I go to choose and pair typefaces.</p>
+          <p class="cv-why">For picking and pairing typefaces</p>
+          <p class="cv-m"><span class="cv-dom">typewolf.com</span><span class="cv-type">Reference</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <a class="see-all" href="#assets"><span>See all</span><svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 6l4 4-4 4"/></svg></a>
+      </div>
+      <a class="shelf-plate" href="#assets" aria-label="Open the Type, icons and assets shelf"><span>Type, icons and assets</span></a>
+    </section>
+    <section class="shelf" id="play" data-view="shelf" aria-labelledby="h-play">
+      <header class="shelf-head">
+        <h2 id="h-play" class="shelf-label"><a href="#play" tabindex="-1">Playful web</a></h2>
+        <p class="shelf-note">Experiments, toys and delightful corners of the internet.</p>
+      </header>
+      <div class="rows">
+        <article class="cover paper" id="l-y5wtme" data-id="y5wtme" data-age="0">
+          <h3 class="cv-t"><a href="https://www.gigabanger.com/" rel="noopener">antislop</a></h3>
+          <span class="cv-art mono" data-host="gigabanger.com" aria-hidden="true">A</span>
+          <p class="cv-site">gigabanger.com</p>
+          <p class="cv-d">Saved without a note, and the page only says &quot;antislop&quot;, so it is unclear what this is. Worth a second look.</p>
+          <p class="cv-why">For unclear, check again</p>
+          <p class="cv-m"><span class="cv-dom">gigabanger.com</span><span class="cv-type">Reference</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <article class="cover paper" id="l-dem4q2" data-id="dem4q2" data-age="0">
+          <h3 class="cv-t"><a href="https://random-topic-generator-woad.vercel.app/" rel="noopener">Speech Practice</a></h3>
+          <span class="cv-art mono" data-host="random-topic-generator-woad.vercel.app" aria-hidden="true">S</span>
+          <p class="cv-site">random-topic-generator-woad.vercel.app</p>
+          <p class="cv-d">Random topics for impromptu speaking practice, with a timer, recording and interview questions.</p>
+          <p class="cv-why">For practising for a talk or presentation</p>
+          <p class="cv-m"><span class="cv-dom">random-topic-generator-woad.vercel.app</span><span class="cv-type">Tool</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <article class="cover paper" id="l-4g494z" data-id="4g494z" data-age="0">
+          <h3 class="cv-t"><a href="https://origamiarchive.com/" rel="noopener">Origami Archive</a></h3>
+          <span class="cv-art mono" data-host="origamiarchive.com" aria-hidden="true">O</span>
+          <p class="cv-site">origamiarchive.com</p>
+          <p class="cv-d">A personal archive of origami prototypes and design files from 2021 to 2024, each downloadable.</p>
+          <p class="cv-why">For studying another designer&#39;s prototypes</p>
+          <p class="cv-m"><span class="cv-dom">origamiarchive.com</span><span class="cv-type">Reference</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <article class="cover paper" id="l-4l0yrp" data-id="4l0yrp" data-age="0">
+          <h3 class="cv-t"><a href="http://earth.nullschool.net/" rel="noopener">earth</a></h3>
+          <span class="cv-art mono" data-host="earth.nullschool.net" aria-hidden="true">E</span>
+          <p class="cv-site">earth.nullschool.net</p>
+          <p class="cv-d">The planet&#39;s wind, weather and ocean conditions live on a spinning globe. A classic of data visualisation.</p>
+          <p class="cv-why">For data visualisation done beautifully</p>
+          <p class="cv-m"><span class="cv-dom">earth.nullschool.net</span><span class="cv-type">Inspiration</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <article class="cover paper" id="l-5qae89" data-id="5qae89" data-age="0">
+          <h3 class="cv-t"><a href="http://paperplanes.world/" rel="noopener">Paper Planes</a></h3>
+          <span class="cv-art mono" data-host="paperplanes.world" aria-hidden="true">P</span>
+          <p class="cv-site">paperplanes.world</p>
+          <p class="cv-d">Throw a virtual paper plane and catch ones thrown by people around the world.</p>
+          <p class="cv-why">For a delightful global web experience</p>
+          <p class="cv-m"><span class="cv-dom">paperplanes.world</span><span class="cv-type">Inspiration</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <article class="cover paper" id="l-59lxuq" data-id="59lxuq" data-age="0">
+          <h3 class="cv-t"><a href="http://liumichelle.com/sketchbook" rel="noopener">Michelle Liu&#39;s Sketchbook</a></h3>
+          <span class="cv-art mono" data-host="liumichelle.com" aria-hidden="true">M</span>
+          <p class="cv-site">liumichelle.com</p>
+          <p class="cv-d">A living digital sketchbook on product designer Michelle Liu&#39;s personal site.</p>
+          <p class="cv-why">For a personal site with a sketchbook</p>
+          <p class="cv-m"><span class="cv-dom">liumichelle.com</span><span class="cv-type">Inspiration</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <article class="cover paper" id="l-2wip5z" data-id="2wip5z" data-age="0">
+          <h3 class="cv-t"><a href="http://marijanapav.com/stamps" rel="noopener">Digital Stamp Collection</a></h3>
+          <span class="cv-art mono" data-host="marijanapav.com" aria-hidden="true">D</span>
+          <p class="cv-site">marijanapav.com</p>
+          <p class="cv-d">Digitally recreated postage stamps, made as a tribute to a grandfather&#39;s stamp collection.</p>
+          <p class="cv-why">For stamp graphics and typography</p>
+          <p class="cv-m"><span class="cv-dom">marijanapav.com</span><span class="cv-type">Inspiration</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <article class="cover paper" id="l-9233jw" data-id="9233jw" data-age="0">
+          <h3 class="cv-t"><a href="http://poetry.camera/" rel="noopener">Poetry Camera</a></h3>
+          <span class="cv-art mono" data-host="poetry.camera" aria-hidden="true">P</span>
+          <p class="cv-site">poetry.camera</p>
+          <p class="cv-d">An instant camera that prints a poem about what it sees instead of a photo. The DIY version is open source.</p>
+          <p class="cv-why">For a beautiful hardware idea</p>
+          <p class="cv-m"><span class="cv-dom">poetry.camera</span><span class="cv-type">Inspiration</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <article class="cover paper" id="l-638bgj" data-id="638bgj" data-age="0">
+          <h3 class="cv-t"><a href="http://everynoise.com/" rel="noopener">Every Noise at Once</a></h3>
+          <span class="cv-art mono" data-host="everynoise.com" aria-hidden="true">E</span>
+          <p class="cv-site">everynoise.com</p>
+          <p class="cv-d">An interactive map of thousands of music genres with audio samples. Not updated since its creator left Spotify in 2023.</p>
+          <p class="cv-why">For every music genre ever</p>
+          <p class="cv-m"><span class="cv-dom">everynoise.com</span><span class="cv-type">Inspiration</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <article class="cover paper" id="l-5ixxax" data-id="5ixxax" data-age="0">
+          <h3 class="cv-t"><a href="http://music.jessyin.world/" rel="noopener">Visual Instruments</a></h3>
+          <span class="cv-art mono" data-host="music.jessyin.world" aria-hidden="true">V</span>
+          <p class="cv-site">music.jessyin.world</p>
+          <p class="cv-d">Turns an image into tiles that play sounds; hover, swap and retune them. Visual instruments.</p>
+          <p class="cv-why">For playful image-to-music interaction</p>
+          <p class="cv-m"><span class="cv-dom">music.jessyin.world</span><span class="cv-type">Inspiration</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <article class="cover paper" id="l-c2myue" data-id="c2myue" data-age="0">
+          <h3 class="cv-t"><a href="https://profconradi.com/" rel="noopener">Simone Conradi</a></h3>
+          <span class="cv-art mono" data-host="profconradi.com" aria-hidden="true">S</span>
+          <p class="cv-site">profconradi.com</p>
+          <p class="cv-d">Mathematical art and physics simulations, from polynomial roots to complex-plane plots. Math, visualised beautifully.</p>
+          <p class="cv-why">For generative and math-based imagery</p>
+          <p class="cv-m"><span class="cv-dom">profconradi.com</span><span class="cv-type">Inspiration</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <article class="cover paper" id="l-8qb5d7" data-id="8qb5d7" data-age="0">
+          <h3 class="cv-t"><a href="http://synesthesiaengine.netlify.app/" rel="noopener">Synesthesia Engine</a></h3>
+          <span class="cv-art mono" data-host="synesthesiaengine.netlify.app" aria-hidden="true">S</span>
+          <p class="cv-site">synesthesiaengine.netlify.app</p>
+          <p class="cv-d">Upload an image and hear it as sound, with a live visualisation.</p>
+          <p class="cv-why">For turning images into sound</p>
+          <p class="cv-m"><span class="cv-dom">synesthesiaengine.netlify.app</span><span class="cv-type">Inspiration</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <article class="cover paper" id="l-541fsq" data-id="541fsq" data-age="0">
+          <h3 class="cv-t"><a href="http://midlife.engineering/" rel="noopener">Midlife Engineering</a></h3>
+          <span class="cv-art mono" data-host="midlife.engineering" aria-hidden="true">M</span>
+          <p class="cv-site">midlife.engineering</p>
+          <p class="cv-d">Interactive sound therapy: ambient music you play with for relaxing, focus and sleep.</p>
+          <p class="cv-why">For an experimental sound experience</p>
+          <p class="cv-m"><span class="cv-dom">midlife.engineering</span><span class="cv-type">Inspiration</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <article class="cover paper" id="l-c7hr7i" data-id="c7hr7i" data-age="0">
+          <h3 class="cv-t"><a href="https://ransom-note.vercel.app/" rel="noopener">Ransom Note Generator</a></h3>
+          <span class="cv-art mono" data-host="ransom-note.vercel.app" aria-hidden="true">R</span>
+          <p class="cv-site">ransom-note.vercel.app</p>
+          <p class="cv-d">Sets your text in mixed cut-out letters like a ransom note, shareable as a link or image.</p>
+          <p class="cv-why">For a ransom note look, for fun</p>
+          <p class="cv-m"><span class="cv-dom">ransom-note.vercel.app</span><span class="cv-type">Tool</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <article class="cover paper" id="l-p39ez8" data-id="p39ez8" data-age="0">
+          <h3 class="cv-t"><a href="https://justforfun.io/" rel="noopener">Just For Fun</a></h3>
+          <span class="cv-art mono" data-host="justforfun.io" aria-hidden="true">J</span>
+          <p class="cv-site">justforfun.io</p>
+          <p class="cv-d">A showcase of playful creative-coding projects like Windows 93, Tixy.land and CSS 3D clouds.</p>
+          <p class="cv-why">For experimental web inspiration</p>
+          <p class="cv-m"><span class="cv-dom">justforfun.io</span><span class="cv-type">Inspiration</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <article class="cover paper" id="l-18xqcv" data-id="18xqcv" data-age="0">
+          <h3 class="cv-t"><a href="https://howubeen.com/" rel="noopener">How u been</a></h3>
+          <span class="cv-art mono" data-host="howubeen.com" aria-hidden="true">H</span>
+          <p class="cv-site">howubeen.com</p>
+          <p class="cv-d">A fill-in postcard you draw on and send when someone asks how you have been.</p>
+          <p class="cv-why">For replying to &quot;how you been&quot;</p>
+          <p class="cv-m"><span class="cv-dom">howubeen.com</span><span class="cv-type">Inspiration</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <article class="cover paper" id="l-5m7l0a" data-id="5m7l0a" data-age="0">
+          <h3 class="cv-t"><a href="https://cityguesser.eu/" rel="noopener">City Guesser</a></h3>
+          <span class="cv-art mono" data-host="cityguesser.eu" aria-hidden="true">C</span>
+          <p class="cv-site">cityguesser.eu</p>
+          <p class="cv-d">Watch a video from somewhere on Earth and guess where on the map. Has private multiplayer rooms.</p>
+          <p class="cv-why">For a break, honestly</p>
+          <p class="cv-m"><span class="cv-dom">cityguesser.eu</span><span class="cv-type">Inspiration</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <a class="see-all" href="#play"><span>See all</span><svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 6l4 4-4 4"/></svg></a>
+      </div>
+      <a class="shelf-plate" href="#play" aria-label="Open the Playful web shelf"><span>Playful web</span></a>
+    </section>
+    <section class="shelf" id="directories" data-view="shelf" aria-labelledby="h-directories">
+      <header class="shelf-head">
+        <h2 id="h-directories" class="shelf-label"><a href="#directories" tabindex="-1">Directories</a></h2>
+        <p class="shelf-note">Lists of tools and resources, for when nothing here fits.</p>
+      </header>
+      <div class="rows">
+        <article class="cover paper" id="l-dcpfce" data-id="dcpfce" data-age="0">
+          <h3 class="cv-t"><a href="http://on.design/" rel="noopener">on.design</a></h3>
+          <span class="cv-art mono" data-host="on.design" aria-hidden="true">O</span>
+          <p class="cv-site">on.design</p>
+          <p class="cv-d">An invite-only design community where designers post work and build profiles.</p>
+          <p class="cv-why">For a place to be found as a designer</p>
+          <p class="cv-m"><span class="cv-dom">on.design</span><span class="cv-type">Reference</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <article class="cover paper" id="l-ddiz05" data-id="ddiz05" data-age="0">
+          <h3 class="cv-t"><a href="https://builtbydesigners.com/" rel="noopener">Built by Designers</a></h3>
+          <span class="cv-art mono" data-host="builtbydesigners.com" aria-hidden="true">B</span>
+          <p class="cv-site">builtbydesigners.com</p>
+          <p class="cv-d">Apps, tools, websites and experiments that designers built and shipped themselves.</p>
+          <p class="cv-why">For inspiration for a side project</p>
+          <p class="cv-m"><span class="cv-dom">builtbydesigners.com</span><span class="cv-type">Inspiration</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <article class="cover paper" id="l-42di41" data-id="42di41" data-age="0">
+          <h3 class="cv-t"><a href="https://toolfolio.com/" rel="noopener">Toolfolio</a></h3>
+          <span class="cv-art mono" data-host="toolfolio.com" aria-hidden="true">T</span>
+          <p class="cv-site">toolfolio.com</p>
+          <p class="cv-d">A directory of tools across design, AI, code, marketing and productivity, with daily picks and deals. Formerly toolfolio.io.</p>
+          <p class="cv-why">For unlimited tools to browse</p>
+          <p class="cv-m"><span class="cv-dom">toolfolio.com</span><span class="cv-type">Reference</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <article class="cover paper" id="l-aqnjt4" data-id="aqnjt4" data-age="0">
+          <h3 class="cv-t"><a href="https://designengineer.tools/" rel="noopener">Design Engineer Tools</a></h3>
+          <span class="cv-art mono" data-host="designengineer.tools" aria-hidden="true">D</span>
+          <p class="cv-site">designengineer.tools</p>
+          <p class="cv-d">Tools for web design engineers sorted into inspiration, AI code, components, motion, 3D, fonts and browser.</p>
+          <p class="cv-why">For design engineering toolkit</p>
+          <p class="cv-m"><span class="cv-dom">designengineer.tools</span><span class="cv-type">Reference</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <article class="cover paper" id="l-5plkpf" data-id="5plkpf" data-age="0">
+          <h3 class="cv-t"><a href="https://designtools.fyi/" rel="noopener">designtools.fyi</a></h3>
+          <span class="cv-art mono" data-host="designtools.fyi" aria-hidden="true">D</span>
+          <p class="cv-site">designtools.fyi</p>
+          <p class="cv-d">About 100 design tools ranked by role, from art director to design engineer, each marked free, paid or open source.</p>
+          <p class="cv-why">For which tools people in a role use</p>
+          <p class="cv-m"><span class="cv-dom">designtools.fyi</span><span class="cv-type">Reference</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <article class="cover paper" id="l-ez2tgu" data-id="ez2tgu" data-age="0">
+          <h3 class="cv-t"><a href="https://markitnow.net/" rel="noopener">Mark-it</a></h3>
+          <span class="cv-art mono" data-host="markitnow.net" aria-hidden="true">M</span>
+          <p class="cv-site">markitnow.net</p>
+          <p class="cv-d">A personal directory of design resources: tools, inspiration, fonts, motion assets and AI tools.</p>
+          <p class="cv-why">For browsing resources by category</p>
+          <p class="cv-m"><span class="cv-dom">markitnow.net</span><span class="cv-type">Reference</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <article class="cover paper" id="l-brz40f" data-id="brz40f" data-age="0">
+          <h3 class="cv-t"><a href="https://www.designminis.com/" rel="noopener">Design Minis</a></h3>
+          <span class="cv-art mono" data-host="designminis.com" aria-hidden="true">D</span>
+          <p class="cv-site">designminis.com</p>
+          <p class="cv-d">Small single-purpose tools made by designers, filterable by colour, type, motion, icons and layout, each marked free or paid.</p>
+          <p class="cv-why">For finding a tiny tool for one job</p>
+          <p class="cv-m"><span class="cv-dom">designminis.com</span><span class="cv-type">Reference</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <article class="cover paper" id="l-2gny6g" data-id="2gny6g" data-age="0">
+          <h3 class="cv-t"><a href="https://mkdir.directory/" rel="noopener">mkdir</a></h3>
+          <span class="cv-art mono" data-host="mkdir.directory" aria-hidden="true">M</span>
+          <p class="cv-site">mkdir.directory</p>
+          <p class="cv-d">About 38 web design inspiration directories, ranked by votes. An inspiration list of inspiration lists.</p>
+          <p class="cv-why">For finding new inspiration sources</p>
+          <p class="cv-m"><span class="cv-dom">mkdir.directory</span><span class="cv-type">Reference</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <article class="cover paper" id="l-5juyrh" data-id="5juyrh" data-age="0">
+          <h3 class="cv-t"><a href="https://designeer.xyz/" rel="noopener">Designeer</a></h3>
+          <span class="cv-art mono" data-host="designeer.xyz" aria-hidden="true">D</span>
+          <p class="cv-site">designeer.xyz</p>
+          <p class="cv-d">A collection of interface craft, component libraries, AI tools and resources for builders. It did not load when I sorted these links.</p>
+          <p class="cv-why">For resources for design engineers</p>
+          <p class="cv-m"><span class="cv-dom">designeer.xyz</span><span class="cv-type">Reference</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <a class="see-all" href="#directories"><span>See all</span><svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 6l4 4-4 4"/></svg></a>
+      </div>
+      <a class="shelf-plate" href="#directories" aria-label="Open the Directories shelf"><span>Directories</span></a>
+    </section>
+    <section class="shelf" id="ai" data-view="shelf" aria-labelledby="h-ai">
+      <header class="shelf-head">
+        <h2 id="h-ai" class="shelf-label"><a href="#ai" tabindex="-1">AI and code</a></h2>
+        <p class="shelf-note">Design systems and skills for AI coders, and open-source projects to learn from.</p>
+      </header>
+      <div class="rows">
+        <article class="cover paper" id="l-6ynx1l" data-id="6ynx1l" data-age="0">
+          <h3 class="cv-t"><a href="https://github.com/LibreChat-AI/LibreChat" rel="noopener">Libre<wbr>Chat</a></h3>
+          <span class="cv-art mono" data-host="github.com" aria-hidden="true">L</span>
+          <p class="cv-site">github.com</p>
+          <p class="cv-d">An open-source, self-hostable AI chat app that works with many providers and supports agents and tools.</p>
+          <p class="cv-why">For a self-hosted ChatGPT-style app</p>
+          <p class="cv-m"><span class="cv-dom">github.com</span><span class="cv-type">Tool</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <article class="cover paper" id="l-9zon4l" data-id="9zon4l" data-age="0">
+          <h3 class="cv-t"><a href="https://github.com/heygen-com/hyperframes" rel="noopener">Hyper<wbr>Frames</a></h3>
+          <span class="cv-art mono" data-host="github.com" aria-hidden="true">H</span>
+          <p class="cv-site">github.com</p>
+          <p class="cv-d">Renders HTML, CSS, media and animation into MP4 with headless Chrome and FFmpeg. Video from web code.</p>
+          <p class="cv-why">For making video from HTML</p>
+          <p class="cv-m"><span class="cv-dom">github.com</span><span class="cv-type">Tool</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <article class="cover paper" id="l-1uykgg" data-id="1uykgg" data-age="0">
+          <h3 class="cv-t"><a href="https://github.com/cloudflare/agentic-inbox" rel="noopener">agentic-inbox</a></h3>
+          <span class="cv-art mono" data-host="github.com" aria-hidden="true">A</span>
+          <p class="cv-site">github.com</p>
+          <p class="cv-d">Cloudflare&#39;s open-source, self-hosted email client with an AI agent built in, running on Workers.</p>
+          <p class="cv-why">For reference for an AI email product</p>
+          <p class="cv-m"><span class="cv-dom">github.com</span><span class="cv-type">Tool</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <article class="cover paper" id="l-9b9xn0" data-id="9b9xn0" data-age="0">
+          <h3 class="cv-t"><a href="https://sneakpeek.design/" rel="noopener">Sneak Peek</a></h3>
+          <span class="cv-art mono" data-host="sneakpeek.design" aria-hidden="true">S</span>
+          <p class="cv-site">sneakpeek.design</p>
+          <p class="cv-d">A newsletter on how leading design teams use AI in their work.</p>
+          <p class="cv-why">For keeping up with AI in design teams</p>
+          <p class="cv-m"><span class="cv-dom">sneakpeek.design</span><span class="cv-type">Article</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <article class="cover paper" id="l-tzu99e" data-id="tzu99e" data-age="0">
+          <h3 class="cv-t"><a href="https://www.ui-skills.com/" rel="noopener">UI Skills</a></h3>
+          <span class="cv-art mono" data-host="ui-skills.com" aria-hidden="true">U</span>
+          <p class="cv-site">ui-skills.com</p>
+          <p class="cv-d">Design-engineering skills and guides for AI agents covering accessibility, motion and interface quality, with a CLI and MCP.</p>
+          <p class="cv-why">For teaching an AI agent good UI</p>
+          <p class="cv-m"><span class="cv-dom">ui-skills.com</span><span class="cv-type">Reference</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <article class="cover paper" id="l-3k3m9f" data-id="3k3m9f" data-age="0">
+          <h3 class="cv-t"><a href="https://styles.refero.design/" rel="noopener">Refero Styles</a></h3>
+          <span class="cv-art mono" data-host="styles.refero.design" aria-hidden="true">R</span>
+          <p class="cv-site">styles.refero.design</p>
+          <p class="cv-d">More than 2,000 design systems pulled from product websites, with colours, type and spacing, each as a DESIGN.md file for AI coding tools.</p>
+          <p class="cv-why">For giving an AI coder a real design system</p>
+          <p class="cv-m"><span class="cv-dom">styles.refero.design</span><span class="cv-type">Reference</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+      </div>
+      <a class="shelf-plate" href="#ai" aria-label="Open the AI and code shelf"><span>AI and code</span></a>
+    </section>
+    <section class="shelf" id="reading" data-view="shelf" aria-labelledby="h-reading">
+      <header class="shelf-head">
+        <h2 id="h-reading" class="shelf-label"><a href="#reading" tabindex="-1">Reading and references</a></h2>
+        <p class="shelf-note">Books, tutorials, archives and references worth returning to.</p>
+      </header>
+      <div class="rows">
+        <article class="cover paper" id="l-8n9zt1" data-id="8n9zt1" data-age="0">
+          <h3 class="cv-t"><a href="http://component.gallery/" rel="noopener">The Component Gallery</a></h3>
+          <span class="cv-art mono" data-host="component.gallery" aria-hidden="true">T</span>
+          <p class="cv-site">component.gallery</p>
+          <p class="cv-d">UI components from about 95 public design systems, thousands of examples. Compare how each one builds the same thing.</p>
+          <p class="cv-why">For naming and comparing components</p>
+          <p class="cv-m"><span class="cv-dom">component.gallery</span><span class="cv-type">Reference</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <article class="cover paper" id="l-5za6as" data-id="5za6as" data-age="0">
+          <h3 class="cv-t"><a href="https://archive.org/" rel="noopener">Internet Archive</a></h3>
+          <span class="cv-art mono" data-host="archive.org" aria-hidden="true">I</span>
+          <p class="cv-site">archive.org</p>
+          <p class="cv-d">A digital library of texts, films, music and old web pages through the Wayback Machine.</p>
+          <p class="cv-why">For finding an old website or public-domain material</p>
+          <p class="cv-m"><span class="cv-dom">archive.org</span><span class="cv-type">Reference</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <article class="cover paper" id="l-2dq23m" data-id="2dq23m" data-age="0">
+          <h3 class="cv-t"><a href="https://tympanus.net/codrops/" rel="noopener">The New Collective (Codrops)</a></h3>
+          <span class="cv-art mono" data-host="tympanus.net" aria-hidden="true">T</span>
+          <p class="cv-site">tympanus.net</p>
+          <p class="cv-d">Frontend and design tutorials, more than 500 free demos and a showcase of notable sites. Codrops now carries this name.</p>
+          <p class="cv-why">For creative coding tutorials and demos</p>
+          <p class="cv-m"><span class="cv-dom">tympanus.net</span><span class="cv-type">Article</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <article class="cover paper" id="l-bktkr0" data-id="bktkr0" data-age="0">
+          <h3 class="cv-t"><a href="https://hallofshame.design/" rel="noopener">Dark Patterns Hall of Shame</a></h3>
+          <span class="cv-art mono" data-host="hallofshame.design" aria-hidden="true">D</span>
+          <p class="cv-site">hallofshame.design</p>
+          <p class="cv-d">Dark patterns and manipulative design from real companies, tagged by pattern type. What not to ship.</p>
+          <p class="cv-why">For checking a flow for dark patterns</p>
+          <p class="cv-m"><span class="cv-dom">hallofshame.design</span><span class="cv-type">Reference</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+        <article class="cover paper" id="l-53ldfb" data-id="53ldfb" data-age="0">
+          <h3 class="cv-t"><a href="https://productdesignpsychology.com/" rel="noopener">Product Design Psychology</a></h3>
+          <span class="cv-art mono" data-host="productdesignpsychology.com" aria-hidden="true">P</span>
+          <p class="cv-site">productdesignpsychology.com</p>
+          <p class="cv-d">A free online book in 40 chapters on the psychology behind product design: the designer&#39;s mind, interfaces, users and organisations.</p>
+          <p class="cv-why">For understanding why people behave as they do in products</p>
+          <p class="cv-m"><span class="cv-dom">productdesignpsychology.com</span><span class="cv-type">Article</span><time datetime="2026-11-02">2 Nov 2026</time></p>
+        </article>
+      </div>
+      <a class="shelf-plate" href="#reading" aria-label="Open the Reading and references shelf"><span>Reading and references</span></a>
+    </section>
+  </div>
+</main>
+
+<div class="minibar" id="minibar" data-js aria-hidden="true">
+  <button type="button" class="mini-mark" tabindex="-1" aria-label="Back to the top"><svg viewBox="0 0 32 32" width="22" height="22">
+  <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="4" y="5" width="5" height="21" rx="1.6"/>
+    <rect x="12" y="8.5" width="5" height="17.5" rx="1.6"/>
+    <rect x="19.4" y="7" width="5" height="19" rx="1.6" transform="rotate(16 24.4 26)"/>
+    <path d="M2 29h28"/>
+  </g></svg></button>
+  <nav class="aisles" aria-label="Jump to a shelf"></nav>
+  <button type="button" class="btn icon mini-search" tabindex="-1" aria-label="Search the shelves"><svg class="i" viewBox="0 0 20 20" aria-hidden="true"><circle cx="9" cy="9" r="5.5"/><path d="M13 13l4 4"/></svg></button>
+  <button type="button" class="btn icon" id="random-mini" tabindex="-1" aria-label="Wander to a random book"><svg class="i compass" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="7.2"/><path class="needle" d="M12.6 7.4l-1.5 3.7-3.7 1.5 1.5-3.7z"/></svg></button>
+</div>
+
+<footer class="foot">
+  <div class="why-wrap" data-js>
+    <span class="foot-mark" aria-hidden="true"><svg class="lockup" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 211 44" width="211" height="44" aria-hidden="true" focusable="false">
+  <svg x="0" y="0" width="44" height="44" viewBox="0 0 32 32" overflow="visible">
+  <g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+    <rect class="bk bk1" x="4" y="5" width="5" height="21" rx="1.6"/>
+    <rect class="bk bk2" x="12" y="8.5" width="5" height="17.5" rx="1.6"/>
+    <rect class="bk bk3" x="19.4" y="7" width="5" height="19" rx="1.6" transform="rotate(16 24.4 26)"/>
+    <path d="M2 29h28"/>
+  </g></svg>
+  <g transform="translate(54 3)"><path fill="currentColor" d="M7.08 32L2.92 32L2.92 3.2L7.08 3.2L7.08 32M16.28 32L12.12 32L12.12 11.6L16.28 11.6L16.28 32M16.52 7.6L11.92 7.6L11.92 2.92L16.52 2.92L16.52 7.6M25.48 32L21.32 32L21.32 11.6L25.28 11.6L25.28 15.48Q26.28 13.64 28.04 12.52L28.04 12.52Q30.12 11.2 32.88 11.2L32.88 11.2Q36.16 11.2 38.04 13.04Q39.92 14.88 39.92 17.92L39.92 17.92L39.92 32L35.8 32L35.8 18.88Q35.8 16.76 34.74 15.72Q33.68 14.68 31.6 14.68L31.6 14.68Q29.8 14.68 28.42 15.48Q27.04 16.28 26.26 17.68Q25.48 19.08 25.48 21L25.48 21L25.48 32M48.92 32L44.76 32L44.76 2.68L48.92 2.68L48.92 20.44L57.68 11.6L62.92 11.6L52.92 21.32L63.32 32L58 32L48.92 22.4L48.92 32M69.96 32L65.8 32L65.8 11.6L69.76 11.6L69.76 15.48Q70.76 13.64 72.48 12.52L72.48 12.52Q74.48 11.2 77 11.2L77 11.2Q80.04 11.2 81.88 12.96L81.88 12.96Q82.84 13.92 83.32 15.24L83.32 15.24Q84.32 13.56 86 12.52L86 12.52Q88.08 11.2 90.68 11.2L90.68 11.2Q93.76 11.2 95.6 12.98Q97.44 14.76 97.44 17.72L97.44 17.72L97.44 32L93.32 32L93.32 18.68Q93.32 16.6 92.34 15.64Q91.36 14.68 89.56 14.68L89.56 14.68Q87.92 14.68 86.58 15.46Q85.24 16.24 84.46 17.62Q83.68 19 83.68 20.88L83.68 20.88L83.68 32L79.56 32L79.56 18.68Q79.56 16.6 78.6 15.64Q77.64 14.68 75.84 14.68L75.84 14.68Q74.16 14.68 72.82 15.46Q71.48 16.24 70.72 17.62Q69.96 19 69.96 20.88L69.96 20.88L69.96 32M111.04 32.4L111.04 32.4Q107.96 32.4 105.62 31.04Q103.28 29.68 101.96 27.28Q100.64 24.88 100.64 21.76L100.64 21.76Q100.64 18.6 101.94 16.22Q103.24 13.84 105.6 12.52Q107.96 11.2 111 11.2L111 11.2Q113.96 11.2 116.14 12.46Q118.32 13.72 119.5 15.96Q120.68 18.2 120.68 21.28L120.68 21.28Q120.68 21.76 120.66 22.18Q120.64 22.6 120.56 23.04L120.56 23.04L104.92 23.04Q105.16 25.6 106.52 27.2L106.52 27.2Q108.16 29.16 111.12 29.16L111.12 29.16Q112.92 29.16 114.24 28.42Q115.56 27.68 116.2 26.24L116.2 26.24L120.12 26.24Q119.12 29.12 116.74 30.76Q114.36 32.4 111.04 32.4M104.96 19.92L104.96 19.92L116.56 19.92Q116.32 17.52 115.12 16.16L115.12 16.16Q113.64 14.44 111 14.44L111 14.44Q108.16 14.44 106.52 16.36L106.52 16.36Q105.32 17.76 104.96 19.92M128.28 32L124.12 32L124.12 11.6L128.08 11.6L128.08 15.56Q128.84 13.64 130.24 12.56L130.24 12.56Q132 11.2 134.44 11.2L134.44 11.2Q135.36 11.2 135.72 11.36L135.72 11.36L135.72 15.28Q135.52 15.2 135.16 15.18Q134.8 15.16 134.28 15.16L134.28 15.16Q131.28 15.16 129.78 16.72Q128.28 18.28 128.28 21.36L128.28 21.36L128.28 32M144.44 40.2L140.16 40.2L144.32 30.68L136.16 11.6L140.68 11.6L146.52 26.08L152.12 11.6L156.44 11.6L144.44 40.2"/></g></svg></span>
+    <button type="button" class="why-btn" id="why-btn" aria-expanded="false" aria-controls="why"><span>Why I made this</span></button>
+    <section class="why" id="why" aria-label="Why I made this" hidden>
+      <p>Good links get lost in chats, notes and saved posts.</p>
+      <p>So I gave mine a home: the 100 I actually reach for, each with a note on when it helps.</p>
+      <p>I made it for myself, to keep for years.</p>
+      <p>It&#39;s open so I can hand a shelf to the people I care about.</p>
+      <p class="name">The name blends almari, the cupboard where Indian homes keep what matters, with library and &quot;link meri&quot;: my links.</p>
+      <p class="sig">Kept and made by Abhijeet.</p>
+    </section>
+  </div>
+  <noscript><p class="why-nojs">Good links get lost in chats, notes and saved posts. Kept and made by Abhijeet.</p></noscript>
+  <div class="foot-row">
+    <p class="clock"><span id="clock">Lit by India Standard Time.</span><span class="steam" aria-hidden="true"><i></i><i></i><i></i></span></p>
+    <div class="foot-ctl" data-js>
+      <a class="btn small" href="changelog.html">What’s new</a>
+      <div class="seg lights" role="radiogroup" aria-label="Lights">
+        <button type="button" role="radio" data-mode="ist" aria-checked="true">India time</button>
+        <button type="button" role="radio" data-mode="day" aria-checked="false">Day</button>
+        <button type="button" role="radio" data-mode="night" aria-checked="false">Night</button>
+      </div>
+      <button type="button" class="btn small" id="sound" aria-pressed="true"><svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M3 8h3l4-3.5v11L6 12H3z"/><path class="wave" d="M13 7.5a3.5 3.5 0 0 1 0 5M15.2 5.5a6.5 6.5 0 0 1 0 9"/><path class="mute" d="M13.5 8l4 4M17.5 8l-4 4"/></svg><span>Sound on</span></button>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script type="application/json" id="lm-data">{"entries":[{"id":"45v6tv","url":"https://canvasui.dev/","title":"Canvas UI","description":"Open-source library of about 35 WebGL and WebGPU effects that render over live HTML, for React, Vue, Svelte and plain JavaScript. Shader effects on real UI, not on a canvas copy.","why":"adding shader effects to real interface elements","type":"tool","maker":"David Haz","tags":["webgl","shaders","effects","open source"],"shelf":"components","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"a5r5aj","url":"https://libraries.dev/beam","title":"Border Beam","description":"An animated glow that travels around an element's border, for React, SwiftUI and React Native. Moved here from beam.jakubantalik.com.","why":"making a card or button feel alive","type":"tool","maker":"Jakub Antalik","tags":["animation","border","effects","react"],"shelf":"components","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"dsm6n3","url":"https://originkit.dev/","title":"Originkit","description":"Free library of animated website components you can copy as code, use in Framer, or pull in through MCP. Ready-made motion for site builds.","why":"dropping ready motion into a site build","type":"tool","tags":["animation","components","framer","free"],"shelf":"components","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"16w7mc","url":"https://aicss.dev/","title":"AICSS","description":"Copy-paste components for AI agent chats: thinking states, tool calls, streaming text and citations, in React, Vue and Svelte. Some are Pro.","why":"designing an AI chat interface","type":"tool","maker":"Kevin (@kvnkld)","tags":["ai interfaces","chat","components","react"],"shelf":"components","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"8vn6ys","url":"https://transitions.dev/","title":"Transitions.dev","description":"More than 40 copy-paste transitions for web apps, plus an AI builder and a motion-audit agent. The essentials for moving between states without jank.","why":"picking a transition for a web app","type":"tool","maker":"Jakub Antalik","tags":["transitions","animation","web apps"],"shelf":"components","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"5954rq","url":"https://metal.jakubantalik.com/","title":"Liquid Metal","description":"A real-time WebGL shader that gives buttons and components a liquid chrome look, tuned with presets and a slider.","why":"a metallic button that actually catches light","type":"tool","maker":"Jakub Antalik","tags":["webgl","shaders","buttons","effects"],"shelf":"components","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"cgwt50","url":"https://www.beautifului.dev/","title":"Beautiful UI","description":"Twenty-plus crafted, MIT-licensed primitives for AI-native interfaces: thinking states, streaming text, approval cards, chat panels and tables.","why":"building blocks for an AI product UI","type":"tool","maker":"Turbo","tags":["ai interfaces","components","open source"],"shelf":"components","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"1qn7xf","url":"https://libraries.dev/orbs","title":"Thinking Orbs","description":"Animated orbs for AI thinking and loading states, nine of them, for React, React Native and SwiftUI. Moved here from orbs.jakubantalik.com.","why":"a thinking indicator that is not a spinner","type":"tool","maker":"Jakub Antalik","tags":["ai interfaces","animation","loading"],"shelf":"components","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"9gk631","url":"https://uiverse.io/","title":"Uiverse","description":"Community-made buttons, loaders, toggles and forms you can copy as HTML and CSS, Tailwind, React or Figma. Endless small UI pieces.","why":"grabbing a button or loader fast","type":"tool","tags":["components","buttons","loaders","css","free"],"shelf":"components","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"aeqnx6","url":"https://opensourceui.in/","title":"Opensource UI","description":"MIT-licensed React and Next.js components in Tailwind, with device mockups, forms, widgets and loaders, each with a live preview.","why":"free React components with mockups","type":"tool","maker":"Bidyut Kundu","tags":["components","react","tailwind","open source"],"shelf":"components","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"4shxnm","url":"https://metalforge.xyz/","title":"MetalForge","description":"Shaders and animated effects for SwiftUI, React Native and the web, tweaked with sliders and exported as code. Some free, some on subscription.","why":"shader effects for a mobile app","type":"tool","maker":"Youssef (@sucodeee)","tags":["shaders","swiftui","react native","effects"],"shelf":"components","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"d2s0kp","url":"http://motionin.design/","title":"Motion","description":"Interactive web sections like animated heroes and scroll galleries, sold as a spec and prompt you hand to an AI model to build. One prompt, one section.","why":"animated sections built by AI","type":"tool","tags":["ai","sections","animation","prompts"],"shelf":"components","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"9094k7","url":"https://calltoinspiration.com/","title":"CallToInspiration","description":"UI examples captured from real websites and apps, organised by pattern: logins, popups, pricing, dashboards, forms.","why":"seeing how others solve one UI pattern","type":"inspiration","tags":["ui patterns","screens","web","apps"],"shelf":"web","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"6sf1im","url":"https://minimal.gallery/","title":"Minimal Gallery","description":"A daily-updated gallery of minimal website design, with Framer and Webflow templates on the side.","why":"restrained, quiet web layouts","type":"inspiration","maker":"Piet","tags":["minimal","websites","gallery"],"shelf":"web","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"2hxgno","url":"https://www.unsection.com/","title":"Unsection","description":"Website sections collected one by one: heroes, features, pricing, FAQs, footers, navbars. Needs a free sign-up for most of it.","why":"one section at a time for a landing page","type":"inspiration","tags":["sections","landing pages","hero","pricing"],"shelf":"web","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"41ebiz","url":"https://www.supahero.io/","title":"Supahero","description":"A curated library of website hero sections. Now part of screensdesign.com.","why":"hero section ideas","type":"inspiration","tags":["hero","landing pages","sections"],"shelf":"web","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"dj1p5x","url":"http://recent.design/","title":"Recent","description":"A design inspiration feed covering websites, posters, branding, motion, illustration, OG images and app icons, with tools and jobs. Godly.website now redirects here.","why":"a daily scroll of good design","type":"inspiration","tags":["websites","posters","branding","motion","icons"],"shelf":"web","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"atxsqx","url":"https://deadsimplesites.com/","title":"Dead Simple Sites","description":"A weekly gallery of minimal websites with screenshots. Plain, clean, mostly typographic.","why":"a portfolio that does less","type":"inspiration","maker":"Arcade Labs","tags":["minimal","websites","gallery"],"shelf":"web","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"aw2e45","url":"http://landdding.com/","title":"Landdding","description":"Landing pages and templates built on Webflow, Framer, WordPress, Wix and Squarespace, filterable by category. Top-notch landings.","why":"landing page layouts","type":"inspiration","maker":"Azwedo","tags":["landing pages","templates","webflow","framer"],"shelf":"web","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"1av4sr","url":"http://curated.design/","title":"Curated","description":"A gallery of live websites and landing pages filterable by style and industry. Advanced filters are Pro.","why":"web design inspiration by industry","type":"inspiration","tags":["websites","landing pages","gallery"],"shelf":"web","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"7dlwij","url":"http://landing.love/","title":"Landing Love","description":"Saved as a gallery of landing page inspiration. It did not load when I sorted these links, so it may have moved.","why":"landing page inspiration","type":"inspiration","tags":["landing pages","gallery"],"shelf":"web","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"3a1iv6","url":"http://saaspo.com/","title":"Saaspo","description":"A curated collection of SaaS websites, filterable by style and page type, including pricing pages.","why":"SaaS sites and pricing pages","type":"inspiration","tags":["saas","landing pages","pricing"],"shelf":"web","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"4of6dt","url":"http://navbar.gallery/","title":"Navbar Gallery","description":"Website navigation bars grouped by type: dropdowns, mega menus, sidebars.","why":"designing site navigation","type":"inspiration","maker":"Christina Liubynska","tags":["navigation","navbar","menus"],"shelf":"web","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"8zrmn0","url":"http://cta.gallery/","title":"CTA Gallery","description":"Call-to-action sections from real websites, sorted by buttons, forms, pop-ups, newsletters and pricing.","why":"a call to action that converts","type":"inspiration","maker":"Webestica","tags":["cta","buttons","forms","newsletter"],"shelf":"web","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"9s6ddj","url":"http://footer.design/","title":"Footer","description":"A gallery of website footers filterable by style: typographic, dark, animated.","why":"footer inspiration","type":"inspiration","maker":"NOOON","tags":["footer","websites","gallery"],"shelf":"web","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"cxh0oj","url":"https://www.designspells.com/","title":"Design Spells","description":"Micro-interactions, easter eggs and small delightful details found in apps and websites. Proof that the tiny things are remembered.","why":"adding one delightful detail","type":"inspiration","maker":"Chester and Duncan","tags":["micro-interactions","details","delight"],"shelf":"motion","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"d37uw3","url":"http://60fps.design/","title":"60fps","description":"UI animation and interaction examples from iOS and web apps, organised by app, gesture, pattern and effect.","why":"mobile UI animation reference","type":"inspiration","tags":["animation","mobile","interaction","ios"],"shelf":"motion","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"1e12sy","url":"http://appmotion.design/","title":"App Motion","description":"Saved as a gallery of mobile app animations and transitions. It did not load when I sorted these links and may be offline.","why":"app animation reference","type":"inspiration","tags":["animation","mobile","transitions"],"shelf":"motion","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"83drg7","url":"https://www.jhey.dev/prototypes/2026/segue","title":"Segue by Jhey","description":"A single HTML and CSS prototype of a page-to-page transition, with its code shown. Jhey makes the browser do things it should not.","why":"how to build a smooth page transition","type":"reference","maker":"Jhey Tompkins","tags":["transitions","css","prototype"],"shelf":"motion","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"a9k7j8","url":"https://www.keyloom.app/","title":"Keyloom","description":"Prebuilt animated video scenes for Remotion, like a typing search bar or counting stats. Motion videos without After Effects.","why":"product videos made in code","type":"tool","maker":"The Experience Company","tags":["video","remotion","animation","code"],"shelf":"motion","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"6zfqax","url":"https://reanimate.niazmorshed.dev/","title":"reanimate","description":"An open-source Claude Code skill that rebuilds an animation from a website, video or GIF as code in your project.","why":"recreating a motion reference in code","type":"tool","maker":"Niaz Morshed","tags":["animation","ai","claude code","open source"],"shelf":"motion","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"1yf4ms","url":"http://animos.app/","title":"animos","description":"A browser tool with 25 animation templates for presenting design work: add images or video, export MP4 or WebM.","why":"showcasing a design in a post","type":"tool","tags":["presentation","showcase","animation","video"],"shelf":"motion","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"b457e3","url":"https://perspectivemock.vercel.app/","title":"PerspectiveMock","description":"Puts screenshots, videos or code into a tilted 3D perspective with camera keyframes and exports MP4. No sign-up.","why":"a quick product showcase animation","type":"tool","tags":["mockup","3d","video","showcase"],"shelf":"motion","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"3dl4u4","url":"http://surface-motion.com/","title":"Surface Motion","description":"Saved as a dynamic way to showcase design work. It blocks automated checks, so its details are unconfirmed.","why":"showcasing work with motion","type":"tool","tags":["showcase","animation","presentation"],"shelf":"motion","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"4q3an1","url":"https://posts.design/","title":"posts.design","description":"An inspiration library of brand social posts: launches, hiring and event announcements, X headers and OG images. Saved three times, which says something.","why":"designing a launch or announcement post","type":"inspiration","tags":["social media","og images","launch","branding"],"shelf":"visual","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"5r1yed","url":"http://rebrand.gallery/","title":"Rebrand Gallery","description":"Rebrand projects with reveal videos and the logos, colours and type behind them, browsable by industry, style, typeface and studio.","why":"identity and rebrand references","type":"inspiration","maker":"Sahkyo","tags":["rebrand","identity","logo","typography"],"shelf":"visual","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"2rcwn6","url":"http://iconly.design/","title":"Iconly","description":"About 2,400 app, game and web app icons, searchable by type, category and colour. For looking, not downloading.","why":"app icon design references","type":"inspiration","tags":["app icons","icons","gallery"],"shelf":"visual","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"3r88hs","url":"https://savee.com/","title":"Savee","description":"A visual inspiration platform: save references into boards and search by word, colour or image. Rabbit hole guaranteed.","why":"building a mood board","type":"inspiration","tags":["moodboard","images","references","boards"],"shelf":"visual","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"8nn1nv","url":"http://arqe.ai/","title":"Arqe","description":"Motion templates for social content, animated device mockups and a library of royalty-free AI images. Exporting needs a subscription.","why":"curated images and mockups for social","type":"tool","tags":["images","mockups","motion templates","social media"],"shelf":"visual","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"91ism0","url":"https://cari.institute/aesthetics/","title":"CARI Index of Aesthetics","description":"A searchable index of consumer aesthetics and visual eras, filterable by decade. Y2K, Frutiger Aero and the rest, explained.","why":"naming and researching a visual style","type":"reference","maker":"Consumer Aesthetics Research Institute","tags":["aesthetics","styles","history","research"],"shelf":"visual","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"c1j0wk","url":"https://www.bxmuseum.com/","title":"BX Museum","description":"An online collection of brand artifacts from companies like LEGO and IKEA, organised by category.","why":"studying how brands show up in the world","type":"reference","tags":["branding","brand experience","packaging"],"shelf":"visual","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"3kqm8a","url":"http://ignant.com/","title":"IGNANT","description":"A daily online magazine of art, design, photography, travel and architecture.","why":"a slow scroll for visual ideas","type":"article","tags":["art","photography","architecture","magazine"],"shelf":"visual","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"j8auwp","url":"https://eyecannndy.com/","title":"Eyecannndy","description":"Saved as visual inspiration. It did not load when I sorted these links, so check it is still there.","why":"visual inspiration","type":"inspiration","tags":["visual","references"],"shelf":"visual","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"3iz5gc","url":"https://squoosh.app/","title":"Squoosh","description":"Compress images in the browser and compare codecs and quality side by side. Nothing leaves your machine.","why":"shrinking images before they go on the web","type":"tool","maker":"GoogleChromeLabs","tags":["images","compression","export","free"],"shelf":"tools","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"vy0l9g","url":"https://www.fffuel.co/","title":"fffuel","description":"Colour tools and SVG generators for gradients, patterns, textures, shapes and backgrounds. A whole drawer of decorative fuel.","why":"generating an SVG background or texture","type":"tool","tags":["svg","gradients","patterns","backgrounds","colour"],"shelf":"tools","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"c8kyan","url":"https://www.imgto3d.ai/","title":"IMGto3D","description":"Turns a single image into a 3D model exported as OBJ, GLB or STL.","why":"a quick 3D model from a photo","type":"tool","tags":["3d","ai","models"],"shelf":"tools","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"9hxb56","url":"https://supercolorpalette.com/","title":"Super Color Palette","description":"A colour palette generator with hue, saturation and lightness controls, contrast checks and colours pulled from images.","why":"building a colour palette","type":"tool","tags":["colour","palette","contrast"],"shelf":"tools","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"bc3zyn","url":"https://www.gradientool.com/","title":"Gradientool","description":"A gradient generator with random shapes, colours and effects, exporting PNG, JPG, MP4 or code.","why":"gradient backgrounds and visuals","type":"tool","maker":"Leo Benzoni","tags":["gradients","backgrounds","video","export"],"shelf":"tools","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"1dbw0y","url":"http://handofyou.app/","title":"Hand of You","description":"Draw your letters on screen and it makes a font file from your handwriting. Free.","why":"turning handwriting into a font","type":"tool","maker":"Alex Burdin and Anton Herasymenko","tags":["fonts","handwriting","lettering","free"],"shelf":"tools","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"be5uq5","url":"https://answerthepublic.com/","title":"AnswerThePublic","description":"Shows the questions people search for across Google, YouTube, Amazon and AI tools.","why":"research for content and UX copy","type":"tool","maker":"NP Digital","tags":["research","seo","keywords","copy"],"shelf":"tools","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"3o3za1","url":"https://texs.org/","title":"texs.org","description":"Tex Jernigan's little tools: crossword, VHS and CD label generators, a Google Font lookup and a GIF maker.","why":"oddly specific generators","type":"tool","maker":"Tex Jernigan","tags":["generators","gif","fonts","small tools"],"shelf":"tools","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"cokpp0","url":"http://brik.space/","title":"Brik","description":"Builds a custom design tool from a text brief, aimed at animation, 3D, typography and interactive work.","why":"a one-off tool for a WebGL idea","type":"tool","tags":["ai","webgl","tools","3d"],"shelf":"tools","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"8cpoth","url":"http://modulify.ai/","title":"Modulify","description":"An AI website and web app builder that goes from prompt to site, with CMS, database and hosting. Cheaper than Lovable.","why":"shipping a site from a prompt","type":"tool","tags":["ai","website builder","no-code"],"shelf":"tools","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"t5px27","url":"https://www.typewolf.com/","title":"Typewolf","description":"Fonts used on real websites, pairing ideas, popularity lists and guides. Where I go to choose and pair typefaces.","why":"picking and pairing typefaces","type":"reference","maker":"Jeremiah Shoaf","tags":["fonts","typography","pairing"],"shelf":"assets","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"67wow2","url":"http://fontinlogo.com/","title":"Font In Logo","description":"The typefaces behind well-known brand logos, browsable by brand, industry or font.","why":"finding the font in a logo","type":"reference","maker":"Azwedo","tags":["fonts","logo","brands","typography"],"shelf":"assets","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"8u0nt6","url":"http://youworkforthem.com/fonts","title":"YouWorkForThem Fonts","description":"A long-running marketplace of curated fonts from independent foundries, with one-time licences.","why":"buying a commercial typeface","type":"tool","tags":["fonts","foundry","marketplace"],"shelf":"assets","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"3hqf2d","url":"http://hugeicons.com/","title":"Hugeicons","description":"More than 60,000 icons in several styles, with a Figma plugin and packages for React, Vue and Flutter. Free set plus Pro.","why":"an icon set for a product","type":"tool","maker":"Halal Lab","tags":["icons","figma","react"],"shelf":"assets","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"5lh24o","url":"https://www.drawkit.com/","title":"DrawKit","description":"Vector and 3D illustrations, icons, animations and mockups with Figma plugins. Some packs free.","why":"illustrations for product and marketing","type":"tool","maker":"James Daly","tags":["illustrations","3d","icons","mockups"],"shelf":"assets","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"7bzvtu","url":"https://kitbitz.art/","title":"Kitbitz","description":"Over 2,000 hand-drawn CC0 illustrations as SVG and PNG, with Figma kits and an MCP connection.","why":"free hand-drawn illustrations","type":"tool","tags":["illustrations","cc0","figma","free"],"shelf":"assets","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"60zzgk","url":"http://backgrounds.supply/","title":"Backgrounds Supply","description":"More than a thousand backgrounds, wallpapers and gradients licensed for client work, one-time purchase.","why":"backgrounds for client work","type":"tool","maker":"Kailash","tags":["backgrounds","wallpapers","gradients"],"shelf":"assets","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"95gf9m","url":"http://grainient.supply/","title":"Grainient","description":"Grainy and smooth gradients, animated gradients and AI backgrounds, plus a shader tool. Unlimited gradients, some free.","why":"grainy gradient backgrounds","type":"tool","maker":"Basit A. Khan","tags":["gradients","grain","backgrounds","animation"],"shelf":"assets","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"djyma1","url":"https://huggingface.co/datasets/nvidia/simready-assets/tree/main","title":"NVIDIA SimReady Assets","description":"NVIDIA's dataset of about 476 GB of 3D asset folders: furniture, appliances, tools and more. Great 3D files for scenes.","why":"3D models for a scene or render","type":"reference","maker":"NVIDIA","tags":["3d","models","assets","free"],"shelf":"assets","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"dbxskk","url":"http://wonderlist.design/","title":"Wonderlist","description":"A paid bundle of 127 Figma website templates, over 1,100 pages across SaaS, portfolio and agency.","why":"full Figma designs to start from","type":"tool","maker":"Azwedo","tags":["figma","templates","websites"],"shelf":"assets","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"5juyrh","url":"https://designeer.xyz/","title":"Designeer","description":"A collection of interface craft, component libraries, AI tools and resources for builders. It did not load when I sorted these links.","why":"resources for design engineers","type":"reference","tags":["directory","components","ai tools","resources"],"shelf":"directories","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"2gny6g","url":"https://mkdir.directory/","title":"mkdir","description":"About 38 web design inspiration directories, ranked by votes. An inspiration list of inspiration lists.","why":"finding new inspiration sources","type":"reference","maker":"Edoardo Lunardi","tags":["directory","inspiration","galleries"],"shelf":"directories","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"brz40f","url":"https://www.designminis.com/","title":"Design Minis","description":"Small single-purpose tools made by designers, filterable by colour, type, motion, icons and layout, each marked free or paid.","why":"finding a tiny tool for one job","type":"reference","tags":["directory","small tools","designers"],"shelf":"directories","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"ez2tgu","url":"https://markitnow.net/","title":"Mark-it","description":"A personal directory of design resources: tools, inspiration, fonts, motion assets and AI tools.","why":"browsing resources by category","type":"reference","maker":"R.Jay","tags":["directory","tools","fonts","ai tools"],"shelf":"directories","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"5plkpf","url":"https://designtools.fyi/","title":"designtools.fyi","description":"About 100 design tools ranked by role, from art director to design engineer, each marked free, paid or open source.","why":"which tools people in a role use","type":"reference","maker":"Toy Studio","tags":["directory","design tools"],"shelf":"directories","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"aqnjt4","url":"https://designengineer.tools/","title":"Design Engineer Tools","description":"Tools for web design engineers sorted into inspiration, AI code, components, motion, 3D, fonts and browser.","why":"design engineering toolkit","type":"reference","maker":"James Warner","tags":["directory","design engineering","motion","3d"],"shelf":"directories","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"42di41","url":"https://toolfolio.com/","title":"Toolfolio","description":"A directory of tools across design, AI, code, marketing and productivity, with daily picks and deals. Formerly toolfolio.io.","why":"unlimited tools to browse","type":"reference","tags":["directory","tools","ai"],"shelf":"directories","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"ddiz05","url":"https://builtbydesigners.com/","title":"Built by Designers","description":"Apps, tools, websites and experiments that designers built and shipped themselves.","why":"inspiration for a side project","type":"inspiration","maker":"Juliette and Phil","tags":["showcase","side projects","apps"],"shelf":"directories","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"dcpfce","url":"http://on.design/","title":"on.design","description":"An invite-only design community where designers post work and build profiles.","why":"a place to be found as a designer","type":"reference","tags":["community","portfolio","designers"],"shelf":"directories","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"3k3m9f","url":"https://styles.refero.design/","title":"Refero Styles","description":"More than 2,000 design systems pulled from product websites, with colours, type and spacing, each as a DESIGN.md file for AI coding tools.","why":"giving an AI coder a real design system","type":"reference","maker":"Refero","tags":["design systems","design.md","ai","typography"],"shelf":"ai","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"tzu99e","url":"https://www.ui-skills.com/","title":"UI Skills","description":"Design-engineering skills and guides for AI agents covering accessibility, motion and interface quality, with a CLI and MCP.","why":"teaching an AI agent good UI","type":"reference","tags":["ai agents","skills","accessibility","motion"],"shelf":"ai","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"9b9xn0","url":"https://sneakpeek.design/","title":"Sneak Peek","description":"A newsletter on how leading design teams use AI in their work.","why":"keeping up with AI in design teams","type":"article","maker":"Jayneil Dalal","tags":["newsletter","ai","design teams"],"shelf":"ai","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"1uykgg","url":"https://github.com/cloudflare/agentic-inbox","title":"agentic-inbox","description":"Cloudflare's open-source, self-hosted email client with an AI agent built in, running on Workers.","why":"reference for an AI email product","type":"tool","maker":"Cloudflare","tags":["github","open source","email","ai agents"],"shelf":"ai","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"9zon4l","url":"https://github.com/heygen-com/hyperframes","title":"HyperFrames","description":"Renders HTML, CSS, media and animation into MP4 with headless Chrome and FFmpeg. Video from web code.","why":"making video from HTML","type":"tool","maker":"HeyGen","tags":["github","open source","video","html"],"shelf":"ai","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"6ynx1l","url":"https://github.com/LibreChat-AI/LibreChat","title":"LibreChat","description":"An open-source, self-hostable AI chat app that works with many providers and supports agents and tools.","why":"a self-hosted ChatGPT-style app","type":"tool","tags":["github","open source","chat","ai"],"shelf":"ai","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"5m7l0a","url":"https://cityguesser.eu/","title":"City Guesser","description":"Watch a video from somewhere on Earth and guess where on the map. Has private multiplayer rooms.","why":"a break, honestly","type":"inspiration","tags":["game","geography","video"],"shelf":"play","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"18xqcv","url":"https://howubeen.com/","title":"How u been","description":"A fill-in postcard you draw on and send when someone asks how you have been.","why":"replying to \"how you been\"","type":"inspiration","maker":"aiden","tags":["toy","postcard","drawing"],"shelf":"play","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"p39ez8","url":"https://justforfun.io/","title":"Just For Fun","description":"A showcase of playful creative-coding projects like Windows 93, Tixy.land and CSS 3D clouds.","why":"experimental web inspiration","type":"inspiration","tags":["creative coding","experiments","web"],"shelf":"play","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"c7hr7i","url":"https://ransom-note.vercel.app/","title":"Ransom Note Generator","description":"Sets your text in mixed cut-out letters like a ransom note, shareable as a link or image.","why":"a ransom note look, for fun","type":"tool","tags":["typography","toy","collage"],"shelf":"play","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"541fsq","url":"http://midlife.engineering/","title":"Midlife Engineering","description":"Interactive sound therapy: ambient music you play with for relaxing, focus and sleep.","why":"an experimental sound experience","type":"inspiration","maker":"1042 Studio","tags":["sound","interactive","ambient"],"shelf":"play","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"8qb5d7","url":"http://synesthesiaengine.netlify.app/","title":"Synesthesia Engine","description":"Upload an image and hear it as sound, with a live visualisation.","why":"turning images into sound","type":"inspiration","tags":["sound","images","experiment"],"shelf":"play","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"c2myue","url":"https://profconradi.com/","title":"Simone Conradi","description":"Mathematical art and physics simulations, from polynomial roots to complex-plane plots. Math, visualised beautifully.","why":"generative and math-based imagery","type":"inspiration","maker":"Simone Conradi","tags":["math","generative","visualisation"],"shelf":"play","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"5ixxax","url":"http://music.jessyin.world/","title":"Visual Instruments","description":"Turns an image into tiles that play sounds; hover, swap and retune them. Visual instruments.","why":"playful image-to-music interaction","type":"inspiration","tags":["music","images","interactive"],"shelf":"play","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"638bgj","url":"http://everynoise.com/","title":"Every Noise at Once","description":"An interactive map of thousands of music genres with audio samples. Not updated since its creator left Spotify in 2023.","why":"every music genre ever","type":"inspiration","maker":"Glenn McDonald","tags":["music","genres","map","data visualisation"],"shelf":"play","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"9233jw","url":"http://poetry.camera/","title":"Poetry Camera","description":"An instant camera that prints a poem about what it sees instead of a photo. The DIY version is open source.","why":"a beautiful hardware idea","type":"inspiration","tags":["hardware","ai","poetry","camera"],"shelf":"play","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"2wip5z","url":"http://marijanapav.com/stamps","title":"Digital Stamp Collection","description":"Digitally recreated postage stamps, made as a tribute to a grandfather's stamp collection.","why":"stamp graphics and typography","type":"inspiration","maker":"Marijana Pavlinić","tags":["stamps","collection","illustration"],"shelf":"play","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"59lxuq","url":"http://liumichelle.com/sketchbook","title":"Michelle Liu's Sketchbook","description":"A living digital sketchbook on product designer Michelle Liu's personal site.","why":"a personal site with a sketchbook","type":"inspiration","maker":"Michelle Liu","tags":["sketchbook","portfolio","personal site"],"shelf":"play","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"5qae89","url":"http://paperplanes.world/","title":"Paper Planes","description":"Throw a virtual paper plane and catch ones thrown by people around the world.","why":"a delightful global web experience","type":"inspiration","tags":["interactive","web experience","global"],"shelf":"play","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"4l0yrp","url":"http://earth.nullschool.net/","title":"earth","description":"The planet's wind, weather and ocean conditions live on a spinning globe. A classic of data visualisation.","why":"data visualisation done beautifully","type":"inspiration","maker":"Cameron Beccario","tags":["data visualisation","weather","map","globe"],"shelf":"play","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"4g494z","url":"https://origamiarchive.com/","title":"Origami Archive","description":"A personal archive of origami prototypes and design files from 2021 to 2024, each downloadable.","why":"studying another designer's prototypes","type":"reference","maker":"dpark","tags":["prototypes","figma","archive","design files"],"shelf":"play","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"dem4q2","url":"https://random-topic-generator-woad.vercel.app/","title":"Speech Practice","description":"Random topics for impromptu speaking practice, with a timer, recording and interview questions.","why":"practising for a talk or presentation","type":"tool","tags":["speaking","practice","presentations"],"shelf":"play","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"y5wtme","url":"https://www.gigabanger.com/","title":"antislop","description":"Saved without a note, and the page only says \"antislop\", so it is unclear what this is. Worth a second look.","why":"unclear, check again","type":"reference","tags":["unknown"],"shelf":"play","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"53ldfb","url":"https://productdesignpsychology.com/","title":"Product Design Psychology","description":"A free online book in 40 chapters on the psychology behind product design: the designer's mind, interfaces, users and organisations.","why":"understanding why people behave as they do in products","type":"article","maker":"Wouter de Bres","tags":["psychology","ux","book"],"shelf":"reading","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"bktkr0","url":"https://hallofshame.design/","title":"Dark Patterns Hall of Shame","description":"Dark patterns and manipulative design from real companies, tagged by pattern type. What not to ship.","why":"checking a flow for dark patterns","type":"reference","tags":["dark patterns","ethics","ux"],"shelf":"reading","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"2dq23m","url":"https://tympanus.net/codrops/","title":"The New Collective (Codrops)","description":"Frontend and design tutorials, more than 500 free demos and a showcase of notable sites. Codrops now carries this name.","why":"creative coding tutorials and demos","type":"article","tags":["tutorials","three.js","webgl","frontend"],"shelf":"reading","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"5za6as","url":"https://archive.org/","title":"Internet Archive","description":"A digital library of texts, films, music and old web pages through the Wayback Machine.","why":"finding an old website or public-domain material","type":"reference","tags":["archive","wayback machine","public domain"],"shelf":"reading","added":"2026-11-02","pinned":false,"readLater":false,"age":0},{"id":"8n9zt1","url":"http://component.gallery/","title":"The Component Gallery","description":"UI components from about 95 public design systems, thousands of examples. Compare how each one builds the same thing.","why":"naming and comparing components","type":"reference","maker":"Iain Bean","tags":["design systems","components","ui"],"shelf":"reading","added":"2026-11-02","pinned":false,"readLater":false,"age":0}],"shelves":[{"id":"now","name":"Now","order":0,"kind":"pinned","area":{"x":0,"y":0,"w":2,"h":2},"note":"Pinned links I keep reaching for."},{"id":"recent","name":"New arrivals","order":1,"kind":"recent","area":{"x":0,"y":2,"w":2,"h":2},"note":"The latest books brought home. They sit on top of the cabinet for a while."},{"id":"gems","name":"Forgotten gems","order":2,"kind":"gems","area":{"x":0,"y":4,"w":2,"h":2},"note":"Older links, a different handful on every visit."},{"id":"web","name":"Web inspiration","order":3,"area":{"x":2,"y":0,"w":4,"h":2},"note":"Galleries of websites, landing pages and single sections: heroes, navbars, CTAs, footers, pricing."},{"id":"components","name":"Components and effects","order":4,"area":{"x":6,"y":0,"w":3,"h":2},"note":"Copy-paste UI, shaders and effects, and building blocks for AI interfaces."},{"id":"tools","name":"Tools","order":5,"area":{"x":9,"y":0,"w":3,"h":2},"note":"Single-job tools: compress, generate, convert, research."},{"id":"motion","name":"Motion and interaction","order":6,"area":{"x":2,"y":2,"w":3,"h":2},"note":"Animation references, micro-interactions and tools for showing work in motion."},{"id":"visual","name":"Brand and visual","order":7,"area":{"x":5,"y":2,"w":3,"h":2},"note":"Branding, social posts, icons, aesthetics and images to look at."},{"id":"assets","name":"Type, icons and assets","order":8,"area":{"x":8,"y":2,"w":4,"h":2},"note":"Fonts, icon sets, illustrations, backgrounds, 3D files and templates."},{"id":"play","name":"Playful web","order":9,"area":{"x":2,"y":4,"w":4,"h":2},"note":"Experiments, toys and delightful corners of the internet."},{"id":"directories","name":"Directories","order":10,"area":{"x":6,"y":4,"w":2,"h":2},"note":"Lists of tools and resources, for when nothing here fits."},{"id":"ai","name":"AI and code","order":11,"area":{"x":8,"y":4,"w":2,"h":2},"note":"Design systems and skills for AI coders, and open-source projects to learn from."},{"id":"reading","name":"Reading and references","order":12,"area":{"x":10,"y":4,"w":2,"h":2},"note":"Books, tutorials, archives and references worth returning to."}],"synonyms":[["font","fonts","typeface","typography","type","lettering","handwriting"],["colour","color","colours","colors","palette","hue","swatch"],["pick","picker","choose","select","generator"],["logo","logotype","identity","branding","brand","rebrand"],["ui","interface","screen","screens","app","apps"],["ux","usability","user experience","psychology"],["inspiration","inspo","references","moodboard","gallery","showcase","examples"],["price","pricing","paywall"],["landing","landing page","homepage","hero"],["navbar","navigation","nav","menu","menus"],["cta","call to action","button","buttons"],["icon","icons","iconography"],["illustration","illustrations","drawings","vector"],["background","backgrounds","wallpaper","gradient","gradients","grain","grainy"],["animation","animated","motion","transition","transitions","micro-interactions","interaction"],["shader","shaders","webgl","webgpu","glsl","effects"],["model","models","asset","assets"],["mockup","mockups","presentation","present","showcase"],["component","components","library","kit","ui kit"],["design system","design systems","style guide","tokens"],["directory","directories","list","collection","resources"],["ai","agent","agents","llm","chatgpt","claude","prompt"],["tool","tools","utility","app"],["image","images","photo","picture","jpg","png"],["compress","compression","optimise","optimize","smaller","squash"],["video","mp4","film","clip"],["sound","music","audio","noise"],["fun","playful","toy","game","experiment","experimental"],["free","open source","cc0","mit"],["social","social media","post","posts","og image","twitter","x"],["template","templates","figma"],["dark patterns","manipulative","deceptive"],["tutorial","tutorials","learn","guide","book"],["website","websites","site","sites","web","page","pages"],["map","globe","weather","data visualisation","visualization","dataviz"]],"config":{"gemsOlderThanDays":180,"exampleSearches":["grainy gradient background","free icons for figma","that site with pricing page examples"],"siteUrl":"https://abhiggt.github.io/lkm/","ownerName":"Abhijeet"}}</script>
+<script type="module" src="assets/js/app.js?v=b6e8666f"></script>
+</body>
+</html>

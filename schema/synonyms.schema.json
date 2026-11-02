@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "linkmery/synonyms.schema.json",
+  "title": "Linkmery synonym groups",
+  "description": "Each group lists words or short phrases that should match each other in search.",
+  "type": "array",
+  "items": {
+    "type": "array",
+    "minItems": 2,
+    "items": { "type": "string", "pattern": "^[a-z0-9][a-z0-9 -]*$" }
+  }
+}

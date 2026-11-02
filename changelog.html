@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en" data-theme="day">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>What’s new · Linkmery</title>
+<meta name="description" content="Every version of Linkmery, the library of links kept by Abhijeet: what changed, and why.">
+<link rel="canonical" href="https://abhiggt.github.io/lkm/changelog.html">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<script>
+  // Same lights as the library: your choice if you made one, otherwise India time.
+  (() => { let m = 'ist'; try { m = JSON.parse(localStorage.getItem('lm.theme')) || 'ist'; } catch { try { m = localStorage.getItem('lm.theme') || 'ist'; } catch {} }
+    const h = +new Intl.DateTimeFormat('en-GB', { timeZone: 'Asia/Kolkata', hour: 'numeric', hourCycle: 'h23' }).format(new Date());
+    document.documentElement.dataset.theme = m === 'day' || m === 'night' ? m : (h >= 6 && h < 18 ? 'day' : 'night'); })();
+</script>
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 400 17px/1.6 var(--font-sans); -webkit-font-smoothing: antialiased; }
+  main { max-width: 680px; margin: 0 auto; padding: 56px 16px 72px; }
+  .home { display: inline-flex; align-items: center; gap: 8px; color: var(--muted); text-decoration: none; font-size: 14px; padding: 8px 14px; border-radius: 999px;
+    background: var(--neu-face); box-shadow: 3px 3px 8px var(--neu-lo), -3px -3px 8px var(--neu-hi); }
+  .home:active { box-shadow: inset 2px 2px 5px var(--neu-lo), inset -2px -2px 5px var(--neu-hi); }
+  h1 { font: 400 clamp(36px, 7vw, 54px)/1.05 var(--font-serif); margin: 36px 0 10px; letter-spacing: -.01em; }
+  .lede { color: var(--muted); font: 400 19px/1.5 var(--font-serif); font-style: italic; margin: 0 0 44px; }
+  article { position: relative; padding: 26px 26px 22px; margin: 0 0 22px; border-radius: 22px; background: var(--neu-face);
+    box-shadow: 6px 6px 16px var(--neu-lo), -6px -6px 16px var(--neu-hi); }
+  article header { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; margin-bottom: 8px; }
+  .v { font: 500 12px/1 var(--font-mono, ui-monospace, monospace); letter-spacing: .12em; padding: 6px 10px; border-radius: 999px; color: #3b2a0c;
+    background: linear-gradient(180deg, #f2db99, #c9a24e); box-shadow: inset 0 1px 0 rgb(255 250 225 / .8), 0 1px 2px rgb(0 0 0 / .2); }
+  h2 { font: 400 24px/1.2 var(--font-serif); margin: 0; }
+  time { color: var(--muted); font-size: 13px; margin-left: auto; }
+  ul { margin: 10px 0 0; padding-left: 20px; }
+  li { margin: 6px 0; }
+  li::marker { color: #c9a24e; }
+  article a { color: inherit; text-decoration-color: #c9a24e; text-underline-offset: 3px; }
+  footer { text-align: center; color: var(--muted); font-size: 14px; padding: 12px 16px 48px; font-family: var(--font-serif); font-style: italic; }
+  @media (max-width: 560px) { main { padding-top: 32px; } article { padding: 20px 18px 16px; border-radius: 18px; } time { margin-left: 0; width: 100%; } }
+</style>
+</head>
+<body>
+<main>
+  <a class="home" href="./">← The library</a>
+  <h1>What’s new</h1>
+  <p class="lede">Every version of the library, newest first.</p>
+
+  <article>
+    <header><span class="v">V7</span><h2>Quieter, more personal</h2><time datetime="2026-11-03">3 November 2026</time></header>
+    <ul>
+      <li>The plaque turns over with one tap to show the time in India, and a small secret.</li>
+      <li>Inside a shelf, the plaque becomes a small gold brooch. Tap it to go back to the main hall.</li>
+      <li><strong>Wander</strong> replaces Surprise me: a random book from a random shelf.</li>
+      <li>Type <strong>all</strong> in search to see every shelf at once.</li>
+      <li>On a book’s card, the type opens a hidden shelf of its kind, and the site has a copy button.</li>
+      <li><strong>Go to the site</strong> is now a stitched strap in the book’s own leather.</li>
+      <li>A satin ribbon marks each card. Turn it over for a leaf pressed from the plant on top.</li>
+      <li>The globe only spins. The plant counts today’s waterings and gets a few drops at a time.</li>
+      <li>See all is a cloth spine. Covers, label holders and buttons feel more like real things.</li>
+      <li>Fewer sounds, and every page works on a phone.</li>
+      <li>The extension is calmer and grey with a touch of gold. It says <em>Add</em> rather than <em>Shelve</em>, and you can try it on <a href="extension.html">its preview page</a>.</li>
+      <li>New address: abhiggt.github.io/lkm.</li>
+    </ul>
+  </article>
+
+  <article>
+    <header><span class="v">V6</span><h2>A realistic library</h2></header>
+    <ul>
+      <li>A desk globe that turns on its tilted axis, and a real money plant, both drawn as images.</li>
+      <li>Bigger, clearer type on the cards. Fraunces is back for the shelf names.</li>
+      <li>Shelf titles on brass label holders, large enough to tap.</li>
+      <li>“Why I made this” fell out of a book and into the footer, as a bookmark.</li>
+      <li>Three taps on the plaque open the admin panel.</li>
+    </ul>
+  </article>
+
+  <article>
+    <header><span class="v">V5</span><h2>A library someone keeps</h2></header>
+    <ul>
+      <li>Seven books on each shelf at home, then See all.</li>
+      <li>A brass plaque on the top rail names the library.</li>
+      <li>In Spines view you can pick a book up and move it along the shelf.</li>
+      <li>Catalogue numbers, stamps and clutter are gone, and nothing sits behind an open card.</li>
+    </ul>
+  </article>
+
+  <article>
+    <header><span class="v">V4</span><h2>Books open their card</h2></header>
+    <ul>
+      <li>Tapping a book never leaves the page. It turns over into a card with two buttons.</li>
+      <li>Quieter sounds made from real textures: paper, wood, a latch, a drop of water.</li>
+      <li>Real shadows and depth on the shelves.</li>
+    </ul>
+  </article>
+
+  <article>
+    <header><span class="v">V3</span><h2>Covers in their own colours</h2></header>
+    <ul>
+      <li>Each cover fades into the colour of its site’s favicon.</li>
+      <li>A book flip, a back button, dark mode fixes, and a first deploy.</li>
+    </ul>
+  </article>
+
+  <article>
+    <header><span class="v">V2</span><h2>Glass doors</h2></header>
+    <ul>
+      <li>Every visit starts at frosted glass doors, with the logo as the doorknob.</li>
+      <li>Books wear their favicons, and a plant lives on top of the bookcase.</li>
+      <li>An admin panel behind a passcode. No accounts.</li>
+    </ul>
+  </article>
+
+  <article>
+    <header><span class="v">V1</span><h2>The first shelves</h2></header>
+    <ul>
+      <li>A hundred hand-picked links, each with a note, sorted onto shelves.</li>
+      <li>Search that understands what you mean, not only what you type.</li>
+      <li>A browser extension: Alt + L on any page to add it.</li>
+    </ul>
+  </article>
+</main>
+<footer>Kept and made by Abhijeet.</footer>
+</body>
+</html>

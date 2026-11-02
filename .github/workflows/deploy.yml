@@ -1,0 +1,62 @@
+# Validate, test, build and publish to GitHub Pages on every push to main.
+# A commit from the extension (a new link in data/bookmarks.json) runs this too,
+# so the site updates a minute or two after you save.
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Validate data
+        run: node tools/validate.mjs
+      - name: Search tests
+        run: npm test
+      - name: Keep fetched favicons between runs
+        uses: actions/cache@v4
+        with:
+          path: assets/fav
+          key: favicons-${{ hashFiles('data/bookmarks.json') }}
+          restore-keys: favicons-
+      - name: Fetch favicons
+        run: node tools/favicons.mjs
+      - name: Build
+        run: node tools/build.mjs
+      - name: Collect the site files
+        run: |
+          mkdir _site
+          cp -r index.html extension.html changelog.html extension sitemap.xml robots.txt manifest.webmanifest sw.js og.png favicon.svg assets icons data _site/
+          [ -f CNAME ] && cp CNAME _site/ || true
+          rm -rf _site/data/import
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,1120 @@
+{
+  "imported": "2026-11-02",
+  "count": 101,
+  "duplicatesDropped": [
+    {
+      "url": "https://posts.design/",
+      "reason": "duplicate in import"
+    },
+    {
+      "url": "http://godly.website/",
+      "reason": "duplicate in import"
+    },
+    {
+      "url": "http://posts.design/",
+      "reason": "duplicate in import"
+    },
+    {
+      "url": "http://recent.design/",
+      "reason": "duplicate in import"
+    }
+  ],
+  "links": [
+    {
+      "url": "https://canvasui.dev/",
+      "title": "",
+      "notes": [
+        "WebGL effects over live HTML"
+      ],
+      "sections": [],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "https://beam.jakubantalik.com/",
+      "title": "",
+      "notes": [
+        "animated border beam effect"
+      ],
+      "sections": [],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "https://originkit.dev/",
+      "title": "",
+      "notes": [
+        "free animated component library"
+      ],
+      "sections": [],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "https://aicss.dev/",
+      "title": "",
+      "notes": [
+        "UI components for AI agent chats"
+      ],
+      "sections": [],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "https://transitions.dev/",
+      "title": "",
+      "notes": [
+        "essential transitions for web apps"
+      ],
+      "sections": [],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "https://metal.jakubantalik.com/",
+      "title": "",
+      "notes": [
+        "liquid metal effect for buttons"
+      ],
+      "sections": [],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "https://beautiful-ui-five.vercel.app/",
+      "title": "",
+      "notes": [
+        "crafted primitives for AI interfaces"
+      ],
+      "sections": [],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "https://orbs.jakubantalik.com/",
+      "title": "",
+      "notes": [
+        "animated thinking orbs for AI UIs"
+      ],
+      "sections": [],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "https://designeer.xyz/",
+      "title": "",
+      "notes": [
+        "collection of interface craft, component libraries, AI tools, and resources for builders."
+      ],
+      "sections": [],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "https://mkdir.directory/",
+      "title": "",
+      "notes": [
+        "collection of major inspiration websites"
+      ],
+      "sections": [],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "https://huggingface.co/datasets/nvidia/simready-assets/tree/main",
+      "title": "",
+      "notes": [
+        "Great 3d assets files."
+      ],
+      "sections": [],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "https://calltoinspiration.com/",
+      "title": "",
+      "notes": [],
+      "sections": [
+        "Inspiration"
+      ],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "https://www.designspells.com/",
+      "title": "",
+      "notes": [],
+      "sections": [
+        "Inspiration"
+      ],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "https://hallofshame.design/",
+      "title": "",
+      "notes": [],
+      "sections": [
+        "Inspiration"
+      ],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "https://minimal.gallery/",
+      "title": "",
+      "notes": [],
+      "sections": [
+        "Inspiration"
+      ],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "https://www.unsection.com/",
+      "title": "",
+      "notes": [],
+      "sections": [
+        "Inspiration"
+      ],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "https://www.supahero.io/",
+      "title": "",
+      "notes": [],
+      "sections": [
+        "Inspiration"
+      ],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "https://sneakpeek.design/",
+      "title": "",
+      "notes": [],
+      "sections": [
+        "Inspiration"
+      ],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "https://tympanus.net/codrops/",
+      "title": "",
+      "notes": [],
+      "sections": [
+        "Inspiration"
+      ],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "https://savee.com/",
+      "title": "",
+      "notes": [],
+      "sections": [
+        "Inspiration"
+      ],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "https://answerthepublic.com/",
+      "title": "",
+      "notes": [],
+      "sections": [
+        "Inspiration"
+      ],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "https://godly.website/",
+      "title": "",
+      "notes": [
+        "award-winning websites"
+      ],
+      "sections": [
+        "Inspiration",
+        "If you design with AI, this is all you need"
+      ],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "https://cari.institute/aesthetics/",
+      "title": "",
+      "notes": [],
+      "sections": [
+        "Inspiration"
+      ],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "https://eyecannndy.com/",
+      "title": "",
+      "notes": [],
+      "sections": [
+        "Inspiration"
+      ],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "https://archive.org/",
+      "title": "",
+      "notes": [],
+      "sections": [
+        "Inspiration"
+      ],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "https://www.bxmuseum.com/",
+      "title": "",
+      "notes": [],
+      "sections": [
+        "Inspiration"
+      ],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "https://markitnow.net/",
+      "title": "",
+      "notes": [],
+      "sections": [
+        "Inspiration"
+      ],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "https://squoosh.app/",
+      "title": "",
+      "notes": [],
+      "sections": [
+        "Tools"
+      ],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "https://www.fffuel.co/",
+      "title": "",
+      "notes": [],
+      "sections": [
+        "Tools"
+      ],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "https://www.imgto3d.ai/",
+      "title": "",
+      "notes": [],
+      "sections": [
+        "Tools"
+      ],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "https://supercolorpalette.com/",
+      "title": "",
+      "notes": [],
+      "sections": [
+        "Tools"
+      ],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "https://uiverse.io/",
+      "title": "",
+      "notes": [],
+      "sections": [
+        "Tools"
+      ],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "https://www.drawkit.com/",
+      "title": "",
+      "notes": [],
+      "sections": [
+        "Tools"
+      ],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "https://www.typewolf.com/",
+      "title": "",
+      "notes": [],
+      "sections": [
+        "Tools"
+      ],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "https://texs.org/",
+      "title": "",
+      "notes": [],
+      "sections": [
+        "Tools"
+      ],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "https://www.designminis.com/",
+      "title": "",
+      "notes": [],
+      "sections": [
+        "Tools"
+      ],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "https://posts.design/",
+      "title": "",
+      "notes": [
+        "Best design inspiration"
+      ],
+      "sections": [
+        "Tools",
+        "UNSORTED",
+        "If you design with AI, this is all you need"
+      ],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "https://cityguesser.eu/",
+      "title": "",
+      "notes": [],
+      "sections": [
+        "UNSORTED"
+      ],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "https://howubeen.com/",
+      "title": "",
+      "notes": [],
+      "sections": [
+        "UNSORTED"
+      ],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "https://justforfun.io/",
+      "title": "",
+      "notes": [],
+      "sections": [
+        "UNSORTED"
+      ],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "https://ransom-note.vercel.app/",
+      "title": "",
+      "notes": [],
+      "sections": [
+        "UNSORTED"
+      ],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "https://metalforge.xyz/",
+      "title": "",
+      "notes": [],
+      "sections": [
+        "UNSORTED"
+      ],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "https://www.jhey.dev/prototypes/2026/segue",
+      "title": "",
+      "notes": [],
+      "sections": [
+        "UNSORTED"
+      ],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "https://www.gradientool.com/",
+      "title": "",
+      "notes": [],
+      "sections": [
+        "UNSORTED"
+      ],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "https://www.keyloom.app/",
+      "title": "",
+      "notes": [],
+      "sections": [
+        "UNSORTED"
+      ],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "https://styles.refero.design/",
+      "title": "",
+      "notes": [],
+      "sections": [
+        "UNSORTED"
+      ],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "https://productdesignpsychology.com/",
+      "title": "",
+      "notes": [],
+      "sections": [
+        "UNSORTED"
+      ],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "https://deadsimplesites.com/",
+      "title": "",
+      "notes": [],
+      "sections": [
+        "UNSORTED"
+      ],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "https://www.ui-skills.com/",
+      "title": "",
+      "notes": [],
+      "sections": [
+        "UNSORTED"
+      ],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "https://designtools.fyi/",
+      "title": "",
+      "notes": [],
+      "sections": [
+        "UNSORTED"
+      ],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "https://designengineer.tools/",
+      "title": "",
+      "notes": [],
+      "sections": [
+        "UNSORTED"
+      ],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "https://perspectivemock.vercel.app/",
+      "title": "",
+      "notes": [],
+      "sections": [
+        "UNSORTED"
+      ],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "https://www.gigabanger.com/",
+      "title": "",
+      "notes": [],
+      "sections": [
+        "UNSORTED"
+      ],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "https://random-topic-generator-woad.vercel.app/",
+      "title": "",
+      "notes": [],
+      "sections": [
+        "UNSORTED"
+      ],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "https://reanimate.niazmorshed.dev/",
+      "title": "",
+      "notes": [],
+      "sections": [
+        "UNSORTED"
+      ],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "http://modulify.ai/",
+      "title": "",
+      "notes": [
+        "cheaper than lovable"
+      ],
+      "sections": [
+        "If you design with AI, this is all you need"
+      ],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "http://landdding.com/",
+      "title": "",
+      "notes": [
+        "top notch landings"
+      ],
+      "sections": [
+        "If you design with AI, this is all you need"
+      ],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "http://motionin.design/",
+      "title": "",
+      "notes": [
+        "1 prompts 1 website"
+      ],
+      "sections": [
+        "If you design with AI, this is all you need"
+      ],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "http://wonderlist.design/",
+      "title": "",
+      "notes": [
+        "127 full figma designs"
+      ],
+      "sections": [
+        "If you design with AI, this is all you need"
+      ],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "http://iconly.design/",
+      "title": "",
+      "notes": [
+        "world best icons"
+      ],
+      "sections": [
+        "If you design with AI, this is all you need"
+      ],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "http://fontinlogo.com/",
+      "title": "",
+      "notes": [
+        "fonts behind brands"
+      ],
+      "sections": [
+        "If you design with AI, this is all you need"
+      ],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "http://on.design/",
+      "title": "",
+      "notes": [
+        "design community"
+      ],
+      "sections": [
+        "If you design with AI, this is all you need"
+      ],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "http://60fps.design/",
+      "title": "",
+      "notes": [
+        "mobile UI animations"
+      ],
+      "sections": [
+        "If you design with AI, this is all you need"
+      ],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "http://footer.design/",
+      "title": "",
+      "notes": [
+        "footer inspiration"
+      ],
+      "sections": [
+        "If you design with AI, this is all you need"
+      ],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "http://recent.design/",
+      "title": "",
+      "notes": [
+        "next level design",
+        "curated designs Inspiration"
+      ],
+      "sections": [
+        "If you design with AI, this is all you need"
+      ],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "http://backgrounds.supply/",
+      "title": "",
+      "notes": [
+        "backgrounds"
+      ],
+      "sections": [
+        "If you design with AI, this is all you need"
+      ],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "https://builtbydesigners.com/",
+      "title": "",
+      "notes": [],
+      "sections": [
+        "If you design with AI, this is all you need"
+      ],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "https://opensourceui.in/",
+      "title": "",
+      "notes": [],
+      "sections": [
+        "If you design with AI, this is all you need"
+      ],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "https://kitbitz.art/",
+      "title": "",
+      "notes": [],
+      "sections": [
+        "If you design with AI, this is all you need"
+      ],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "http://grainient.supply/",
+      "title": "",
+      "notes": [
+        "unlimited gradients BG & animated gradients"
+      ],
+      "sections": [
+        "If you design with AI, this is all you need"
+      ],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "http://animos.app/",
+      "title": "",
+      "notes": [
+        "Showcase your design presentation"
+      ],
+      "sections": [
+        "If you design with AI, this is all you need"
+      ],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "http://arqe.ai/",
+      "title": "",
+      "notes": [
+        "Curated Images Gallery"
+      ],
+      "sections": [
+        "If you design with AI, this is all you need"
+      ],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "http://toolfolio.io/",
+      "title": "",
+      "notes": [
+        "unlimited tools"
+      ],
+      "sections": [
+        "If you design with AI, this is all you need"
+      ],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "http://youworkforthem.com/fonts",
+      "title": "",
+      "notes": [
+        "Curated fonts"
+      ],
+      "sections": [
+        "If you design with AI, this is all you need"
+      ],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "http://surface-motion.com/",
+      "title": "",
+      "notes": [
+        "Dynamic way to showcase"
+      ],
+      "sections": [
+        "If you design with AI, this is all you need"
+      ],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "http://brik.space/",
+      "title": "",
+      "notes": [
+        "WebGL dynamic components"
+      ],
+      "sections": [
+        "If you design with AI, this is all you need"
+      ],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "http://midlife.engineering/",
+      "title": "",
+      "notes": [
+        "interactive sound therapy"
+      ],
+      "sections": [
+        "If you design with AI, this is all you need"
+      ],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "http://synesthesiaengine.netlify.app/",
+      "title": "",
+      "notes": [
+        "turn images into sound"
+      ],
+      "sections": [
+        "If you design with AI, this is all you need"
+      ],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "http://curated.design/",
+      "title": "",
+      "notes": [
+        "Web Design →"
+      ],
+      "sections": [
+        "Sites on the internet for design inspiration."
+      ],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "http://landing.love/",
+      "title": "",
+      "notes": [
+        "Landing Pages →"
+      ],
+      "sections": [
+        "Sites on the internet for design inspiration."
+      ],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "http://saaspo.com/",
+      "title": "",
+      "notes": [
+        "Saas Websites →"
+      ],
+      "sections": [
+        "Sites on the internet for design inspiration."
+      ],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "http://navbar.gallery/",
+      "title": "",
+      "notes": [
+        "Navbar →"
+      ],
+      "sections": [
+        "Sites on the internet for design inspiration."
+      ],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "http://cta.gallery/",
+      "title": "",
+      "notes": [
+        "CTA Sections →"
+      ],
+      "sections": [
+        "Sites on the internet for design inspiration."
+      ],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "http://appmotion.design/",
+      "title": "",
+      "notes": [
+        "Animation →"
+      ],
+      "sections": [
+        "Sites on the internet for design inspiration."
+      ],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "http://rebrand.gallery/",
+      "title": "",
+      "notes": [
+        "Brands →"
+      ],
+      "sections": [
+        "Sites on the internet for design inspiration."
+      ],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "http://hugeicons.com/",
+      "title": "",
+      "notes": [
+        "Icons →"
+      ],
+      "sections": [
+        "Sites on the internet for design inspiration."
+      ],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "http://component.gallery/",
+      "title": "",
+      "notes": [
+        "Design Systems →"
+      ],
+      "sections": [
+        "Sites on the internet for design inspiration."
+      ],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "https://profconradi.com/",
+      "title": "",
+      "notes": [
+        "math visualized"
+      ],
+      "sections": [
+        "Sites on the internet for design inspiration."
+      ],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "http://music.jessyin.world/",
+      "title": "",
+      "notes": [
+        "visual instruments"
+      ],
+      "sections": [
+        "Sites on the internet for design inspiration."
+      ],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "http://everynoise.com/",
+      "title": "",
+      "notes": [
+        "every music genre ever"
+      ],
+      "sections": [
+        "Sites on the internet for design inspiration."
+      ],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "http://poetry.camera/",
+      "title": "",
+      "notes": [
+        "a camera that prints poems"
+      ],
+      "sections": [
+        "Sites on the internet for design inspiration."
+      ],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "http://marijanapav.com/stamps",
+      "title": "",
+      "notes": [
+        "digital stamp collection"
+      ],
+      "sections": [
+        "Sites on the internet for design inspiration."
+      ],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "http://liumichelle.com/sketchbook",
+      "title": "",
+      "notes": [
+        "a living digital sketchbook"
+      ],
+      "sections": [
+        "Sites on the internet for design inspiration."
+      ],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "http://handofyou.app/",
+      "title": "",
+      "notes": [
+        "handwriting into a font"
+      ],
+      "sections": [
+        "Sites on the internet for design inspiration."
+      ],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "http://paperplanes.world/",
+      "title": "",
+      "notes": [
+        "paperplanes from across the world"
+      ],
+      "sections": [
+        "Sites on the internet for design inspiration."
+      ],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "http://ignant.com/",
+      "title": "",
+      "notes": [
+        "a daily feed of art, design and photography"
+      ],
+      "sections": [
+        "Sites on the internet for design inspiration."
+      ],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "http://earth.nullschool.net/",
+      "title": "",
+      "notes": [
+        "the planet's weather live, on a spinning globe"
+      ],
+      "sections": [
+        "Sites on the internet for design inspiration."
+      ],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "https://github.com/cloudflare/agentic-inbox",
+      "title": "",
+      "notes": [],
+      "sections": [
+        "Sites on the internet for design inspiration."
+      ],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "https://github.com/heygen-com/hyperframes",
+      "title": "",
+      "notes": [],
+      "sections": [
+        "Sites on the internet for design inspiration."
+      ],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "https://github.com/LibreChat-AI/LibreChat",
+      "title": "",
+      "notes": [],
+      "sections": [
+        "Sites on the internet for design inspiration."
+      ],
+      "source": "websites.md",
+      "keep": true
+    },
+    {
+      "url": "https://origamiarchive.com/",
+      "title": "",
+      "notes": [],
+      "sections": [
+        "Sites on the internet for design inspiration."
+      ],
+      "source": "websites.md",
+      "keep": true
+    }
+  ]
+}

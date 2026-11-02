@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Linkmery settings</title>
+<link rel="stylesheet" href="fonts.css">
+<link rel="stylesheet" href="ui.css">
+<style>body { margin: 0; min-height: 100vh; }</style>
+</head>
+<body class="opt">
+<main class="options">
+  <h1><img src="icons/icon-32.png" width="28" height="28" alt=""> Settings</h1>
+  <p class="lede">Add any page to your library, and find it again from anywhere.</p>
+
+  <section>
+    <h2>Your library</h2>
+    <p>Where your Linkmery lives. Find searches everything there, plus anything added here that isn’t live yet.</p>
+    <label class="field"><span>Library address</span><input id="siteUrl" type="url" placeholder="https://abhiggt.github.io/lkm/"></label>
+  </section>
+
+  <section>
+    <h2>Go live straight away</h2>
+    <p>With a GitHub token, every link you add is published to your site in a minute or two. Make a fine-grained token for this one repository with <code>Contents: read and write</code> and nothing else. It stays in this browser only; if the laptop is ever lost, revoke it on GitHub.</p>
+    <label class="field"><span>Repository (owner/name)</span><input id="repo" placeholder="abhiggt/lkm"></label>
+    <label class="field"><span>Branch</span><input id="branch" placeholder="main"></label>
+    <label class="field"><span>Fine-grained token</span><input id="token" type="password" autocomplete="off" placeholder="github_pat_..."></label>
+  </section>
+
+  <section>
+    <div class="btns">
+      <button class="primary" id="save" type="button">Save settings</button>
+      <button class="btn" id="test" type="button">Test the address</button>
+    </div>
+    <p class="status" id="status" role="status"></p>
+  </section>
+
+  <section>
+    <h2>Ready to go live</h2>
+    <p id="pending">Checking…</p>
+    <div class="btns">
+      <button class="btn" id="retry" type="button">Publish now</button>
+      <button class="btn" id="export" type="button">Export JSON</button>
+      <button class="btn" id="clear" type="button">Clear</button>
+    </div>
+    <p>Export gives a file in the <code>bookmarks.json</code> format. Merge it with <code>node tools/merge.mjs export.json</code>.</p>
+  </section>
+
+  <section>
+    <h2>Rename shelves and edit links</h2>
+    <p>On your site, tap <em>The Library of Links</em> plaque three times and enter your passcode. You can rename and reorder shelves, edit any link, and publish it all at once.</p>
+  </section>
+
+  <section>
+    <h2>Shortcuts</h2>
+    <p><kbd>Alt</kbd> + <kbd>L</kbd> opens Linkmery on any page (Option + L on a Mac). Enter adds the page; Alt + F jumps to Find. In the address bar, type <code>lm</code> and a space to search your library. Change the shortcut at chrome://extensions/shortcuts.</p>
+  </section>
+</main>
+<script type="module" src="options.js"></script>
+</body>
+</html>
