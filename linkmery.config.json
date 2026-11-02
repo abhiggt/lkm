@@ -1,8 +1,7 @@
 {
   "siteUrl": "https://abhiggt.github.io/lkm/",
-  "title": "Linkmery: links' memory",
+  "title": "Linkmery:  Library of Links",
   "shortName": "Linkmery",
-  "description": "A visual designer's hand-picked links on typography, colour, interface design, branding and inspiration, each with a note on when to reach for it. Search them, browse the shelves, share what you need.",
   "lang": "en-IN",
   "horizontalPlan": true,
   "dayStartsIST": 6,
@@ -26,5 +25,6 @@
       "code": "abhijeet",
       "open": "#meri"
     }
-  ]
+  ],
+  "description": "Links that are needed at the right time, should be at the right place, now it's a library."
 }
