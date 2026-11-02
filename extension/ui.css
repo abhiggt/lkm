@@ -127,3 +127,13 @@ button:focus-visible, summary:focus-visible { outline: 1.5px solid var(--gold); 
 .options kbd { font: 400 12px var(--mono); border-radius: 7px; padding: 1px 7px; box-shadow: var(--up-sm); }
 .q::-webkit-search-cancel-button { -webkit-appearance: none; width: 14px; height: 14px; cursor: pointer; opacity: .55;
   background: linear-gradient(45deg, transparent 45%, var(--ink) 45% 55%, transparent 55%), linear-gradient(-45deg, transparent 45%, var(--ink) 45% 55%, transparent 55%); }
+/* shelf picker with a small rename pencil */
+.pick-row { display: grid; grid-template-columns: minmax(0, 1fr) 42px; gap: 10px; align-items: center; }
+.pick-row .rename { grid-column: 1; grid-row: 1; }
+.pick-row.renaming .shelf-select { visibility: hidden; grid-column: 1; grid-row: 1; }
+.pick-row .shelf-select { grid-column: 1; grid-row: 1; }
+.pencil { grid-column: 2; grid-row: 1; width: 42px; height: 42px; border: 0; border-radius: 13px; background: var(--bg); color: var(--muted); font-size: 16px; cursor: pointer; box-shadow: var(--up-sm); }
+.pencil:hover { color: var(--gold); }
+.pencil:active { box-shadow: var(--in); }
+.options .shelf-names { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 4px 14px; margin-bottom: 12px; }
+.options .shelf-names .field > span { font: 400 11px var(--mono); }

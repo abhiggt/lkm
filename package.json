@@ -1,6 +1,6 @@
 {
   "name": "linkmery",
-  "version": "7.1.0",
+  "version": "7.3.0",
   "description": "A designer's almari of links",
   "scripts": {
     "brand": "node tools/brand.mjs",

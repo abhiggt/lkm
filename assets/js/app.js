@@ -6,7 +6,7 @@ import { EMPTY_SHELF, CONSOLE } from './core/ascii.js';
 import { h, $, $$, store, copy, toast, domain, human, TYPE_LABEL } from './ui/util.js';
 import { createFlip } from './ui/flip.js';
 import { pickColour, bookVars } from './core/colour.js';
-import { initEggs, onTriple } from './ui/eggs.js';
+import { initEggs } from './ui/eggs.js';
 import { sfx } from './ui/sfx.js';
 
 const data = JSON.parse(document.getElementById('lm-data').textContent);
@@ -236,14 +236,18 @@ function fillVirtual(id) {
 
 // ---------- shelf rooms: #id opens one shelf, with views and sharing ----------
 const views = store.get('views', {});
-const VIEWS = [['shelf', 'Shelf'], ['spines', 'Spines'], ['list', 'List']];
+const VIEWS = [['shelf', 'Shelf'], ['spines', 'Stack'], ['list', 'List']];
 for (const sec of $$('.shelves .shelf')) {
   const id = sec.id;
   const seg = h('div.seg', { role: 'radiogroup', 'aria-label': 'View' }, VIEWS.map(([v, label]) =>
     h('button', { type: 'button', role: 'radio', 'data-v': v, 'aria-checked': String(v === 'shelf'), onclick: () => setShelfView(sec, v, true) }, label)));
-  $('.shelf-head', sec).append(h('div.room-bar', {}, seg,
-    h('button.btn', { type: 'button', onclick: () => share(`${shelfName(id)} on Linkmery`, `${siteBase()}#${id}`) }, 'Share this shelf')));
+  $('.shelf-head', sec).append(h('div.room-bar', {}, seg));
 }
+// Inside a shelf, "Share this shelf" sits in the top row, level with the search bar.
+$('#share-room').addEventListener('click', () => {
+  const id = location.hash.slice(1);
+  share(`${shelfById.get(id)?.name || VIRTUAL[id]?.name || 'A shelf'} on Linkmery`, `${siteBase()}#${id}`);
+});
 // Ornaments (a plant, a Rubik's cube) stand in a shelf's last row only if it has room.
 function fitOrnaments() {
   for (const orn of $$('.shelves .ornament')) {
@@ -310,6 +314,43 @@ function closeDrawer(blur) {
 }
 
 let results = [];
+
+// ---------- cheat codes (made in the admin panel) ----------
+const cheats = (data.config.cheats || []).filter(c => c.code && c.open);
+let cheatTimer = 0;
+function cheatTarget(c) {
+  if (c.open.startsWith('#')) { const id = c.open.slice(1); return { label: shelfById.get(id)?.name || VIRTUAL[id]?.name || id, kind: 'room', id }; }
+  if (c.open.startsWith('book:')) { const e = byId.get(c.open.slice(5)); return e ? { label: e.title, kind: 'book', e } : null; }
+  return { label: domain(c.open), kind: 'url', url: c.open };
+}
+function showCheat(c) {
+  const t = cheatTarget(c);
+  results = [];
+  found.hidden = false;
+  if (!t) { found.replaceChildren(h('p.cheat', {}, 'That cheat code leads nowhere now.')); return; }
+  const go = h('a.cheat-go', { href: t.kind === 'url' ? t.url : t.kind === 'room' ? `#${t.id}` : `#${t.e.shelf}`, ...(t.kind === 'url' && { target: '_blank', rel: 'noopener' }),
+    onclick: ev => { ev.preventDefault(); openCheat(c); } }, t.label);
+  found.replaceChildren(h('div.cheat', { role: 'status' }, h('span.cheat-mark', { 'aria-hidden': 'true' }, '✦'),
+    h('p', {}, 'Cheat code ', h('strong', {}, c.code.trim()), '. Opening ', go, '…')));
+  clearTimeout(cheatTimer);
+  cheatTimer = setTimeout(() => { if (q.value.trim().toLowerCase() === c.code.trim().toLowerCase()) openCheat(c); }, 800);
+}
+function openCheat(c) {
+  clearTimeout(cheatTimer);
+  const t = cheatTarget(c); if (!t) return;
+  sfx.light();
+  if (t.kind === 'url') { window.open(t.url, '_blank', 'noopener'); toast(`Opened ${t.label} in a new tab.`); closeDrawer(true); return; }
+  closeDrawer(true);
+  if (t.kind === 'room') { location.hash = t.id; return; }
+  openBook(t.e);
+}
+/** Takes one book out, wherever it is: from its shelf at home, or from its room if it isn't showing. */
+function openBook(e) {
+  if (body.classList.contains('in-room') && !$(`.shelf.here #l-${e.id}`)) goHome();
+  const cover = document.getElementById(`l-${e.id}`);
+  if (cover && cover.offsetParent === null) { location.hash = e.shelf; setTimeout(() => surprise.pick(e), 500); return; }
+  setTimeout(() => surprise.pick(e), 120);
+}
 function remember(s) {
   s = s.trim();
   if (s.length < 3 || !results.length) return;
@@ -324,6 +365,9 @@ function renderFound() {
   }
   drawer.hidden = true;
   body.classList.add('seeking');
+  // A cheat code, typed exactly, opens what it was made for.
+  const cheat = cheats.find(c => c.code.trim().toLowerCase() === text.toLowerCase());
+  if (cheat) return showCheat(cheat);
   // "all" lays every shelf out, whole.
   const everything = /^all$/i.test(text);
   results = everything
@@ -516,28 +560,62 @@ plant.addEventListener('click', () => {
   toast(n === 1 ? 'Watered once, today.' : `Watered ${n} times, today.`);
 });
 
-// ---------- the plaque: turn it over; inside a shelf, the brooch leads home ----------
+// ---------- the plaque ----------
+// Inside a shelf it is a brooch: one tap goes home. On the main hall it counts
+// taps: two turn it over ("Nothing to see here :)"), three insist, four open
+// the admin panel.
 const plaque = $('#plaque');
-function plaqueBack() {
-  $('#pl-time').textContent = new Intl.DateTimeFormat('en-IN', { timeZone: 'Asia/Kolkata', weekday: 'short', day: 'numeric', month: 'short', hour: 'numeric', minute: '2-digit', hour12: true }).format(new Date()).replace(/ (am|pm)$/i, (_, m) => ` ${m.toLowerCase()}`) + ' in India';
-  const days = Math.max(1, Math.round((Date.now() - Date.parse(plaque.dataset.since)) / 864e5));
-  $('#pl-secret').textContent = `kept for ${days} ${days === 1 ? 'day' : 'days'} · psst, type meri`;
+let plTaps = 0, plTimer = 0, plBack = 0;
+function turnPlaque(line, aside = '') {
+  $('#pl-time').textContent = line; $('#pl-secret').textContent = aside;
+  plaque.classList.add('flipped'); sfx.click();
+  plaque.setAttribute('aria-label', `${line} ${aside}`.trim());
+  clearTimeout(plBack);
+  plBack = setTimeout(() => { plaque.classList.remove('flipped'); plaque.setAttribute('aria-label', plaque.querySelector('.pl-front').textContent); }, 4200);
 }
 plaque.addEventListener('click', () => {
   if (body.classList.contains('in-room')) { sfx.tap(); goHome(); return; }
-  plaqueBack(); plaque.classList.toggle('flipped'); sfx.click();
-  plaque.setAttribute('aria-label', plaque.classList.contains('flipped') ? `${$('#pl-time').textContent}. ${$('#pl-secret').textContent}` : plaque.querySelector('.pl-front').textContent);
-  sfx.tap();
+  plTaps++; clearTimeout(plTimer);
+  if (plTaps >= 4) { plTaps = 0; plaque.classList.remove('flipped'); openAdmin(); return; }
+  plTimer = setTimeout(() => {
+    const n = plTaps; plTaps = 0;
+    if (n === 2) {
+      if (plaque.classList.contains('flipped')) { clearTimeout(plBack); plaque.classList.remove('flipped'); sfx.click(); }
+      else turnPlaque('Nothing to see here :)');
+    } else if (n === 3) turnPlaque('I told you na.', 'nothing to see here');
+  }, 420);
 });
-plaque.addEventListener('keydown', ev => { if (ev.key === 'Enter' || ev.key === ' ') { ev.preventDefault(); plaque.click(); } });
-setInterval(() => { if (plaque.classList.contains('flipped')) plaqueBack(); }, 30000);
+plaque.addEventListener('keydown', ev => {
+  if (ev.key !== 'Enter' && ev.key !== ' ') return;
+  ev.preventDefault();
+  if (body.classList.contains('in-room')) return goHome();
+  if (plaque.classList.contains('flipped')) plaque.classList.remove('flipped'); else turnPlaque('Nothing to see here :)');
+});
 
-// ---------- the globe on the cabinet: give it a spin ----------
-$('#globe').addEventListener('click', () => {
-  const g = $('#globe');
-  g.classList.remove('spin'); void g.offsetWidth; g.classList.add('spin');
-  sfx.spin();
+// ---------- the little light on the cabinet ----------
+// At night it switches on and warms the room. In daylight it has nothing to
+// add, and says so.
+const light = $('#light');
+const isNight = () => document.documentElement.dataset.theme === 'night';
+function setLight(on) {
+  body.classList.toggle('light-on', on);
+  light.setAttribute('aria-pressed', String(on));
+  light.setAttribute('aria-label', on ? 'Switch the little light off' : 'Switch the little light on');
+}
+light.addEventListener('click', () => {
+  sfx.click();
+  if (!isNight()) { setLight(false); return daylightNote(); }
+  setLight(!body.classList.contains('light-on'));
 });
+new MutationObserver(() => { if (!isNight()) setLight(false); }).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+function daylightNote() {
+  $('.daylight')?.remove();
+  const note = h('div.daylight', { role: 'status', onclick: () => note.remove() },
+    h('p', {}, 'Brightness is within', h('span', {}, '(and also all over your screen :)')));
+  body.append(note);
+  requestAnimationFrame(() => note.classList.add('on'));
+  setTimeout(() => { note.classList.remove('on'); setTimeout(() => note.remove(), 600); }, 2800);
+}
 
 // ---------- why Linkmery exists (folded away in the footer) ----------
 const whyBtn = $('#why-btn'), why = $('#why');
@@ -640,12 +718,15 @@ initEggs({ toast, reduced, sfx, found: markFound,
 // ---------- admin: three taps on the logo, then a passcode ----------
 async function openAdmin() {
   sfx.tap();
-  const { openAdmin: open } = await import('./ui/admin.js');
-  open({ data, toast, sfx });
+  try {
+    const { openAdmin: open } = await import('./ui/admin.js');
+    await open({ data, toast, sfx });
+  } catch (err) {
+    document.querySelector('dialog.admin')?.close?.();
+    toast('The admin panel could not open. Reload the page and try again.');
+    console.error(err);
+  }
 }
-onTriple($('#crest'), openAdmin);
-onTriple($('#plaque'), openAdmin);
-onTriple($('.mini-mark'), openAdmin);
 
 // A hello for anyone who opens the developer console.
 console.log(`%c${CONSOLE}`, 'font-family: monospace; line-height: 1.2');

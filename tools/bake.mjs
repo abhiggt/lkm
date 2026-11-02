@@ -7,13 +7,10 @@
 // Usage: node tools/bake.mjs   (writes assets/img/*.avif)
 import { mkdirSync, statSync } from 'node:fs';
 import sharp from 'sharp';
-import { earthMap, globeStand } from './art/globe.mjs';
 import { plant } from './art/plant.mjs';
 
 mkdirSync('assets/img', { recursive: true });
 const jobs = [
-  ['earth', earthMap(), { width: 1024, quality: 62 }],
-  ['globe-stand', globeStand(), { width: 240, quality: 70 }],
   ['plant', plant(0), { width: 210, quality: 68 }],
 ];
 for (const [name, svg, { width, quality }] of jobs) {

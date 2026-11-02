@@ -45,48 +45,6 @@ export function createFlip({ shelfName, share, copy, front, sfx, entry: getEntry
     return r.width && r.height && r.bottom > 0 && r.top < innerHeight ? r : null;
   };
 
-  // A silk ribbon marker hangs out of the top of the card. Turn it over and
-  // it is a card-stock bookmark with a leaf pressed in it, taken from the
-  // plant on top of the bookcase.
-  const LEAF = `<svg viewBox="0 0 110 140" aria-hidden="true"><defs>
-    <radialGradient id="lf-g" cx=".42" cy=".42" r=".7"><stop offset="0" stop-color="#a3ad66"/><stop offset=".55" stop-color="#7f8c45"/><stop offset="1" stop-color="#5c6a2e"/></radialGradient>
-    <linearGradient id="lf-v" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e7d79a" stop-opacity=".0"/><stop offset=".5" stop-color="#e7d79a" stop-opacity=".45"/><stop offset="1" stop-color="#e7d79a" stop-opacity="0"/></linearGradient>
-    <filter id="lf-t" x="0" y="0" width="1" height="1"><feTurbulence type="fractalNoise" baseFrequency="1.4" numOctaves="2" seed="4" result="n"/>
-      <feColorMatrix in="n" values="0 0 0 0 .2  0 0 0 0 .22  0 0 0 0 .08  0 0 0 .55 -.18" result="d"/><feComposite in="d" in2="SourceGraphic" operator="in" result="t"/><feMerge><feMergeNode in="SourceGraphic"/><feMergeNode in="t"/></feMerge></filter>
-    <filter id="lf-b"><feGaussianBlur stdDeviation="3"/></filter>
-    <clipPath id="lf-c"><path d="M52 30C44 17 25 15 15 28C4 43 7 68 22 88C34 104 49 116 64 132C62 117 70 104 80 90C96 68 101 43 89 28C78 16 60 17 52 30Z"/></clipPath></defs>
-    <path d="M52 30C51 19 54 10 61 3" stroke="#6e6436" stroke-width="3" stroke-linecap="round" fill="none"/>
-    <g filter="url(#lf-t)">
-      <path d="M52 30C44 17 25 15 15 28C4 43 7 68 22 88C34 104 49 116 64 132C62 117 70 104 80 90C96 68 101 43 89 28C78 16 60 17 52 30Z" fill="url(#lf-g)"/>
-      <g clip-path="url(#lf-c)" filter="url(#lf-b)"><path d="M24 40C34 56 30 76 44 98" stroke="url(#lf-v)" stroke-width="9" fill="none"/><path d="M76 34C70 52 82 70 70 92" stroke="url(#lf-v)" stroke-width="7" fill="none"/></g>
-      <path d="M52 30C44 17 25 15 15 28C4 43 7 68 22 88C34 104 49 116 64 132C62 117 70 104 80 90C96 68 101 43 89 28C78 16 60 17 52 30Z" fill="none" stroke="#4d5826" stroke-width="1.2" stroke-opacity=".7"/>
-      <g fill="none" stroke="#d7d8a6" stroke-linecap="round" stroke-opacity=".55">
-        <path d="M52 31C54 60 58 96 64 129" stroke-width="1.6"/>
-        <g stroke-width=".9"><path d="M53 44C42 42 29 44 18 52"/><path d="M54 60C43 61 31 67 21 76"/><path d="M56 77C47 80 39 88 34 97"/><path d="M59 95C54 98 50 104 48 110"/>
-        <path d="M53 44C64 41 77 42 87 48"/><path d="M55 60C66 58 79 61 88 68"/><path d="M57 77C66 76 75 80 81 87"/><path d="M60 95C65 95 70 98 73 102"/></g></g></g>
-    <rect x="42" y="0" width="30" height="13" rx="1.5" transform="rotate(-14 57 7)" fill="#efe3bf" fill-opacity=".78"/></svg>`;
-  // A satin ribbon marker: it comes up from behind the card, over the top edge,
-  // and lies down the front with a V cut at its end.
-  const RIBBON = `<svg viewBox="0 0 24 120" aria-hidden="true"><defs>
-    <linearGradient id="rb-s" x1="0" x2="1"><stop offset="0" stop-color="#1d3328"/><stop offset=".28" stop-color="#335a47"/><stop offset=".46" stop-color="#5f8a73"/><stop offset=".62" stop-color="#3a6450"/><stop offset="1" stop-color="#1b2f25"/></linearGradient>
-    <linearGradient id="rb-f" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#000" stop-opacity=".45"/><stop offset=".22" stop-color="#000" stop-opacity="0"/><stop offset=".6" stop-color="#fff" stop-opacity=".07"/><stop offset=".72" stop-color="#000" stop-opacity=".12"/><stop offset=".8" stop-color="#fff" stop-opacity=".06"/><stop offset="1" stop-color="#000" stop-opacity=".1"/></linearGradient></defs>
-    <path d="M4 26V12C4 5 8 2 12 2s8 3 8 10v14Z" fill="#183025"/>
-    <path d="M4 26H20V118L12 108L4 118Z" fill="url(#rb-s)"/>
-    <path d="M4 26H20V118L12 108L4 118Z" fill="url(#rb-f)"/>
-    <path d="M4 27H20" stroke="#8fb39f" stroke-opacity=".5" stroke-width="1"/>
-    <path d="M5.5 30V112M18.5 30V112" stroke="#c9a24e" stroke-opacity=".35" stroke-width=".6"/></svg>`;
-  function bookmark() {
-    const bm = h('button.bm', { type: 'button', 'aria-label': 'Turn the bookmark over', 'aria-pressed': 'false', onclick: () => {
-      const on = bm.getAttribute('aria-pressed') !== 'true';
-      bm.setAttribute('aria-pressed', String(on)); bm.classList.toggle('turned', on); sfx?.pull?.();
-    } },
-      h('span.bm-turn', {},
-        h('span.bm-face.bm-front', {}, h('span.ribbon')),
-        h('span.bm-face.bm-back', {}, h('span.leaf'), h('small', {}, 'pressed from the plant on top'))));
-    bm.querySelector('.leaf').innerHTML = LEAF; bm.querySelector('.ribbon').innerHTML = RIBBON;
-    return bm;
-  }
-
   function card(e) {
     const rows = [
       // The type leads to a shelf that isn't on the bookcase: every book of that kind.
@@ -98,7 +56,7 @@ export function createFlip({ shelfName, share, copy, front, sfx, entry: getEntry
     ].filter(Boolean);
     const art = e.fav ? h('span.cv-art', {}, h('img', { src: e.fav, alt: '', width: 32, height: 32 }))
       : h('span.cv-art.mono', { 'aria-hidden': 'true' }, (e.title.match(/[A-Za-z0-9]/) || ['?'])[0].toUpperCase());
-    return h('div.card-wrap', {}, bookmark(), h('div.card-in', {},
+    return h('div.card-wrap', {}, h('div.card-in', {},
       h('div.card-top', {},
         art,
         h('div.card-where', {},

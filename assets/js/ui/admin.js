@@ -1,4 +1,4 @@
-// The admin panel: three taps on the logo, then a passcode. No accounts.
+// The admin panel: four taps on the plaque, then a passcode. No accounts.
 // The passcode opens data/admin.json (the sealed GitHub token), and changes
 // are published as one commit; the site redeploys a minute or two later.
 import { h, $, $$ } from './util.js';
@@ -49,7 +49,7 @@ export async function openAdmin({ toast, sfx }) {
   let box = null;
   try { const r = await fetch('data/admin.json', { cache: 'no-store' }); if (r.ok) box = await r.json(); } catch { /* not set up */ }
   dlg.replaceChildren(box ? lockScreen(box) : setupScreen());
-  if (!dlg.open) dlg.showModal();
+  if (!dlg.open) { try { dlg.showModal(); } catch { dlg.setAttribute('open', ''); } }
   dlg.querySelector('input')?.focus();
 
   // ---------------- locked ----------------
@@ -139,7 +139,7 @@ export async function openAdmin({ toast, sfx }) {
     const count = h('span.ad-count');
     const publish = h('button.ad-primary', { type: 'button', onclick: doPublish }, 'Publish');
     const body = h('div.ad-body');
-    const tabs = h('div.ad-tabs', { role: 'tablist' }, [['shelves', 'Shelves'], ['links', 'Books'], ['tags', 'Tags'], ['site', 'Site'], ['access', 'Passcode']].map(([id, label]) =>
+    const tabs = h('div.ad-tabs', { role: 'tablist' }, [['shelves', 'Shelves'], ['links', 'Books'], ['tags', 'Tags'], ['site', 'Site'], ['cheats', 'Cheat codes'], ['access', 'Passcode']].map(([id, label]) =>
       h('button', { type: 'button', role: 'tab', 'data-t': id, onclick: () => { tab = id; draw(); } }, label)));
     dlg.replaceChildren(h('div.ad', {},
       h('header.ad-head', {},
@@ -156,7 +156,7 @@ export async function openAdmin({ toast, sfx }) {
     }
     function draw() {
       $$('[data-t]', tabs).forEach(b => b.setAttribute('aria-selected', String(b.dataset.t === tab)));
-      body.replaceChildren(({ shelves: shelvesPane, links: linksPane, tags: tagsPane, site: sitePane, access: accessPane })[tab]());
+      body.replaceChildren(({ shelves: shelvesPane, links: linksPane, tags: tagsPane, site: sitePane, cheats: cheatsPane, access: accessPane })[tab]());
       refresh();
     }
 
@@ -336,6 +336,37 @@ export async function openAdmin({ toast, sfx }) {
             field('Site address', line('siteUrl', { type: 'url' })))));
     }
 
+    // ---- cheat codes ----
+    // A word typed exactly into the search bar opens a shelf, a book or a page.
+    function cheatsPane() {
+      const list = clone(config.cheats || []);
+      const store = () => { const l = list.filter(c => c.code?.trim() || c.open); if (l.length) config.cheats = l; else delete config.cheats; refresh(); };
+      const real = shelves.filter(s => !s.kind);
+      const isUrl = v => /^https?:\/\//.test(v || '');
+      const rows = h('ul.ad-cheats');
+      const draw2 = () => rows.replaceChildren(...list.map((c, i) => {
+        const url = h('input', { type: 'url', placeholder: 'https://…', value: isUrl(c.open) ? c.open : '', 'aria-label': 'Web address', hidden: !isUrl(c.open) && c.open !== 'url',
+          oninput: ev => { c.open = ev.target.value.trim() || 'url'; store(); } });
+        const sel = h('select', { 'aria-label': 'Opens', onchange: ev => {
+          c.open = ev.target.value; url.hidden = c.open !== 'url'; if (c.open === 'url') { url.value = ''; url.focus(); } store(); } },
+          h('option', { value: '', disabled: true, selected: !c.open }, 'Opens…'),
+          h('optgroup', { label: 'Shelves' }, real.map(s => h('option', { value: `#${s.id}`, selected: c.open === `#${s.id}` }, s.name))),
+          h('optgroup', { label: 'Rooms' }, [['#meri', 'Meri'], ['#borrowed', 'Borrowed lately'], ['#recent', 'New arrivals']].map(([v, n]) => h('option', { value: v, selected: c.open === v }, n))),
+          h('optgroup', { label: 'A book' }, [...links].sort((a, b) => a.title.localeCompare(b.title)).map(e => h('option', { value: `book:${e.id}`, selected: c.open === `book:${e.id}` }, e.title))),
+          h('option', { value: 'url', selected: isUrl(c.open) || c.open === 'url' }, 'A web address…'));
+        return h('li.ad-cheat', {},
+          h('input.ad-code', { value: c.code || '', placeholder: 'a word', maxlength: 30, 'aria-label': 'Cheat code', spellcheck: 'false',
+            oninput: ev => { c.code = ev.target.value.toLowerCase().replace(/\s+/g, ' ').trimStart(); store(); } }),
+          h('span.ad-arrow', { 'aria-hidden': 'true' }, '→'), sel, url,
+          h('button.ad-ghost.ad-danger', { type: 'button', onclick: () => { list.splice(i, 1); store(); draw2(); } }, 'Remove'));
+      }));
+      draw2();
+      return h('section.ad-pane', {},
+        h('p.ad-lede', {}, 'Type a cheat code exactly into the search bar and it opens what you chose: a shelf, a book, or any page on the web. Two are built in: all (every shelf at once) and meri (the books most yours).'),
+        rows,
+        h('button.ad-ghost', { type: 'button', onclick: () => { list.push({ code: '', open: '' }); draw2(); rows.querySelector('li:last-child .ad-code')?.focus(); } }, '+ Add a cheat code'));
+    }
+
     // ---- passcode ----
     function accessPane() {
       const p1 = h('input', { type: 'password', autocomplete: 'new-password', placeholder: 'New passcode', 'aria-label': 'New passcode' });
@@ -369,6 +400,16 @@ export async function openAdmin({ toast, sfx }) {
       const seen = new Map(); for (const e of links) { const k = normUrl(e.url); if (seen.has(k)) problems.push(`"${e.title}" and "${seen.get(k)}" are the same link`); seen.set(k, e.title); }
       if (links.some(e => !isDate(e.added) || (e.deadSince && !isDate(e.deadSince)))) problems.push('a book has a date that isn\'t a real date');
       if (!String(config.siteUrl || 'https://x').match(/^https?:\/\//)) problems.push('the site address should start with https://');
+      const codes = new Set();
+      for (const c of config.cheats || []) {
+        const code = (c.code || '').trim();
+        if (code.length < 2) { problems.push('a cheat code needs at least two letters'); break; }
+        if (code === 'all' || code === 'meri') { problems.push(`"${code}" is already a built-in cheat code`); break; }
+        if (codes.has(code)) { problems.push(`the cheat code "${code}" is used twice`); break; }
+        codes.add(code);
+        const ok = /^#[\w-]+$/.test(c.open || '') || /^book:\w+$/.test(c.open || '') || /^https?:\/\/\S+\.\S+/.test(c.open || '');
+        if (!ok) { problems.push(`the cheat code "${code}" doesn't say what it opens`); break; }
+      }
       if (problems.length) { toast(`Can't publish yet: ${problems[0]}.`); return; }
       publish.disabled = true; publish.textContent = 'Publishing...';
       try {

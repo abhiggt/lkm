@@ -1,6 +1,6 @@
 {
   "siteUrl": "https://abhiggt.github.io/lkm/",
-  "title": "Linkmery: a visual designer's links on type, colour, interface and brand",
+  "title": "Linkmery: links' memory",
   "shortName": "Linkmery",
   "description": "A visual designer's hand-picked links on typography, colour, interface design, branding and inspiration, each with a note on when to reach for it. Search them, browse the shelves, share what you need.",
   "lang": "en-IN",
@@ -20,5 +20,11 @@
     "I made it for myself, to keep for years.",
     "It's open so I can hand a shelf to the people I care about."
   ],
-  "nameOrigin": "The name blends almari, the cupboard where Indian homes keep what matters, with library and \"link meri\": my links."
+  "nameOrigin": "The name blends almari, the cupboard where Indian homes keep what matters, with library and \"link meri\": my links.",
+  "cheats": [
+    {
+      "code": "abhijeet",
+      "open": "#meri"
+    }
+  ]
 }

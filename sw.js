@@ -1,7 +1,7 @@
 // Linkmery service worker. Version is stamped by tools/build.mjs.
 // The page (which carries the link data) is network first, so it is never
 // stale for longer than one offline stretch. Static assets are cache first.
-const VERSION = 'lm-b6e8666f';
+const VERSION = 'lm-7621b686';
 const SHELL = ['./', 'assets/css/tokens.css', 'assets/css/site.css', 'favicon.svg', 'manifest.webmanifest'];
 
 self.addEventListener('install', e => {

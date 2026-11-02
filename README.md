@@ -1,175 +1,70 @@
 # Linkmery
 
-A designer's almari of links. Linkmery blends **almari** (अलमारी, cupboard), **library** and **"link meri"** (my links): a glass-front almari where anyone can look in, search and copy, and only the owner rearranges the shelves.
+**The Library of Links, kept by Abhijeet.**
 
-It is a static site on GitHub Pages with no backend, no accounts and no tracking, plus a browser extension that saves and finds links from any page.
+[abhiggt.github.io/lkm](https://abhiggt.github.io/lkm/)
 
-## What is in the repo
+Good links get lost. They end up in chats, notes, screenshots and posts saved "for later" that never come back. Linkmery is one designer's answer to that: about a hundred links he actually reaches for, kept like books in a small library, each with a note in his own words on when it helps.
 
-```
-index.html              built by tools/build.mjs; every link is in the HTML for Google
-assets/                 css (tokens.css is the design system), js, fonts, brand files
-data/bookmarks.json     the links: the only file you normally change
-data/shelves.json       shelf names, notes and floor-plan positions
-data/synonyms.json      words that should find each other in search
-data/import/            the one-time import of your old links (kept for reference)
-extension/              the Chrome and Firefox extension (Save and Find)
-tools/                  build, validate, add, import, merge, link check, reminders
-tests/                  search tests, browser checks, extension checks
-brand/board.html        the brand board (not deployed)
-.github/workflows/      deploy, weekly dead-link check, weekly read-later email
-```
+It's a personal collection, open to anyone. You can browse it, search it, borrow what you need and pass a shelf on to a friend. Only its keeper rearranges the shelves.
 
-## Run it locally
+## The name
 
-```
-npm install
-node tools/validate.mjs     # data is valid
-npm test                    # search finds the right links
-node tools/build.mjs        # writes index.html, sitemap, share image, extension files
-python3 -m http.server 8080 # then open http://localhost:8080
-```
+Linkmery blends three words. **Almari** (अलमारी) is the cupboard where Indian homes keep what matters. **Library** is what it grew into. **Link meri** means "my links".
 
-## Publish on GitHub Pages (about five minutes)
+## What you'll find when you visit
 
-1. On GitHub (account `abhiggt`), create an empty repository named `lkm` (no README, no licence). The short name gives the short address: `https://abhiggt.github.io/lkm/`.
-2. From this folder, push it:
-   ```
-   git init -b main          # skip if this folder is already a git repository
-   git add -A && git commit -m "Linkmery v3"
-   git remote add origin https://github.com/abhiggt/lkm.git
-   git push -u origin main
-   ```
-3. In the repository, open **Settings → Pages** and set **Source** to **GitHub Actions**.
-4. Open the **Actions** tab. The Deploy workflow fetches every favicon, colours the books, builds and publishes. When it goes green, the site is at `https://abhiggt.github.io/lkm/`.
+**Glass doors.** Every visit starts at a dark bookcase behind frosted glass, with a brass plaque on top. Tap the doors, or press Enter, and a warm light flickers on as the shelves come up one by one.
 
-`siteUrl` in `linkmery.config.json` is already set to that address. If you ever move the site, change it there (or clear it and the build works the address out from the repository).
+**Shelves of books.** Every link is a book. Its cover takes the colour of the website's own icon, and the shelves are sorted by what the links are for:
 
-To edit from the site afterwards, tap the Linkmery logo three times (the first time asks for a GitHub token; see the admin panel below).
+| Shelf | What's on it |
+|---|---|
+| Web inspiration | Galleries of websites, landing pages and single sections |
+| Components and effects | Copy-paste UI, shaders and building blocks for AI interfaces |
+| Tools | Single-job tools: compress, generate, convert, research |
+| Motion and interaction | Animation references and micro-interactions |
+| Brand and visual | Branding, social posts, icons and images to look at |
+| Type, icons and assets | Fonts, icon sets, illustrations, backgrounds and 3D files |
+| Playful web | Experiments, toys and delightful corners of the internet |
+| Directories | Lists of resources, for when nothing here fits |
+| AI and code | Design systems and skills for AI coders, and open projects to learn from |
+| Reading and references | Books, tutorials and archives worth returning to |
 
-**Custom domain:** add a file named `CNAME` containing the domain (for example `linkmery.design`), point the domain's DNS at GitHub Pages as GitHub's Pages settings describe, set `siteUrl` to the new address, and tick **Enforce HTTPS**.
+Each shelf shows seven books. Pull the green **See all** spine at the end of the row, or tap the shelf's brass label, to step inside and see the whole shelf.
 
-## Adding links
+**Taking a book out.** Tapping a book doesn't send you away. The book slides off the shelf, turns over and opens into a card. The card says what the link is and gives the keeper's note on when to use it. From there you can go to the site, copy its address or send it to someone. Use the arrows to leaf through the rest of the shelf.
 
-### The extension (the main way)
+**Finding something.** Search in plain words, the way you'd describe something to a friend: *"grainy gradient background"* or *"that site with pricing page examples"*. It knows that *colour* and *palette* belong together, and it forgives typos. Type **all** to see every shelf at once. If you're not looking for anything in particular, press **Wander** and it hands you a random book from a random shelf.
 
-Install it once:
-- **Chrome, Edge, Arc, Brave:** open `chrome://extensions`, turn on **Developer mode**, click **Load unpacked**, and choose the `extension` folder (or the unzipped `linkmery-extension` folder).
-- **Firefox:** open `about:debugging`, choose **This Firefox**, then **Load Temporary Add-on**, and pick `extension/manifest.json`. A temporary add-on is removed when Firefox restarts. To keep it, sign it for free with `npx web-ext sign` and a Mozilla add-ons API key.
+**Small living things.** An old filament bulb sits on top of the bookcase. Switch it on at night and the room warms up; in daylight it has something else to say. A money plant sits there too; water it and it remembers how many times it was watered today. The plaque has very little to say, but it will tell you so. Inside a shelf, the plaque shrinks to a gold brooch, and tapping it brings you back to the main hall. The lights follow the time in India: day from six in the morning, night from six in the evening. You can change that, and turn the sound off, in the footer.
 
-Then open the extension's settings and fill in:
-- **Site URL:** your published address. Find searches the links there.
-- **Repository and token (recommended):** with these, every save becomes a commit and the site updates on its own. Create a **fine-grained** token at GitHub, **Settings, Developer settings, Personal access tokens, Fine-grained**. Give it access to **only this repository** and the single permission **Contents: Read and write**.
+**A few secrets.** Some things in the library answer to three quick taps, and one answers to a word typed anywhere on the page. They're left for you to find.
 
-**Token risk, plainly:** the token is stored in the browser's extension storage. Anyone who can use your browser profile, or malware on the machine, could use it to change this one repository and nothing else. Give it an expiry date, and revoke it on GitHub if a laptop is lost. If you'd rather not use a token, skip it: saves wait in the extension, and **Export JSON** in settings gives you a file to merge with `node tools/merge.mjs export.json`.
+## What it isn't
 
-Using it:
-- **Alt + L** (Option + L on a Mac) opens Linkmery on any page. Change it at `chrome://extensions/shortcuts`. Select text on the page first and it becomes your note.
-- **Add** is three things: the title (prefilled), a one-line note, and a shelf. The shelf is suggested from the links it most resembles (marked *best fit* in gold). Good for, type, tags, pin and read later wait under **Add details**. **Enter** saves; inside the note, **Ctrl + Enter**.
-- **Find** (Alt + F inside the panel): type, use the arrow keys, Enter opens.
-- **Right-click** on a page or a link, then **Add to Linkmery**.
-- In the address bar, type **`lm`**, a space, and what you're looking for.
+- **No account.** No sign-up and no login.
+- **No tracking.** No analytics, no cookies and no ads.
+- **No feed.** Nothing to like, follow or comment on.
 
-A working preview of the panel (day and night) is published with the site at `https://abhiggt.github.io/lkm/extension.html`. It runs the extension's own code against the live library; nothing in it is saved.
+It's a static page that works fast on a phone, and every link is readable even with JavaScript off.
 
-### From the terminal
+## The extension
 
-```
-node tools/add.mjs https://example.com --shelf tools --tags "colour, free"
-```
-It fills the title and description from the page, saves the share image and favicon to `assets/img/`, asks the Wayback Machine for a snapshot, and refuses duplicates. Commit and push afterwards.
+Linkmery has a browser extension for Chrome and Firefox. Its keeper uses it to add pages to the library: press **Alt + L** on any website, write a line about why it's worth keeping, and it's on the right shelf a minute later. It can also search the library from any tab.
 
-### By hand
+You can try the extension on [its preview page](https://abhiggt.github.io/lkm/extension.html).
 
-Edit `data/bookmarks.json`, run `node tools/validate.mjs`, commit. The validator catches duplicate URLs, unknown shelves and descriptions too short to be useful.
+## What's new
 
-### Writing descriptions
+Every version is listed on the [What's new](https://abhiggt.github.io/lkm/changelog.html) page. Ideas for the next one are in [next-release-ideas.md](next-release-ideas.md).
 
-The description is what search and Google read most. Write one or two sentences in your own words: say what it is and when you'd reach for it, and use the words you'd search with later. "Gradient generator that exports MP4 too" beats "cool tool".
+## Keeping your own
 
-## The site
+The whole library is in this repository: the links, the shelves, the site and the extension. Running it costs nothing, because it is a static site on GitHub Pages.
 
-Linkmery is a library someone keeps by hand: every link a book, every book there for a reason.
+[KEEPING.md](KEEPING.md) covers the practical side: how to publish it, add links, edit from the site, how search works, and the checks behind it all.
 
-- **The plaque:** one tap turns it over to the date and time in India and a small secret. Inside a shelf it becomes a small gold brooch; tap it to go back to the main hall.
-- **The doors:** every visit starts at frosted glass doors on a dark cabinet, with a large brass plaque on the top rail, "The Library of Links, kept by Abhijeet". Open them (tap, Enter or `/`) and a warm light flickers on as the shelves come up one after another. A shared shelf link (`yoursite/#tools`) walks straight in.
-- **On the cabinet:** a desk globe that turns slowly on its tilted axis (tap it and it spins), and a money plant: tap to water it and a few drops fall into the pot. It only says how many times it has been watered today.
-- **Shelves:** seven books a shelf, then a slim **See all** spine. Each shelf's name is printed on a card in a brass label holder screwed to the front of the board; tap it to open the shelf. On narrower screens a shelf is a row you swipe along. Scroll down and the top bar becomes an index of every shelf.
-- **Books:** each cover fades from paper into the colour of the site's favicon, with the favicon as cover art. The colour and title are made by the page itself from the data, so a new link looks right the moment it is added; nothing is drawn by hand.
-- **Taking a book out:** tapping a book never opens the site. It slides off the shelf, turns over and opens into its card: the shelf, the title, the description, the librarian's note, its type (a link to a shelf of every book of that type, a shelf that isn't on the bookcase) and its site (with a copy button), and two buttons: **Go to the site**, a stitched strap of the book's own leather, and **Send to someone**. A silk ribbon marker stands out of the top of the card; turn it over for a leaf pressed from the plant on top. Arrows, ← → or a swipe leaf through the shelf.
-- **Rooms:** a shelf on its own has every book and three views: Shelf, Spines and List. In **Spines** you can pick a book up and move it along the shelf; a reload puts the shelf back in its order.
-- **Search** is a compact bar that widens as you use it, with **Wander** (a random book from a random shelf). Results are grouped by the shelf they live on; type **all** to see every shelf at once.
-- **Footer:** the Linkmery mark, large, and **Why I made this** as a bookmark that fell out of a book: tap it for five lines and "Kept and made by Abhijeet." Lights follow India time, or stay on Day or Night. Sound can be switched off.
-- **Sound:** quiet and made from real textures: a latch and air for the doors, a light switch, books settling, pages turning, a drop of water. Synthesised in the browser; nothing plays before the visitor taps something.
-- **Images:** the globe and the plant are drawn as SVG in `tools/art/` and baked to AVIF by `node tools/bake.mjs` (a few KB each, crisp on any screen). The baked files are committed, so the deploy doesn't need to bake.
+---
 
-- **What's new:** `changelog.html` lists every version, linked from the footer. Ideas for the next release live in `next-release-ideas.md`; when a release ships, move what made it into the changelog.
-
-### Things to find
-
-The keyhole (three taps: a skeleton key opens a random book), the clock (a chai break and a five-minute read), the plant (three quick taps: what you borrowed lately), the name line in Why I made this (copies the address to pass on), and typing **meri** anywhere (the books most yours). Three taps on **The Library of Links** plaque open the admin panel.
-
-## Editing from the site (admin panel)
-
-Tap The Library of Links plaque three times, then enter your passcode. There are no accounts.
-
-- **The first time,** the panel asks for your repository, a fine-grained GitHub token (this repository only, Contents: read and write) and a passcode. It seals the token with the passcode (PBKDF2 and AES-GCM, in the browser) and publishes the sealed file as `data/admin.json`. After that, the passcode alone opens the editor, on any device.
-- **Shelves:** rename, reorder, add a line about each, add or delete shelves. Deleting moves the shelf's links to another one. Renaming keeps the `#name`, so links people already have keep working.
-- **Shelves that fill themselves** (Pinned, Recently added, Forgotten gems) can be renamed and described too.
-- **Books:** shelve a new book (URL, title, shelf; it gets the next catalogue number and today's date), or find any book and edit its title, URL, description, use, shelf, type, tags, the date it was shelved, the date it moved out, its archived copy, pin and read later, or delete it. The same link can't be shelved twice.
-- **Tags:** every tag with how many books carry it. Rename one on every book at once, merge two by renaming one into the other, or remove one everywhere.
-- **Site:** your name (the footer signature and the plaque), the line under the logo, the "Why Linkmery exists" lines, where the name comes from, and the title and description search engines see. These are saved to `linkmery.config.json`.
-- **Passcode:** change it any time.
-- **Publish** writes everything as one commit, and the site updates a minute or two later.
-
-How safe is it? The sealed file is public, so anyone can download it and try guesses offline. A long passcode is what protects it: a short sentence of four or more words is best (the panel accepts 8 characters or more, and you can change it any time under Passcode). The token can only touch this one repository. To shut editing off completely, delete the token on GitHub.
-
-## Favicons
-
-`tools/favicons.mjs` runs in the Deploy workflow and saves each site's icon into `assets/fav/`, trying Google's favicon service, the site's own `apple-touch-icon.png`, then DuckDuckGo. The build reads each icon's colour for its book. If an icon couldn't be fetched at build time, the visitor's browser asks Google's favicon service for it when the book comes into view and colours the book from it. Run it locally with `node tools/favicons.mjs`.
-
-## Shelves
-
-Shelves live in `data/shelves.json`. Shelves appear in `order`, each with a `name` and an optional `note` (shown when the shelf is opened on its own). "Pinned" shows pinned links, "Recently added" the newest, and "Forgotten gems" a rotating handful of older ones. To add a shelf, add an entry, then move links onto it by changing their `shelf`.
-
-## Search
-
-Search runs entirely in the browser (`assets/js/core/search.js`, shared with the extension). It removes filler words, stems, expands synonyms from `data/synonyms.json`, tolerates typos, and matches word starts while you type. Every result says what it matched on.
-
-**Measure it with your own words.** Add to `tests/blind-queries.json` the way you would really search for links, written before you look at them:
-```json
-[{ "query": "that gradient site with grain", "expect": "http://grainient.supply/" }]
-```
-Then run `node tools/eval.mjs`. It reports recall at 3 (the target is 80%) and lists the misses. Fix a miss by adding a synonym or improving that link's description.
-
-## Google
-
-The whole site is one page, and every link's title and description is in the HTML before any JavaScript runs. Shelf links (`#tools`) are for sharing; Google treats the site as one page.
-
-To get indexed:
-1. Open [Google Search Console](https://search.google.com/search-console) and add your site as a **URL prefix** property, using the exact `siteUrl`.
-2. Verify it. The **HTML tag** method is simplest: copy the `google-site-verification` meta tag into the `<head>` template in `tools/build.mjs` (next to the description tag), rebuild, push, then click **Verify**.
-3. Under **Sitemaps**, submit `sitemap.xml`.
-4. Use **URL Inspection** on the home page to request indexing and check that the rendered HTML shows the links.
-5. Optional: run the page through Google's **Rich Results Test** to confirm the structured data reads correctly.
-
-## Weekly jobs
-
-- **Dead-link check** (Mondays): marks broken links with a badge and the archived copy, commits the change, and opens an issue listing them. Sites that only block robots are not marked dead.
-- **Read-later email** (Saturdays): one email listing read-later links saved more than 3 days ago. It uses [Resend](https://resend.com) (free tier). In the repository, under **Settings, Secrets and variables, Actions**, add:
-  - `RESEND_API_KEY`: your Resend API key
-  - `REMIND_TO`: your email address
-  - `REMIND_FROM`: a sender address on a domain verified in Resend (`onboarding@resend.dev` works for testing)
-
-Run either job by hand from the **Actions** tab. Preview the email with `node tools/remind.mjs --dry-run`.
-
-## Checks
-
-- `npm test`: search regression tests on the real library and the sample fixture.
-- `python3 tests/e2e_check.py http://localhost:8080/`: IST theme switching at 06:00 and 18:00, no console errors, no outside requests, the quiet home and the search drawer, the almirah doors, every shelf link and its views, search, the sheet, lights, sound, the easter eggs, and phone layout, with screenshots. Needs `pip install playwright` and `playwright install chromium`.
-- `python3 tests/extension_check.py http://localhost:8080/`: loads the extension and checks the Alt + L shortcut, the suggested shelf, Save, Find with arrow keys, the overlay and the saved format.
-- `npx web-ext lint --source-dir extension`: extension manifest and code.
-
-## Brand
-
-`brand/board.html` shows the mark (books on a shelf), the wordmark, colours and type. Regenerate the logo files and icons with `node tools/brand.mjs`. The theme follows India Standard Time for every visitor: light from 06:00 to 18:00, dark otherwise.
+Kept and made by Abhijeet.

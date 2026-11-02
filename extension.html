@@ -49,6 +49,7 @@
   const runtime = { sendMessage: async msg => {
     if (msg.type === 'data') return data;
     if (msg.type === 'save') return { ok: true, committed: false, entry: { ...msg.form, id: 'preview' } };
+    if (msg.type === 'renameShelves') { for (const [id, name] of Object.entries(msg.names)) { const s = data.shelves.find(x => x.id === id); if (s) s.name = name; } return { ok: true, renamed: 1 }; }
     return {};
   } };
   Object.defineProperty(window, 'chrome', { value: { runtime }, configurable: true, writable: true });

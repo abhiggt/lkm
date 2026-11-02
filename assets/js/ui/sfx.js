@@ -7,7 +7,7 @@
 let ctx = null, out = null;
 const KEY = 'lm.sound';
 const isOn = () => { try { return localStorage.getItem(KEY) !== 'off'; } catch { return true; } };
-const LEVEL = 1;
+const LEVEL = 0.5;   // kept low: these are heard on almost every tap
 const GRAIN = 3.2;   // filtered noise keeps little of its energy; this brings it back up
 
 /** A small wooden room: a short, dark, decaying stereo tail. */
@@ -120,17 +120,15 @@ function drop(c, o, t) {
 const SOUNDS = {
   open: [[latch, 0, 0.38], [swish, 0.05, 0.55], [settle, 0.62, 0.2]],
   close: [[swish, 0, 0.35], [latch, 0.36, 0.22]],
-  pull: [[rustle, 0, { dur: 0.24, up: true, peak: 0.14 }]],
+  pull: [[rustle, 0, { dur: 0.24, up: true, peak: 0.1 }]],
   flip: [[rustle, 0, { dur: 0.3, up: true, peak: 0.13 }], [flutter, 0.32, { count: 5, span: 0.3, peak: 0.07 }], [settle, 0.86, 0.12]],
   unflip: [[flutter, 0, { count: 4, span: 0.24, peak: 0.06 }], [rustle, 0.26, { dur: 0.26, up: false, peak: 0.12 }], [settle, 0.62, 0.1]],
   slide: [[rustle, 0, { dur: 0.22, up: true, peak: 0.1 }]],
-  tap: [[grain, 0, { f: 1900, q: 1.6, dur: 0.01, peak: 0.3 }], [body, 0, { f: 1300, q: 10, peak: 0.2, ring: 0.035 }]],
+  tap: [[grain, 0, { f: 1700, q: 1.6, dur: 0.008, peak: 0.14 }], [body, 0, { f: 1200, q: 10, peak: 0.09, ring: 0.03 }]],
   knock: [[knock, 0], [knock, 0.14, 0.32], [knock, 0.24, 0.26]],
   drop: [[drop, 0]],
   light: [[grain, 0, { f: 3000, q: 1.2, dur: 0.006, peak: 0.22 }], [body, 0, { f: 950, q: 12, peak: 0.16, ring: 0.04 }], [grain, 0.05, { f: 2400, q: 1.2, dur: 0.005, peak: 0.12 }]],
   settleRow: [[rustle, 0, { dur: 0.18, up: false, peak: 0.06 }], [settle, 0.12, 0.06], [settle, 0.2, 0.045]],
-  // A globe spun by hand: a dry whirr of air that slows, and the faint tick of the axis.
-  spin: [[grain, 0, { f: 700, to: 300, q: 0.7, dur: 0.9, attack: 0.05, peak: 0.12 }], ...[0.06, 0.16, 0.3, 0.48, 0.7].map(t => [grain, t, { f: 2600, q: 2, dur: 0.004, peak: 0.07 }])],
 };
 function play(name) {
   const c = live(); if (!c) return;
@@ -148,7 +146,6 @@ export const sfx = {
   flip() { play('flip'); buzz(5); },
   unflip: () => play('unflip'),
   slide: () => play('slide'),
-  spin: () => play('spin'),
   // Small switches stay silent: sound is kept for the moments that matter.
   tap: () => {},
   click: () => play('tap'),

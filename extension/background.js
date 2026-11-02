@@ -85,6 +85,37 @@ async function commit(entries) {
   return { ok: false, reason: 'the library changed while adding. Try again.' };
 }
 
+/** Renames shelves in data/shelves.json with one commit. names: { id: 'New name' } */
+async function renameShelves(names) {
+  const s = await settings();
+  if (!s.repo || !s.token) return { ok: false, reason: 'no-token' };
+  const url = `https://api.github.com/repos/${s.repo}/contents/data/shelves.json`;
+  const headers = { Authorization: `Bearer ${s.token}`, Accept: 'application/vnd.github+json', 'X-GitHub-Api-Version': '2022-11-28' };
+  for (let attempt = 0; attempt < 2; attempt++) {
+    const cur = await fetch(`${url}?ref=${encodeURIComponent(s.branch)}`, { headers, cache: 'no-store' });
+    if (!cur.ok) return { ok: false, reason: `GitHub said ${cur.status} when reading the shelves` };
+    const file = await cur.json();
+    const shelves = JSON.parse(dec(file.content));
+    const changed = [];
+    for (const sh of shelves) {
+      const next = String(names[sh.id] ?? '').trim().slice(0, 40);
+      if (next && next !== sh.name) { changed.push(`${sh.name} → ${next}`); sh.name = next; }
+    }
+    if (!changed.length) return { ok: true, renamed: 0 };
+    const res = await fetch(url, {
+      method: 'PUT', headers,
+      body: JSON.stringify({ message: changed.length === 1 ? `Rename shelf: ${changed[0]}` : `Rename ${changed.length} shelves`, content: enc(JSON.stringify(shelves, null, 2) + '\n'), sha: file.sha, branch: s.branch }),
+    });
+    if (res.ok) {
+      const { cache } = await get('cache');
+      if (cache) { cache.shelves = shelves; await set({ cache }); }
+      return { ok: true, renamed: changed.length };
+    }
+    if (res.status !== 409) return { ok: false, reason: `GitHub said ${res.status} when saving` };
+  }
+  return { ok: false, reason: 'the shelves changed while renaming. Try again.' };
+}
+
 async function save(form) {
   const entry = toEntry(form);
   const { pending = [] } = await get('pending');
@@ -111,6 +142,7 @@ api.runtime.onMessage.addListener((msg, _sender, reply) => {
     data: () => allData(),
     refresh: () => loadData(true).then(() => allData()),
     save: () => save(msg.form),
+    renameShelves: () => renameShelves(msg.names || {}),
     export: () => exportPending(),
     clearPending: () => set({ pending: [] }).then(() => ({ ok: true })),
     retry: async () => { const { pending = [] } = await get('pending'); const r = await commit(pending); if (r.ok) await set({ pending: [] }); return r; },

@@ -112,6 +112,28 @@ export async function renderApp(root, { page = {}, initialTab = 'save', close })
     const select = h('select', { name: 'shelf', 'aria-label': 'Shelf' }, shelves.map(s => h('option', { value: s.id, selected: s.id === shelf }, s.name)));
     const label = () => { goLabel.textContent = `${dupe ? 'Update on' : 'Add to'} ${shelfName(shelf)}`; sug.hidden = !!dupe || shelf !== suggested; };
     select.addEventListener('change', () => { shelf = select.value; label(); });
+    // Rename the chosen shelf, right here. It is published as its own small commit.
+    const nameInput = h('input.rename', { type: 'text', maxlength: 40, 'aria-label': 'New shelf name', hidden: true });
+    const pencil = h('button.pencil', { type: 'button', title: 'Rename this shelf', 'aria-label': 'Rename this shelf', onclick: () => {
+      nameInput.value = shelfName(shelf); nameInput.hidden = false; pick.classList.add('renaming'); nameInput.focus(); nameInput.select();
+    } }, '✎');
+    const endRename = () => { nameInput.hidden = true; pick.classList.remove('renaming'); };
+    nameInput.addEventListener('keydown', async ev => {
+      if (ev.key === 'Escape') { ev.preventDefault(); ev.stopPropagation(); endRename(); select.focus(); return; }
+      if (ev.key !== 'Enter') return;
+      ev.preventDefault(); ev.stopPropagation();
+      const next = nameInput.value.trim();
+      if (!next || next === shelfName(shelf)) return endRename();
+      status.textContent = 'Renaming…';
+      const r = await send({ type: 'renameShelves', names: { [shelf]: next } });
+      if (r.ok) {
+        const sh = shelves.find(x => x.id === shelf); if (sh) sh.name = next;
+        select.querySelector(`option[value="${shelf}"]`).textContent = next; label();
+        status.textContent = `Renamed to ${next}. Your site updates in a minute or two.`;
+      } else status.textContent = r.reason === 'no-token' ? 'Add a GitHub token in settings to rename shelves.' : `Couldn’t rename: ${r.reason}`;
+      endRename(); select.focus();
+    });
+    nameInput.addEventListener('blur', () => setTimeout(endRename, 150));
     label();
 
     const more = h('details.more', {},
@@ -123,12 +145,13 @@ export async function renderApp(root, { page = {}, initialTab = 'save', close })
         h('label', {}, h('input', { type: 'checkbox', name: 'pinned' }), ' Pin to the top'),
         h('label', {}, h('input', { type: 'checkbox', name: 'readLater' }), ' Read later')));
 
+    const pick = h('div.pick-row', {}, h('label.shelf-select', {}, select, sug), nameInput, pencil);
     const f = h('form.save', { onsubmit: ev => submit(ev, () => shelf) },
       h('div.page-row', {}, tileFor({ title: page.title, url, icon: page.icon }), h('div.meta-col', {},
         title, h('p.url', {}, hostOf(url)),
         dupe && h('p.dupe', {}, `Already in your library, on ${shelfName(dupe.shelf)}.`))),
       desc,
-      h('label.shelf-select', {}, select, sug),
+      pick,
       more,
       h('div.acts', {}, go));
     // Enter saves from anywhere except inside the note, where Ctrl/Cmd+Enter does.

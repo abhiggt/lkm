@@ -1,5 +1,5 @@
 # Every Saturday morning: one email listing read-later links older than 3 days.
-# Needs repository secrets RESEND_API_KEY, REMIND_TO and REMIND_FROM (see README).
+# Needs repository secrets RESEND_API_KEY, REMIND_TO and REMIND_FROM (see KEEPING.md).
 # It never changes any data.
 name: Read-later reminder
 

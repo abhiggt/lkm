@@ -56,3 +56,28 @@ $('clear').addEventListener('click', async () => {
   await api.runtime.sendMessage({ type: 'clearPending' });
   showPending();
 });
+
+// ---------- shelf names ----------
+async function showShelves() {
+  const d = await api.runtime.sendMessage({ type: 'data' });
+  const box = $('shelf-names');
+  const real = (d.shelves || []).filter(s => !s.kind).sort((a, b) => a.order - b.order);
+  if (!real.length) { box.innerHTML = '<p>Add your library address above, then come back here.</p>'; return; }
+  box.replaceChildren(...real.map(s => {
+    const label = document.createElement('label'); label.className = 'field';
+    const span = document.createElement('span'); span.textContent = `#${s.id}`;
+    const input = document.createElement('input'); input.value = s.name; input.dataset.id = s.id; input.dataset.was = s.name; input.maxLength = 40;
+    label.append(span, input); return label;
+  }));
+}
+showShelves();
+$('save-names').addEventListener('click', async () => {
+  const names = {};
+  for (const i of document.querySelectorAll('#shelf-names input')) if (i.value.trim() && i.value.trim() !== i.dataset.was) names[i.dataset.id] = i.value.trim();
+  const say = m => { $('names-status').textContent = m; };
+  if (!Object.keys(names).length) return say('Nothing changed.');
+  say('Renaming…');
+  const r = await api.runtime.sendMessage({ type: 'renameShelves', names });
+  if (r.ok) { say(r.renamed === 1 ? 'Renamed. Your site updates in a minute or two.' : `${r.renamed} shelves renamed. Your site updates in a minute or two.`); showShelves(); }
+  else say(r.reason === 'no-token' ? 'Add the repository and a token above first.' : `Couldn’t rename: ${r.reason}`);
+});

@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Linkmery",
   "short_name": "Linkmery",
-  "version": "7.1.0",
+  "version": "7.3.0",
   "description": "Add any page to your Linkmery library, and find it again from anywhere.",
   "icons": {
     "16": "icons/icon-16.png",

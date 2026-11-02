@@ -120,7 +120,7 @@ const jsonLd = {
 };
 
 // Data for the JS layer, embedded so the page needs no runtime fetch.
-const payload = JSON.stringify({ entries: entries.map(e => ({ ...e, ...(favOf(e.id) && { fav: favOf(e.id) }), ...(colours.get(e.id) && { colour: colours.get(e.id) }), age: ageOf(e.added) })), shelves, synonyms, config: { gemsOlderThanDays: cfg.gemsOlderThanDays, exampleSearches: cfg.exampleSearches, siteUrl: site, ownerName: cfg.ownerName || '' } })
+const payload = JSON.stringify({ entries: entries.map(e => ({ ...e, ...(favOf(e.id) && { fav: favOf(e.id) }), ...(colours.get(e.id) && { colour: colours.get(e.id) }), age: ageOf(e.added) })), shelves, synonyms, config: { cheats: (cfg.cheats || []).filter(c => c.code && c.open), gemsOlderThanDays: cfg.gemsOlderThanDays, exampleSearches: cfg.exampleSearches, siteUrl: site, ownerName: cfg.ownerName || '' } })
   .replace(/</g, '\\u003c');
 // Version stamp for cache busting: covers the data and every script and stylesheet.
 const assetFiles = ['assets/css/tokens.css', 'assets/css/site.css', ...readdirSync('assets/js', { recursive: true }).filter(f => f.endsWith('.js')).sort().map(f => `assets/js/${f}`)];
@@ -183,13 +183,28 @@ const html = `<!doctype html>
   <div class="plaque" id="plaque" role="button" tabindex="0" aria-label="The Library of Links, kept by ${esc(cfg.ownerName || 'hand')}" data-since="${entries.map(e => e.added).sort()[0] || ''}">
     <span class="pl-turn">
       <span class="pl-face pl-front"><span class="pl-title">The Library of Links</span><em>kept by ${esc(cfg.ownerName || 'hand')}</em></span>
-      <span class="pl-face pl-back" aria-live="polite"><span class="pl-time" id="pl-time"></span><em id="pl-secret"></em></span>
+      <span class="pl-face pl-back" aria-live="polite"><span class="pl-time" id="pl-time">Nothing to see here :)</span><em id="pl-secret"></em></span>
     </span>
     <span class="pl-brooch" aria-hidden="true"><svg viewBox="0 0 32 32" width="26" height="26">${MARKS[DEFAULT_MARK].inner('currentColor', 2.2)}</svg></span>
   </div>
   <div class="cabinet-top">
-    <button type="button" class="top-obj" id="globe" data-js aria-label="Spin the globe: it stops on a random book"><i class="contact"></i>
-      <span class="globe-art" aria-hidden="true"><span class="sphere"><span class="map"></span></span><img class="stand" src="assets/img/globe-stand.avif" alt="" width="240" height="280" decoding="async"></span>
+    <button type="button" class="light-btn" id="light" data-js aria-pressed="false" aria-label="The little light"><i class="contact"></i>
+      <svg class="bulb" viewBox="0 0 60 120" aria-hidden="true"><defs>
+        <radialGradient id="bl-glass" cx=".38" cy=".32" r=".75"><stop offset="0" stop-color="#fffaf0" stop-opacity=".55"/><stop offset=".5" stop-color="#e9dcc0" stop-opacity=".16"/><stop offset="1" stop-color="#b9a47a" stop-opacity=".3"/></radialGradient>
+        <radialGradient id="bl-glow" cx=".5" cy=".45" r=".55"><stop offset="0" stop-color="#ffd98a"/><stop offset=".45" stop-color="#ffb648" stop-opacity=".75"/><stop offset="1" stop-color="#ff9a2a" stop-opacity="0"/></radialGradient>
+        <linearGradient id="bl-brass" x1="0" x2="1"><stop offset="0" stop-color="#6e4f1a"/><stop offset=".3" stop-color="#e6c77c"/><stop offset=".55" stop-color="#b98d3c"/><stop offset="1" stop-color="#5e4214"/></linearGradient>
+        <linearGradient id="bl-base" x1="0" x2="1"><stop offset="0" stop-color="#2a1d0c"/><stop offset=".35" stop-color="#7a5a26"/><stop offset=".6" stop-color="#4b3513"/><stop offset="1" stop-color="#1e1508"/></linearGradient></defs>
+        <circle class="bl-glow" cx="30" cy="38" r="30" fill="url(#bl-glow)"/>
+        <path class="bl-glass" d="M30 6C16 6 8 17 8 30c0 10 6 17 10 23 3 4 4 7 4 11h16c0-4 1-7 4-11 4-6 10-13 10-23C52 17 44 6 30 6Z" fill="url(#bl-glass)" stroke="#d8c9a4" stroke-opacity=".55" stroke-width="1"/>
+        <path d="M17 22c2-6 7-10 13-11" stroke="#fff" stroke-opacity=".55" stroke-width="2" stroke-linecap="round" fill="none"/>
+        <g class="bl-fil" fill="none" stroke-linecap="round"><path d="M26 63V40M34 63V40" stroke="#7d6a48" stroke-width=".8"/>
+          <path class="wire" d="M26 40c0-6 2-12 4-12s4 6 4 12M26 40c1-3 2-3 2 0s1 3 2 0 1-3 2 0 1 3 2 0" stroke="#8a6a3a" stroke-width="1.1"/></g>
+        <rect x="21" y="63" width="18" height="17" rx="2" fill="url(#bl-brass)"/>
+        <path d="M21 67h18M21 71h18M21 75h18" stroke="#5a3f12" stroke-opacity=".55" stroke-width="1"/>
+        <path d="M14 82h32l4 14H10Z" fill="url(#bl-brass)"/>
+        <rect x="6" y="96" width="48" height="9" rx="2" fill="url(#bl-base)"/>
+        <path d="M6 97.5h48" stroke="#c9a24e" stroke-opacity=".6" stroke-width="1"/>
+        <rect class="bl-switch" x="44" y="86" width="3.5" height="7" rx="1.5" fill="#2a1d0c"/></svg>
     </button>
     <button type="button" class="plant-btn" id="plant" data-js aria-label="Water the money plant"><i class="contact"></i>
       <img class="money" src="assets/img/plant.avif" alt="" width="210" height="720" decoding="async"><i class="drop d1" aria-hidden="true"></i><i class="drop d2" aria-hidden="true"></i><i class="drop d3" aria-hidden="true"></i><i class="drop d4" aria-hidden="true"></i>
@@ -211,6 +226,7 @@ const html = `<!doctype html>
   </div>
 
   <button type="button" class="btn back" id="back" data-js><svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M12 4l-6 6 6 6"/></svg>All shelves</button>
+  <button type="button" class="btn share-room" id="share-room" data-js><svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 13V3M6 7l4-4 4 4M4 11v5h12v-5"/></svg><span>Share<span class="long"> this shelf</span></span></button>
   <div class="almari-head">
     <h1 class="crest"><span class="crest-btn" id="crest">${lockup()}</span><span class="sr-only">Linkmery: a visual designer's links on type, colour, interface and brand</span></h1>
     <noscript><p class="crest-fallback">Linkmery</p></noscript>
