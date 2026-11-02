@@ -1801,6 +1801,19 @@
       "added": "2026-11-02",
       "pinned": false,
       "readLater": false
+    },
+    {
+      "id": "zpaftl",
+      "url": "https://lemomo-ai.github.io/lemo-opuscar/",
+      "title": "Lemo-Opuscar · 66 film styles for Claude Code, made in code",
+      "description": "Lemo-Opuscar: 66 film styles for Claude Code. Each style is a reusable prompt plus a short film made entirely in code by Claude Opus 5.5, with no video model. Includes OPUSCAR 98, 98 years of Best Picture. Official site of github.com/lemomo-ai/lemo-opuscar.",
+      "type": "tool",
+      "tags": [],
+      "shelf": "tools",
+      "added": "2026-11-02",
+      "pinned": false,
+      "readLater": false,
+      "archiveUrl": "https://web.archive.org/web/https://lemomo-ai.github.io/lemo-opuscar/"
     }
   ]
 }
