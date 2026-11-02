@@ -18,19 +18,6 @@ Linkmery blends three words. **Almari** (अलमारी) is the cupboard whe
 
 **Shelves of books.** Every link is a book. Its cover takes the colour of the website's own icon, and the shelves are sorted by what the links are for:
 
-| Shelf | What's on it |
-|---|---|
-| Web inspiration | Galleries of websites, landing pages and single sections |
-| Components and effects | Copy-paste UI, shaders and building blocks for AI interfaces |
-| Tools | Single-job tools: compress, generate, convert, research |
-| Motion and interaction | Animation references and micro-interactions |
-| Brand and visual | Branding, social posts, icons and images to look at |
-| Type, icons and assets | Fonts, icon sets, illustrations, backgrounds and 3D files |
-| Playful web | Experiments, toys and delightful corners of the internet |
-| Directories | Lists of resources, for when nothing here fits |
-| AI and code | Design systems and skills for AI coders, and open projects to learn from |
-| Reading and references | Books, tutorials and archives worth returning to |
-
 Each shelf shows seven books. Pull the green **See all** spine at the end of the row, or tap the shelf's brass label, to step inside and see the whole shelf.
 
 **Taking a book out.** Tapping a book doesn't send you away. The book slides off the shelf, turns over and opens into a card. The card says what the link is and gives the keeper's note on when to use it. From there you can go to the site, copy its address or send it to someone. Use the arrows to leaf through the rest of the shelf.
