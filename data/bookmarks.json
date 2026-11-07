@@ -1843,6 +1843,23 @@
       "pinned": false,
       "readLater": false,
       "archiveUrl": "https://web.archive.org/web/https://www.cynthwang.com/projects"
+    },
+    {
+      "id": "1ew4le",
+      "url": "https://www.designforb2b.com/",
+      "title": "Best B2B Website Design Inspiration | DesignforB2B",
+      "description": "Hand-picked B2B and design-forward company websites to inspire your next redesign. Filter by industry, visual style, and funding stage, with real screenshots.",
+      "why": "B2B ka reference",
+      "type": "inspiration",
+      "tags": [
+        "web",
+        "b2b"
+      ],
+      "shelf": "web",
+      "added": "2026-11-07",
+      "pinned": false,
+      "readLater": false,
+      "archiveUrl": "https://web.archive.org/web/https://www.designforb2b.com/"
     }
   ]
 }
